@@ -601,7 +601,6 @@ Transform:
   m_Children:
   - {fileID: 2115923802}
   - {fileID: 1371060725}
-  - {fileID: 593119700}
   - {fileID: 208370694}
   - {fileID: 308788704}
   - {fileID: 1597351081}
@@ -609,6 +608,7 @@ Transform:
   - {fileID: 1498999112}
   - {fileID: 1383329181}
   - {fileID: 1488499636}
+  - {fileID: 593119700}
   - {fileID: 1341818500}
   - {fileID: 538273452}
   - {fileID: 702833853}
@@ -699,7 +699,7 @@ Transform:
   m_GameObject: {fileID: 593119699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 211.9, y: 20.1, z: 108.4}
+  m_LocalPosition: {x: 215.6, y: 20.1, z: 108.4}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1328,7 +1328,7 @@ Transform:
   m_GameObject: {fileID: 1341818499}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 206, y: 19, z: 177}
+  m_LocalPosition: {x: 206, y: -1, z: 177}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1758,7 +1758,7 @@ Transform:
   m_GameObject: {fileID: 1481678521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.16, y: 27.1, z: 172}
+  m_LocalPosition: {x: 76.16, y: 27.1, z: -33.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2145,7 +2145,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: f1732493b90ced24a9c27e2e481cade9, type: 2}
   m_EnableTreeColliders: 1
