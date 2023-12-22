@@ -1,8 +1,15 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
+
+    [SerializeField] private GameObject defaultController;
+    [SerializeField] private GameObject flyCamController;
+    public bool isFlyCam = false;
+    public int coins = 0;
+    
 
     public static GameManager Instance
     {
@@ -37,11 +44,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        ChangeController(isFlyCam);
+
+    }
+
     private int score = 0;
 
     public void IncreaseScore()
     {
         score++;
         Debug.Log("Score: " + score);
+    }
+
+    private void ChangeController(bool isFly)
+    {
+        if (isFly)
+        {
+            flyCamController.SetActive(true);
+            defaultController.SetActive(false);
+        }
+        else
+        {
+            flyCamController.SetActive(false);
+            defaultController.SetActive(true);
+        }
+    }
+
+    public void IncreaseCoins()
+    {
+        coins++;
     }
 }
