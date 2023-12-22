@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +9,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject defaultController;
     [SerializeField] private GameObject flyCamController;
+    public Image fadeImage;
+    public float fadeSpeed = 1.0f;
+    
     public bool isFlyCam = false;
     public int coins = 0;
     
@@ -47,6 +52,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ChangeController(isFlyCam);
+        fadeImage.gameObject.SetActive(true);
+        FadeOut();
 
     }
 
@@ -75,5 +82,21 @@ public class GameManager : MonoBehaviour
     public void IncreaseCoins()
     {
         coins++;
+    }
+    
+    public void FadeIn()
+    {
+        fadeImage.DOFade(1.0f, fadeSpeed).OnComplete(AfterFade);
+    }
+    
+    public void FadeOut()
+    {
+        fadeImage.DOFade(0.0f, fadeSpeed).OnComplete(AfterFade);
+    }
+    
+    private void AfterFade()
+    {
+        Debug.Log("Fade completed! Do something here.");
+        // Дополнительные действия после завершения анимации
     }
 }
