@@ -351,6 +351,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1670006972}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &333706541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333706542}
+  m_Layer: 0
+  m_Name: MeshAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &333706542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333706541}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.70701146, y: 0.01159785, z: 0.011597853, w: 0.7070119}
+  m_LocalPosition: {x: 0.007, y: 1.439, z: 0.387}
+  m_LocalScale: {x: 28, y: 28, z: 28}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 135756641613574979}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &746329221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -734,6 +765,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1940329150}
+  - {fileID: 543450652645747619}
   - {fileID: 757496462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -770,7 +802,7 @@ MonoBehaviour:
   flyCamController: {fileID: 1940329144}
   fadeImage: {fileID: 1834240475}
   fadeSpeed: 2
-  isFlyCam: 0
+  isFlyCam: 1
   coins: 0
 --- !u!4 &1443635185
 Transform:
@@ -1660,7 +1692,7 @@ Transform:
   - {fileID: 1021341127168817547}
   - {fileID: 4644297670730840971}
   - {fileID: 2145364987317118011}
-  m_Father: {fileID: 135756641613574979}
+  m_Father: {fileID: 1193300721}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 1.88}
 --- !u!65 &554430839759958051
 BoxCollider:
@@ -1877,6 +1909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652645747619}
+  - component: {fileID: 919132148103328026}
   m_Layer: 0
   m_Name: cockroachLowPoly
   m_TagString: Untagged
@@ -1884,6 +1917,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132148103328026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148103328025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1530a87279ddbe4fbec578aa2557580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchor: {fileID: 333706542}
 --- !u!1 &952495603799152883
 GameObject:
   m_ObjectHideFlags: 0
@@ -6871,7 +6917,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       insertIndex: 0
-      addedObject: {fileID: 543450652645747619}
+      addedObject: {fileID: 333706542}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
 --- !u!65 &5400588793975755839
