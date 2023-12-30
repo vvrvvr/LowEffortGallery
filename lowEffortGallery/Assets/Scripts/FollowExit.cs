@@ -2,7 +2,21 @@ using UnityEngine;
 
 public class FollowExit : MonoBehaviour
 {
-    public Transform anchor;
+    public Transform anchorDefaultController;
+    private Transform anchor;
+    public Transform anchorFlyCam;
+
+    private void Start()
+    {
+        if (GameManager.Instance.isFlyCam)
+        {
+            anchor = anchorFlyCam;
+        }
+        else
+        {
+            anchor = anchorDefaultController;
+        }
+    }
 
     void Update()
     {
@@ -13,4 +27,5 @@ public class FollowExit : MonoBehaviour
             transform.position = anchorPosition;
         }
     }
+    
 }

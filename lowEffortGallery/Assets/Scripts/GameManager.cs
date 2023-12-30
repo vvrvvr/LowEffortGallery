@@ -99,4 +99,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("Fade completed! Do something here.");
         // Дополнительные действия после завершения анимации
     }
+
+    public void LoadNextLevel()
+    {
+        FadeIn();
+        DOTween.Sequence()
+            .AppendInterval(fadeSpeed)  
+            .OnComplete(afterWait);
+    }
+    void afterWait()
+    {
+        Debug.Log("After waiting!");
+    }
 }
