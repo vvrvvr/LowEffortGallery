@@ -10,7 +10,7 @@ public class AxisMovement : MonoBehaviour
     public bool axisY = false;
     public bool axisZ = false;
 
-    void Update()
+    void FixedUpdate()
     {
         float moveInput = Input.GetAxis(inputAxis);
         float newPosition = GetNewPosition(moveInput);
@@ -21,11 +21,11 @@ public class AxisMovement : MonoBehaviour
     float GetNewPosition(float input)
     {
         if (axisX)
-            return transform.position.x + input * speed * Time.deltaTime;
+            return transform.position.x + input * speed * Time.fixedDeltaTime;
         else if (axisY)
-            return transform.position.y + input * speed * Time.deltaTime;
+            return transform.position.y + input * speed * Time.fixedDeltaTime;
         else if (axisZ)
-            return transform.position.z + input * speed * Time.deltaTime;
+            return transform.position.z + input * speed * Time.fixedDeltaTime;
 
         return transform.position.y; // Default to Y-axis if none is selected
     }
