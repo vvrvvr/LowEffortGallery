@@ -11,7 +11,10 @@ public class ExitSequence : MonoBehaviour
         {
             isOnce = false;
             Debug.Log("StartSequence");
-            _playableDirector.Play();
+            if (_playableDirector != null)
+                _playableDirector.Play();
+            else
+                Exit();
         }
     }
 
