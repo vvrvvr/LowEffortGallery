@@ -17,6 +17,12 @@ public class CryptidController : MonoBehaviour
             Debug.LogError("Cryptid object is not assigned!");
         }
         cryptidObject.SetActive(false);
+        
+        MeshRenderer currentMeshRenderer = GetComponent<MeshRenderer>();
+        if (currentMeshRenderer != null)
+        {
+            currentMeshRenderer.enabled = false;
+        }
     }
     
     private void OnTriggerEnter(Collider other)
