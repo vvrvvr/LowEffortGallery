@@ -1653,7 +1653,7 @@ MonoBehaviour:
   flyCamController: {fileID: 1940329144}
   fadeImage: {fileID: 1834240475}
   fadeSpeed: 2
-  isFlyCam: 1
+  isFlyCam: 0
   coins: 0
 --- !u!4 &1443635185
 Transform:
@@ -2145,6 +2145,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fly Cam
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523452871067122170, guid: 93e0c8f325173bd479f16ba90ef1d72a,
+        type: 3}
+      propertyPath: m_HDR
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572945980171725517, guid: 93e0c8f325173bd479f16ba90ef1d72a,
+        type: 3}
+      propertyPath: m_RendererIndex
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
