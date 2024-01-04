@@ -4658,6 +4658,7 @@ MonoBehaviour:
   photoObject: {fileID: 41050747}
   folderName: galleryFiles
   fileNamePrefix: Screenshot
+  maskTexture: {fileID: 2800000, guid: ef842315cf3da0a478e3399c36dc0d91, type: 3}
 --- !u!1 &1296494154
 GameObject:
   m_ObjectHideFlags: 0
