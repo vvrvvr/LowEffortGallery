@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class CaptureScreenshot : MonoBehaviour
 {
+    [SerializeField] private PhotoWarning _photoWarning;
     public Camera cameraToCapture;
     public Texture2D maskTexture;
     private Texture2D savedTexture;
     public bool isApplyMaskToPhoto = true;
     private bool isOnce = true;
+    
 
     private void Start()
     {
@@ -35,6 +37,7 @@ public class CaptureScreenshot : MonoBehaviour
     public void MakeScreenshot()
     {
         cameraToCapture.gameObject.SetActive(true);
+        _photoWarning.DisableWarning();
 
         // Capture the screenshot
         RenderTexture renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
