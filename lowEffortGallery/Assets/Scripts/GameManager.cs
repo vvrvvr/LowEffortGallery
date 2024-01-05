@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class GameManager : MonoBehaviour
     
     public bool isFlyCam = false;
     public int coins = 0;
+    
+    public string folderName = "galleryFiles";
+    public string fileNamePrefix = "Screenshot";
+
+    private int screenshotCount = 0;
+    public Texture2D[] texturesArray= new Texture2D[3];
     
 
     public static GameManager Instance
@@ -55,6 +62,20 @@ public class GameManager : MonoBehaviour
         fadeImage.gameObject.SetActive(true);
         FadeOut();
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+           
+               // ApplySavedTexture();
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Debug.Log("saved");
+           // SaveTextureToFile();
+        }
     }
 
     private int score = 0;
@@ -110,5 +131,44 @@ public class GameManager : MonoBehaviour
     void afterWait()
     {
         Debug.Log("After waiting!");
+    }
+
+
+    public void SavePhotoTextureToArray(Texture2D textureToSave)
+    {
+        texturesArray[screenshotCount] = textureToSave;
+        screenshotCount++;
+        if (screenshotCount >= texturesArray.Length)
+        {
+            screenshotCount = 0;
+        }
+    }
+    private void ApplySavedTexture(Texture2D choosenTexture, GameObject photoObject)
+    {
+        // Apply the saved texture to the photoObject
+        Renderer renderer = photoObject.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.material.mainTexture = choosenTexture;
+            Debug.Log("Texture applied to photoObject");
+        }
+        else
+        {
+            Debug.LogError("photoObject does not have a Renderer component");
+        }
+    }
+
+    public void SaveTextureToFile(Texture2D choosenTexture)
+    {
+        // Create the folder if it does not exist
+        string folderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), folderName);
+        if (!Directory.Exists(folderPath))
+        {
+            Directory.CreateDirectory(folderPath);
+        }
+        // Save texture to file
+        string filePath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), folderName, fileNamePrefix + screenshotCount.ToString() + ".png");
+        byte[] bytes = choosenTexture.EncodeToPNG();
+        File.WriteAllBytes(filePath, bytes);
     }
 }

@@ -1,41 +1,34 @@
 using UnityEngine;
-using System.IO;
 
 public class CaptureScreenshot : MonoBehaviour
 {
     public Camera cameraToCapture;
-    public GameObject photoObject;
-    public string folderName = "galleryFiles";
-    public string fileNamePrefix = "Screenshot";
-
-    private int screenshotCount = 1;
-    private Texture2D savedTexture;
     public Texture2D maskTexture;
+    private Texture2D savedTexture;
+    public bool isApplyMaskToPhoto = true;
+    private bool isOnce = true;
 
     private void Start()
     {
         cameraToCapture.gameObject.SetActive(false);
     }
 
-    private void Update()
+    private void Update() //удалить метод
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            Debug.Log("pressed");
+            Debug.Log("pressed P for photo");
             MakeScreenshot();
         }
-
-        if (Input.GetKeyDown(KeyCode.O))
+        
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && isOnce)
         {
-            if (savedTexture != null)
-            {
-                ApplySavedTexture();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            Debug.Log("saved");
-            SaveTextureToFile();
+            isOnce = false;
+            MakeScreenshot();
         }
     }
 
@@ -52,22 +45,24 @@ public class CaptureScreenshot : MonoBehaviour
         savedTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         savedTexture.Apply();
 
-        // Increment the screenshot count
-        screenshotCount++;
-
         cameraToCapture.targetTexture = null;
         RenderTexture.active = null;
         Destroy(renderTexture);
 
         // Apply the mask texture
-        ApplyMaskToTexture();
+        if(isApplyMaskToPhoto)
+            ApplyMaskToTexture();
 
         cameraToCapture.gameObject.SetActive(false);
+        
+        GameManager.Instance.SavePhotoTextureToArray(savedTexture);
+        savedTexture = null;
+        
         Debug.Log("screenshot made");
     }
     private void ApplyMaskToTexture()
     {
-        if (savedTexture == null || maskTexture == null)
+        if ( maskTexture == null)
         {
             Debug.LogError("savedTexture or maskTexture is null. Make sure they are initialized.");
             return;
@@ -106,32 +101,5 @@ public class CaptureScreenshot : MonoBehaviour
         RenderTexture.ReleaseTemporary(rt);
         return resizedTexture;
     }
-    private void ApplySavedTexture()
-    {
-        // Apply the saved texture to the photoObject
-        Renderer renderer = photoObject.GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            renderer.material.mainTexture = savedTexture;
-            Debug.Log("Texture applied to photoObject");
-        }
-        else
-        {
-            Debug.LogError("photoObject does not have a Renderer component");
-        }
-    }
-
-    public void SaveTextureToFile()
-    {
-        // Create the folder if it does not exist
-        string folderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), folderName);
-        if (!Directory.Exists(folderPath))
-        {
-            Directory.CreateDirectory(folderPath);
-        }
-        // Save texture to file
-        string filePath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), folderName, fileNamePrefix + screenshotCount.ToString() + ".png");
-        byte[] bytes = savedTexture.EncodeToPNG();
-        File.WriteAllBytes(filePath, bytes);
-    }
+   
 }
