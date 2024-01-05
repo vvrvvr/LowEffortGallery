@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using System.IO;
 
@@ -73,7 +72,7 @@ public class CaptureScreenshot : MonoBehaviour
             Debug.LogError("savedTexture or maskTexture is null. Make sure they are initialized.");
             return;
         }
-
+        
         // Make sure the mask texture has the same dimensions as the captured image
         maskTexture = ResizeTexture(maskTexture, savedTexture.width, savedTexture.height);
 
@@ -83,8 +82,8 @@ public class CaptureScreenshot : MonoBehaviour
 
         for (int i = 0; i < pixels.Length; i++)
         {
-            // If the mask pixel is not fully black, replace the corresponding pixel in the saved texture
-            if (maskPixels[i].r > 0 || maskPixels[i].g > 0 || maskPixels[i].b > 0)
+            // If the mask pixel is not alpha, replace the corresponding pixel in the saved texture
+            if (maskPixels[i].a != 0)
             {
                 pixels[i] = maskPixels[i];
             }
