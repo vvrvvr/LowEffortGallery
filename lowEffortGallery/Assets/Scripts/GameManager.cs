@@ -171,4 +171,14 @@ public class GameManager : MonoBehaviour
         byte[] bytes = choosenTexture.EncodeToPNG();
         File.WriteAllBytes(filePath, bytes);
     }
+
+    public void PhotoFlash()
+    {
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(fadeImage.DOColor(Color.white, 0f));
+        sequence.Append(fadeImage.DOFade(1f, 0.2f));
+        sequence.Append(fadeImage.DOFade(0f, 0.4f));
+        sequence.Append(fadeImage.DOColor(Color.black, 0f));
+        sequence.Append(fadeImage.DOFade(0f, 0f));
+    }
 }

@@ -38,6 +38,8 @@ public class CaptureScreenshot : MonoBehaviour
     {
         cameraToCapture.gameObject.SetActive(true);
         _photoWarning.DisableWarning();
+        
+        GameManager.Instance.PhotoFlash();
 
         // Capture the screenshot
         RenderTexture renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
