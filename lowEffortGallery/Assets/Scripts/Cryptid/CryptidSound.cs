@@ -7,11 +7,11 @@ public class CryptidSound : MonoBehaviour
 
     private void Start()
     {
-        MeshRenderer currentMeshRenderer = GetComponent<MeshRenderer>();
-        if (currentMeshRenderer != null)
-        {
-            currentMeshRenderer.enabled = false;
-        }
+        // MeshRenderer currentMeshRenderer = GetComponent<MeshRenderer>();
+        // if (currentMeshRenderer != null)
+        // {
+        //     currentMeshRenderer.enabled = false;
+        // }
     }
 
     private void OnTriggerEnter(Collider other)
