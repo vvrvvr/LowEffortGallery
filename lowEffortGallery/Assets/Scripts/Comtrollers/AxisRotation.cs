@@ -3,28 +3,40 @@ using UnityEngine;
 public class AxisRotation : MonoBehaviour
 {
     public float rotationSpeed = 5f;
-    public string inputAxis = "Vertical";
+    public string inputHorizontalAxis = "Horizontal";
+    public string inputVerticalAxis = "Vertical";
     public bool rotateAroundX = true;
     public bool rotateAroundY = false;
     public bool rotateAroundZ = false;
+    public bool isLimiter = false;
 
     void FixedUpdate()
     {
-        float rotateInput = Input.GetAxis(inputAxis);
-        Vector3 newRotation = GetNewRotation(rotateInput);
+        float rotateInputHorizontal = Input.GetAxis(inputHorizontalAxis);
+        float rotateInputVertical = Input.GetAxis(inputVerticalAxis);
+        
+        if (isLimiter)
+        {
+            rotateInputHorizontal = Mathf.Clamp(rotateInputHorizontal, 0, 1);
+            rotateInputVertical = Mathf.Clamp(rotateInputVertical, 0, 1);
+        }
+
+        Vector3 newRotation = GetNewRotation(rotateInputHorizontal, rotateInputVertical);
         SetNewRotation(newRotation);
     }
 
-    Vector3 GetNewRotation(float input)
+    Vector3 GetNewRotation(float inputHorizontal, float inputVertical)
     {
         Vector3 rotation = Vector3.zero;
 
         if (rotateAroundX)
-            rotation.x = input * rotationSpeed * Time.fixedDeltaTime;
-        else if (rotateAroundY)
-            rotation.y = input * rotationSpeed * Time.fixedDeltaTime;
-        else if (rotateAroundZ)
-            rotation.z = input * rotationSpeed * Time.fixedDeltaTime;
+            rotation.x = inputVertical * rotationSpeed * Time.fixedDeltaTime + inputHorizontal * rotationSpeed * Time.fixedDeltaTime;
+        
+        if (rotateAroundY)
+            rotation.y = inputVertical * rotationSpeed * Time.fixedDeltaTime + inputHorizontal * rotationSpeed * Time.fixedDeltaTime;
+
+        if (rotateAroundZ)
+            rotation.z = inputVertical * rotationSpeed * Time.fixedDeltaTime + inputHorizontal * rotationSpeed * Time.fixedDeltaTime;
 
         return rotation;
     }
