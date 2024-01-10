@@ -4,14 +4,11 @@ public class CryptidSound : MonoBehaviour
 {
     
     private bool isOnce = true;
+    private AudioSource _audio;
 
     private void Start()
     {
-        // MeshRenderer currentMeshRenderer = GetComponent<MeshRenderer>();
-        // if (currentMeshRenderer != null)
-        // {
-        //     currentMeshRenderer.enabled = false;
-        // }
+        _audio = gameObject.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,6 +17,7 @@ public class CryptidSound : MonoBehaviour
         {
             Debug.Log("cryptid sound");
             isOnce = false;
+            _audio.Play();
             
         }
     }

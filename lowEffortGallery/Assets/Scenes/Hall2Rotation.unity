@@ -9117,7 +9117,7 @@ GameObject:
   - component: {fileID: 1274595749195892580}
   - component: {fileID: 7786670629331674720}
   - component: {fileID: 4229027466446084695}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9558,7 +9558,7 @@ GameObject:
   - component: {fileID: 7281294354472766076}
   - component: {fileID: 4102832834733531557}
   - component: {fileID: 3248497972893386413}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L_midleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9937,6 +9937,7 @@ GameObject:
   - component: {fileID: 1409807827003698845}
   - component: {fileID: 2972443290119555561}
   - component: {fileID: 8539700775885982711}
+  - component: {fileID: 8539700775885982712}
   m_Layer: 3
   m_Name: CryptidSound
   m_TagString: Untagged
@@ -10085,7 +10086,7 @@ GameObject:
   - component: {fileID: 3737906463017701795}
   - component: {fileID: 5043517005106941380}
   - component: {fileID: 6719011435115375772}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R_forleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10521,14 +10522,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6589383792952680050}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.108367875, z: -0, w: 0.9941109}
+  m_LocalRotation: {x: 0, y: 0.9961413, z: -0, w: -0.08776426}
   m_LocalPosition: {x: 42.114, y: 0.06000004, z: 25.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6431752265571626739}
   m_Father: {fileID: 8190486020058206401}
-  m_LocalEulerAnglesHint: {x: 0, y: 17.984, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 190.07, z: 0}
 --- !u!54 &2972443290119555561
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10580,7 +10581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8273551786682226639}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: leg_grp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10750,7 +10751,7 @@ GameObject:
   - component: {fileID: 2596504706475366537}
   - component: {fileID: 6042431314734912735}
   - component: {fileID: 1622415449201710710}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R_antena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10766,7 +10767,7 @@ Transform:
   m_GameObject: {fileID: 1619523417988559359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.22, y: 0, z: -0.4}
+  m_LocalPosition: {x: -3.467, y: 0, z: -0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10801,7 +10802,7 @@ GameObject:
   - component: {fileID: 887389503891461976}
   - component: {fileID: 6360722077390235253}
   - component: {fileID: 6574678961010585743}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R_midleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10959,7 +10960,7 @@ GameObject:
   - component: {fileID: 7883571756775652733}
   - component: {fileID: 75306655500720831}
   - component: {fileID: 1125006050152120033}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L_mesothorax
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11073,14 +11074,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8536945037540393419}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.8, y: -1.23, z: 0.65}
+  m_LocalRotation: {x: 0.000000009313225, y: -0, z: -0.20752975, w: 0.9782287}
+  m_LocalPosition: {x: -3.94, y: -1.68, z: -7.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8896789213152642535}
   m_Father: {fileID: 6431752265571626739}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -23.955}
 --- !u!23 &3877584945138053468
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11301,7 +11302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1101993210521722053}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: mesothorax_grp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11359,7 +11360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3845598222833406457}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: wings_grp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11507,7 +11508,7 @@ GameObject:
   - component: {fileID: 838140435000165578}
   - component: {fileID: 6688627524265415919}
   - component: {fileID: 3877584945138053468}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L_antena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11617,7 +11618,7 @@ GameObject:
   - component: {fileID: 3818972271458450961}
   - component: {fileID: 7739683732243876895}
   - component: {fileID: 4866586607517721111}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R_hindleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11693,7 +11694,7 @@ GameObject:
   - component: {fileID: 615321160384719035}
   - component: {fileID: 1325121630177448597}
   - component: {fileID: 4148751860293693125}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R_wing01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11852,7 +11853,7 @@ GameObject:
   - component: {fileID: 5193964547602089052}
   - component: {fileID: 2459080432313754109}
   - component: {fileID: 4200104846391474409}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R_mesothorax
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11939,7 +11940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4363666724693677519}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: wings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11965,7 +11966,7 @@ GameObject:
   - component: {fileID: 33867260906701081}
   - component: {fileID: 4492206607552954077}
   - component: {fileID: 3745940088594929194}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L_wings01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12558,7 +12559,7 @@ GameObject:
   - component: {fileID: 2559179890228709770}
   - component: {fileID: 3862124286234683032}
   - component: {fileID: 7404765564289029422}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L_wings02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12576,7 +12577,7 @@ GameObject:
   - component: {fileID: 9223263831263624902}
   - component: {fileID: 4730616427842054554}
   - component: {fileID: 6479419573041930170}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R_wing02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12928,7 +12929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8896789213152642535}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: cockroachLowPoly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12973,7 +12974,7 @@ GameObject:
   - component: {fileID: 316550060758488147}
   - component: {fileID: 4784124316373736889}
   - component: {fileID: 7466925011238350095}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L_hindleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13045,7 +13046,7 @@ GameObject:
   - component: {fileID: 4983268284945098806}
   - component: {fileID: 3171048395103931886}
   - component: {fileID: 6868485032855934250}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13143,7 +13144,7 @@ GameObject:
   - component: {fileID: 9061612474881543299}
   - component: {fileID: 758133958014237804}
   - component: {fileID: 763956940041902638}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CryptidMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13162,6 +13163,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &8539700775885982712
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619523417988559359}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2062bfa22f992a4db1ef771b707fd9d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.05
+  m_Pitch: 0.5
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8631473842223389653
 GameObject:
   m_ObjectHideFlags: 0
@@ -13173,7 +13270,7 @@ GameObject:
   - component: {fileID: 2296259460413094758}
   - component: {fileID: 7154288973225661476}
   - component: {fileID: 3098703522644787042}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L_forleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13205,7 +13302,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.55547476, y: 0.086522564, z: -0.19588318, w: 0.80348706}
   m_LocalPosition: {x: -0.016000282, y: 0.16999999, z: -0.5099998}
-  m_LocalScale: {x: 20.017002, y: 20.017002, z: 20.017}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7468217082789098401}
@@ -13273,7 +13370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7468217082789098401}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: antena_grp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

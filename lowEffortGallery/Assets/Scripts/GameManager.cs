@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     private int screenshotCount = 0;
     public Texture2D[] texturesArray= new Texture2D[3];
+    public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
     
 
     public static GameManager Instance
