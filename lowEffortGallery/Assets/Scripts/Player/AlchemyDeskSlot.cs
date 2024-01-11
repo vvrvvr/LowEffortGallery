@@ -7,6 +7,9 @@ public class AlchemyDeskSlot : MonoBehaviour
     [SerializeField] private Transform itemPlace;
     private InterfaceObject currentInterface = null;
     private Coroutine wait;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Animator counterAnimator;
+    public ParticleSystem particles;
         
 
     public bool isSlotBusy = false;
@@ -14,6 +17,7 @@ public class AlchemyDeskSlot : MonoBehaviour
     void Start()
     {
         outline.SetActive(false);
+        animator.enabled = false;
     }
 
     private void OnEnable()
@@ -64,6 +68,11 @@ public class AlchemyDeskSlot : MonoBehaviour
     public void ApplyBuy()
     {
         currentInterface.DeleteInterface();
+        animator.enabled = false;
+        animator.enabled = true;
+        counterAnimator.enabled = false;
+        counterAnimator.enabled = true;
+        particles.Play();
         currentInterface = null;
         isSlotBusy = false;
     }
