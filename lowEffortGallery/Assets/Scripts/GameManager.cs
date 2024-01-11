@@ -3,6 +3,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using System.IO;
+using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
     private int screenshotCount = 0;
     public Texture2D[] texturesArray= new Texture2D[3];
     public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
+    private CinemachineImpulseSource impulseSource;
+    public float impulsePower;
     
 
     public static GameManager Instance
@@ -62,6 +65,7 @@ public class GameManager : MonoBehaviour
         ChangeController(isFlyCam);
         fadeImage.gameObject.SetActive(true);
         FadeOut();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
 
     }
 
@@ -193,6 +197,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            impulseSource.GenerateImpulse(impulsePower);
             Debug.Log("cant buy");
         }
     }
