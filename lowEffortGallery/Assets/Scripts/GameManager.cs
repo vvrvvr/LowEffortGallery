@@ -189,6 +189,7 @@ public class GameManager : MonoBehaviour
         {
             coins -= obj.cost;
             obj.isBought = true;
+            obj.InterfaceBought();
         }
         else
         {

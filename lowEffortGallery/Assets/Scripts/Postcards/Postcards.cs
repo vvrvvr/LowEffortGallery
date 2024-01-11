@@ -3,6 +3,7 @@ using UnityEngine;
 public class Postcards : MonoBehaviour
 {
     public GameObject[] _postcards = new GameObject[3];
+    public GameObject[] _priceTags = new GameObject[3];
     
 
     private void Start()
@@ -22,6 +23,7 @@ public class Postcards : MonoBehaviour
         for (; postcardCounter < _postcards.Length; postcardCounter++)
         {
             _postcards[postcardCounter].SetActive(false);
+            _priceTags[postcardCounter].SetActive(false);
         }
     }
     

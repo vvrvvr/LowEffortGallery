@@ -9,7 +9,8 @@ public class InterfaceObject : MonoBehaviour
     [SerializeField] private float targetScale = 0.5f;
     [SerializeField] private float scaleTime = 0.2f;
     public float rotationSpeed = 1f;
-    public List<GameObject> connectedObjects = new List<GameObject>();
+    public GameObject pricetag;
+    private Pricetag priceTagScript;
     private Vector3 _originalScale;
     private bool _isScaling = false;
     private bool _isRotating = false;
@@ -45,6 +46,9 @@ public class InterfaceObject : MonoBehaviour
         }
         if (transform.parent != null)
             _parentObj = transform.parent;
+        
+        priceTagScript = pricetag.GetComponent<Pricetag>();
+        priceTagScript.ActivatePriceTag(cost);
     }
     
 
@@ -146,12 +150,14 @@ public class InterfaceObject : MonoBehaviour
 
     public void DeleteInterface()
     {
-        foreach (var obj in connectedObjects)
-        {
-            Destroy(obj);
-        }
+        Destroy(pricetag);
         Destroy(gameObject);
         
+    }
+
+    public void InterfaceBought()
+    {
+        priceTagScript.ActivatepriceTagBought();
     }
     
 }
