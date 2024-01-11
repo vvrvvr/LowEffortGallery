@@ -50,21 +50,41 @@ public class ObjectInteraction : MonoBehaviour
             {
                 heldObject = hit.collider.gameObject;
                 var heldObjectInterface = heldObject.GetComponent<InterfaceObject>();
-                if (heldObjectInterface.CanTake)
+                if (heldObjectInterface.isBought) 
                 {
-                    heldObjectInterface.IsTaken();
-                    EventManager.OnItemHeld.Invoke();
-                    heldObject.transform.parent = heldObjectLocalPosition;
-                    heldObject.transform.localPosition = Vector3.zero;
-                    heldObject.transform.localRotation = quaternion.identity;
-                    // _characterController.radius = 1f;
-                    cursor.SetActive(false);
+                   TakeObject(heldObjectInterface);
+                }
+                else
+                {
+                    GameManager.Instance.BuyObject(heldObjectInterface);
+                    if (heldObjectInterface.isBought) 
+                    {
+                        TakeObject(heldObjectInterface);
+                    }
+                    else
+                    {
+                        heldObject = null;
+                    }
                 }
             }
         }
         else
         {
             pointerImage.sprite = null;
+        }
+    }
+
+    public void TakeObject(InterfaceObject heldObjectInterface)
+    {
+        if (heldObjectInterface.CanTake)
+        {
+            heldObjectInterface.IsTaken();
+            EventManager.OnItemHeld.Invoke();
+            heldObject.transform.parent = heldObjectLocalPosition;
+            heldObject.transform.localPosition = Vector3.zero;
+            heldObject.transform.localRotation = quaternion.identity;
+            // _characterController.radius = 1f;
+            cursor.SetActive(false);
         }
     }
 }

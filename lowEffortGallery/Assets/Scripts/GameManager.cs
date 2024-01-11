@@ -182,4 +182,17 @@ public class GameManager : MonoBehaviour
         sequence.Append(fadeImage.DOColor(Color.black, 0f));
         sequence.Append(fadeImage.DOFade(0f, 0f));
     }
+
+    public void BuyObject(InterfaceObject obj)
+    {
+        if (coins >= obj.cost)
+        {
+            coins -= obj.cost;
+            obj.isBought = true;
+        }
+        else
+        {
+            Debug.Log("cant buy");
+        }
+    }
 }

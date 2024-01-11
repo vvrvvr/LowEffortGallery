@@ -8,7 +8,7 @@ public class InterfaceObject : MonoBehaviour
 {
     [SerializeField] private float targetScale = 0.5f;
     [SerializeField] private float scaleTime = 0.2f;
-    [SerializeField] private float rotationSpeed = 1f;
+    public float rotationSpeed = 1f;
     public List<GameObject> connectedObjects = new List<GameObject>();
     private Vector3 _originalScale;
     private bool _isScaling = false;
@@ -16,6 +16,8 @@ public class InterfaceObject : MonoBehaviour
     private Coroutine _rotateCoroutine;
     private Coroutine _moveToCoroutine;
     private Rigidbody _rb;
+    public int cost = 1;
+    public bool isBought = false;
 
     private bool _isDropped = false;
     public bool isOnscreen = true;
