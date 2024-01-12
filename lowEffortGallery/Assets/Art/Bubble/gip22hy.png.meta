@@ -1,0 +1,1742 @@
+fileFormatVersion: 2
+guid: 8f5f8697faf1cb443b8ca4f35adc289f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gip22hy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1310
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337d57232a77de84b85e84901eeaff8d
+      internalID: 1358447379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1310
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eddcca04da7ad74bae22949518bf75d
+      internalID: 1719450838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_2
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1310
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd6c5ac9ef716a48a2f36892f11683c
+      internalID: -1549643969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_3
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1310
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07e5f57ca2f4ad4d92a09ad8f4c4489
+      internalID: -415594895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_4
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1310
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb897f292ae2d704181b8584be936dac
+      internalID: 1459505754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_5
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1310
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b674a164cec164a9b68e0a1e9fb16e
+      internalID: -1047258951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_6
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1310
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a29ecfdfb8b60a44ab51df794ed9949
+      internalID: -1267900244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1179
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984e7be3c19763340806fb3f625b1ed3
+      internalID: 1113891831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_8
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1179
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06705dd8f98abc48a22c32a723fb79a
+      internalID: 1446827670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_9
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1179
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbec7e33a6e046246926910975222d53
+      internalID: 475994528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_10
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1179
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0adfdddad683b4e8a51efe9ac96052
+      internalID: 760674953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_11
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1179
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc5d51e42ca1dd4191f21ce17f25a86
+      internalID: 828941740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_12
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1179
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11435a6223e7dd04ea7e39ed0823ad72
+      internalID: 1599298345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_13
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1179
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb3a3c46221129439035244a1f1f129
+      internalID: -912428940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1048
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62cee9c1c29e5144adcf5c0bbaf945d
+      internalID: -1338995983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_15
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1048
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2491c69002d784dad3b0e76568171a
+      internalID: -1462134081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_16
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1048
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10807c4f294fee45976cbf0c926e3b2
+      internalID: -2103647789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_17
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1048
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69f6add77bf5234893b46788b3b0213
+      internalID: -26394989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_18
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1048
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4500205e2e3a1ea4eaf7d4f322ac2fa5
+      internalID: 1851133154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_19
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1048
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5baa5e66d4907364cace3d1a49343076
+      internalID: -1016130956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_20
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1048
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3690b59627994ed4fa06671994a56c2e
+      internalID: 2028946831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 917
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d401e7c75075146a8b5c123ca989f9
+      internalID: -1961404040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_22
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 917
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7ffe3faebc87143b87e65190eb994b
+      internalID: 1650280321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_23
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 917
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c996000436d844ba14a37a26cf5060
+      internalID: 1486648284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_24
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 917
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e1ac3731655bf468e04a31674027ff
+      internalID: -1560039084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_25
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 917
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c851bd575c58943b93231db3e9e0c0
+      internalID: 393436689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_26
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 917
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8000c3da98e2d294ba240b9dcad63a63
+      internalID: -1139090142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_27
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 917
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6856feffc7a15234fa9bf815576c263b
+      internalID: -1466579820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 786
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da60c6d26613f044e95796bd2b1dd5b4
+      internalID: -1603483029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_29
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 786
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16edcf08d638974ca09a4a7171559a8
+      internalID: 799550119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_30
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 786
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1dcbbef8beeb843832a528c5bcbf98
+      internalID: 726810939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_31
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 786
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfffe37669d0ba41aa016b4d99a2ba2
+      internalID: 809364820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_32
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 786
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278595edf00552349942b3afff1073b6
+      internalID: -1645137977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_33
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 786
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619ee5d42b491554699c7d22258c0edd
+      internalID: 1962930544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_34
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 786
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6085b9d412b007148adff98818cf1730
+      internalID: 670462478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 655
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0eb97817ee97641918836874d9809c
+      internalID: 145307319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_36
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 655
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97b7e81d332f9b449128b4cd188d52c
+      internalID: 1776385622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_37
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 655
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f9444afed1afb46a25f14451241de6
+      internalID: 1903157007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_38
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 655
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ed10996ba029f4ea9ba1bed71f5d2a
+      internalID: -464550842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_39
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 655
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9bb845bad28cc4884cc2b85e8696a9
+      internalID: -1545247208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_40
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 655
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3d866ad89f30947946a8c94edcfa08
+      internalID: -1237498974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_41
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 655
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a160ef88517f3042b2f2ed2741d5528
+      internalID: -686158888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 524
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ec46926b85a214486b49f8dafad444
+      internalID: 1260363951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_43
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 524
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc533f6a0ab1d79448c6138ee0e57182
+      internalID: -1127913050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_44
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 524
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958d71f7c36e711479536c5603d2e2b8
+      internalID: 86724986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_45
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 524
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5a52875810395439295a0b7e67af2c
+      internalID: 2013542102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_46
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 524
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e4803faed068845baeadd1b8d6616a
+      internalID: -1428475761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_47
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 524
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c889f8dd09f2849bd378e8ef5544d0
+      internalID: 1399259257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_48
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 524
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48eb3ee776d6de94bbca7a14224c0d9b
+      internalID: 2111935294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 393
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf78ec522140b664f92efc61025fe8f3
+      internalID: -1886692699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_50
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 393
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ff537254eb5bb4295937ed59ff583e
+      internalID: -693951238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_51
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 393
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28a84fb8438c2049beae662248d559e
+      internalID: -2006244648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_52
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 393
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f73c3b2526b14a4fa66b12fdfa246e6
+      internalID: 1335544918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_53
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 393
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9277dd67c6a0d478575ea64fe74d12
+      internalID: 899718165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_54
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 393
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1915de51e52671642bf4936ccbf55dc3
+      internalID: -1617716307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_55
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 393
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1701ce194b8499e4884b6288c9ffa6ec
+      internalID: -1557903163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 262
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba2f678337040741bfcee96c198c562
+      internalID: -1668836392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_57
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 262
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4033c244b42fd047987f9688391ff3b
+      internalID: -298004114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_58
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 262
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591deb5a0a946364f844e90bb6d31efc
+      internalID: -1490610399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_59
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 262
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5e24b6c819dcc4f86d6905101fbd5e
+      internalID: -351783151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_60
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 262
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8186ae60c8d634bbcf9899a7e9a52d
+      internalID: 1693373627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_61
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 262
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0528ae00844c4e947b700bf0f5826f53
+      internalID: -957392292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_62
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 262
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a3d39e72c0cea4082ee58f15b704c5
+      internalID: -2143780253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 131
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b520c0b776aa54f9adb1c0254dc90e
+      internalID: 554643509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_64
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 131
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6188c5fb931b54bb294103748ced86
+      internalID: 1274843967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_65
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 131
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f32c877cb1d8c4b9b021037032438b
+      internalID: 242416850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_66
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 131
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d866e436c81ee924a828ad6c4a5b9743
+      internalID: -1455964725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_67
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 131
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b142bb53c70af8d4596118c99e09f04b
+      internalID: 1347311299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_68
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 131
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c3eeba0b5731a4e8cf963f83fc90d7
+      internalID: 950010505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_69
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 131
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694defad63af82d458ae33d6c0d8cc10
+      internalID: -63934171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27efc0da1e185574daa34019df50e872
+      internalID: -230855705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gip22hy_71
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 0
+        width: 232
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f782f0f1231ee43a3a1742e7fa13bd
+      internalID: 1654100905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gip22hy_0: 1358447379
+      gip22hy_1: 1719450838
+      gip22hy_10: 760674953
+      gip22hy_11: 828941740
+      gip22hy_12: 1599298345
+      gip22hy_13: -912428940
+      gip22hy_14: -1338995983
+      gip22hy_15: -1462134081
+      gip22hy_16: -2103647789
+      gip22hy_17: -26394989
+      gip22hy_18: 1851133154
+      gip22hy_19: -1016130956
+      gip22hy_2: -1549643969
+      gip22hy_20: 2028946831
+      gip22hy_21: -1961404040
+      gip22hy_22: 1650280321
+      gip22hy_23: 1486648284
+      gip22hy_24: -1560039084
+      gip22hy_25: 393436689
+      gip22hy_26: -1139090142
+      gip22hy_27: -1466579820
+      gip22hy_28: -1603483029
+      gip22hy_29: 799550119
+      gip22hy_3: -415594895
+      gip22hy_30: 726810939
+      gip22hy_31: 809364820
+      gip22hy_32: -1645137977
+      gip22hy_33: 1962930544
+      gip22hy_34: 670462478
+      gip22hy_35: 145307319
+      gip22hy_36: 1776385622
+      gip22hy_37: 1903157007
+      gip22hy_38: -464550842
+      gip22hy_39: -1545247208
+      gip22hy_4: 1459505754
+      gip22hy_40: -1237498974
+      gip22hy_41: -686158888
+      gip22hy_42: 1260363951
+      gip22hy_43: -1127913050
+      gip22hy_44: 86724986
+      gip22hy_45: 2013542102
+      gip22hy_46: -1428475761
+      gip22hy_47: 1399259257
+      gip22hy_48: 2111935294
+      gip22hy_49: -1886692699
+      gip22hy_5: -1047258951
+      gip22hy_50: -693951238
+      gip22hy_51: -2006244648
+      gip22hy_52: 1335544918
+      gip22hy_53: 899718165
+      gip22hy_54: -1617716307
+      gip22hy_55: -1557903163
+      gip22hy_56: -1668836392
+      gip22hy_57: -298004114
+      gip22hy_58: -1490610399
+      gip22hy_59: -351783151
+      gip22hy_6: -1267900244
+      gip22hy_60: 1693373627
+      gip22hy_61: -957392292
+      gip22hy_62: -2143780253
+      gip22hy_63: 554643509
+      gip22hy_64: 1274843967
+      gip22hy_65: 242416850
+      gip22hy_66: -1455964725
+      gip22hy_67: 1347311299
+      gip22hy_68: 950010505
+      gip22hy_69: -63934171
+      gip22hy_7: 1113891831
+      gip22hy_70: -230855705
+      gip22hy_71: 1654100905
+      gip22hy_72: -1422344733
+      gip22hy_73: 1862091483
+      gip22hy_74: -714024497
+      gip22hy_75: -1596194449
+      gip22hy_76: -2070291800
+      gip22hy_8: 1446827670
+      gip22hy_9: 475994528
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

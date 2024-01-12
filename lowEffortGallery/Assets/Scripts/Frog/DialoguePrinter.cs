@@ -42,6 +42,7 @@ public class DialoguePrinter : MonoBehaviour
     private void Start()
     {
         DelayObj.SetActive(false);
+        SpeechPanel.SetActive(false);
     }
 
     private void Update()
@@ -49,7 +50,7 @@ public class DialoguePrinter : MonoBehaviour
        
         if (Input.GetKeyDown(KeyCode.N))
         {
-            string[] doorPhrase = new string[] { "Цветов слишком мало для букета", "Цветоsdfsssв слишком мало для букета" };
+            string[] doorPhrase = new string[] { "I fixed this by generating a new font asset and increasing the padding from 5 to 10.", "Take a look at FAQ Question 2 and Question 11 on the TextMesh Pro user forum" };
             NewSay(doorPhrase);
         }
         if (isDialogue)
