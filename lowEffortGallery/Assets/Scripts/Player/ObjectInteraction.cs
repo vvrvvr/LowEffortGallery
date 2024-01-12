@@ -33,7 +33,7 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (DialoguePrinter.instance.isDialogueCantInteract)
         {
-            pointerImage.sprite = null;
+            pointerImage.sprite = crosshair;
             return;
         }
            
@@ -76,7 +76,7 @@ public class ObjectInteraction : MonoBehaviour
         }
         else
         {
-            pointerImage.sprite = null;
+            pointerImage.sprite = crosshair;
         }
     }
 
