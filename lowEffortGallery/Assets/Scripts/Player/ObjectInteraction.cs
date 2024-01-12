@@ -31,6 +31,12 @@ public class ObjectInteraction : MonoBehaviour
 
     void Update()
     {
+        if (DialoguePrinter.instance.isDialogueCantInteract)
+        {
+            pointerImage.sprite = null;
+            return;
+        }
+           
         RaycastHit hit;
         Vector3 fwd = _camera.transform.TransformDirection(Vector3.forward);
 

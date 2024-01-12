@@ -7,6 +7,7 @@ public class DialoguePrinter : MonoBehaviour
 {
     public static DialoguePrinter instance;
     public Elements elements;
+    public GameObject DelayObj;
 
     [System.Serializable]
     public class Elements
@@ -28,8 +29,10 @@ public class DialoguePrinter : MonoBehaviour
     private Coroutine offPanel = null;
 
     private bool isDialogue;
+    public bool isDialogueCantInteract = false;
 
-    public float textSpeed = 0.02f; // Скорость вывода букв
+    public float textSpeed = 0.02f;
+    public float dialogueDelay = 2.0f; // Время задержки после завершения написания фразы
 
     private void Awake()
     {
@@ -38,13 +41,17 @@ public class DialoguePrinter : MonoBehaviour
 
     private void Start()
     {
-        string[] doorPhrase = new string[] { "Цветов слишком мало для букета", "Цветоsdfsssв слишком мало для букета", "ddsf f f " };
-        NewSay(doorPhrase);
-        //Say("слишком мало для буке");
+        DelayObj.SetActive(false);
     }
 
     private void Update()
     {
+       
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            string[] doorPhrase = new string[] { "Цветов слишком мало для букета", "Цветоsdfsssв слишком мало для букета" };
+            NewSay(doorPhrase);
+        }
         if (isDialogue)
         {
             if (Input.GetMouseButtonDown(0) || startSpeaking)
@@ -57,7 +64,8 @@ public class DialoguePrinter : MonoBehaviour
                         if (offPanel != null)
                             StopCoroutine(offPanel);
                         offPanel = null;
-                        SwitchOffTextPanel();
+                        StartCoroutine(SwitchOffTextPanelTimer());
+                        //SwitchOffTextPanel();
                         return;
                     }
 
@@ -65,10 +73,10 @@ public class DialoguePrinter : MonoBehaviour
                     index++;
                 }
                 else if (isSpeaking)
-                {
-                    // Если фраза выводится, завершить вывод сразу
+                {   
+                    DelayObj.SetActive(true);
                     StopSpeaking();
-                    SpeechText.text = str[index-1]; // Отобразить фразу целиком
+                    SpeechText.text = str[index-1];
                     isWaitingForUserInput = true;
                 }
             }
@@ -81,6 +89,7 @@ public class DialoguePrinter : MonoBehaviour
         str = s;
         startSpeaking = true;
         isDialogue = true;
+        isDialogueCantInteract = true;
     }
 
     public void Say(string speech)
@@ -96,10 +105,12 @@ public class DialoguePrinter : MonoBehaviour
             StopCoroutine(speaking);
         }
         speaking = null;
+        
     }
 
     IEnumerator Speaking(string speech)
     {
+        DelayObj.SetActive(false);
         SpeechPanel.SetActive(true);
         targetSpeech = speech;
         SpeechText.text = "";
@@ -108,10 +119,12 @@ public class DialoguePrinter : MonoBehaviour
         while (SpeechText.text != speech)
         {
             SpeechText.text += targetSpeech[SpeechText.text.Length];
-            yield return new WaitForSeconds(textSpeed); // Используйте заданную скорость вывода букв
+            yield return new WaitForSeconds(textSpeed);
         }
+        
+        DelayObj.SetActive(true);
 
-        isWaitingForUserInput = true; // Позволяет игроку пропустить текущую фразу
+        isWaitingForUserInput = true;
         while (isWaitingForUserInput)
             yield return new WaitForEndOfFrame();
 
@@ -121,14 +134,19 @@ public class DialoguePrinter : MonoBehaviour
 
     IEnumerator SwitchOffTextPanelTimer()
     {
-        yield return new WaitForSeconds(4.0f);
+        
         SwitchOffTextPanel();
+        yield return new WaitForSeconds(0.2f);
+        isDialogueCantInteract = false;
+        //yield return new WaitForSeconds(0.5f);
     }
 
     private void SwitchOffTextPanel()
     {
+        DelayObj.SetActive(false);
         SpeechPanel.SetActive(false);
         isDialogue = false;
+        
         index = 0;
         if (offPanel != null)
             StopCoroutine(offPanel);
