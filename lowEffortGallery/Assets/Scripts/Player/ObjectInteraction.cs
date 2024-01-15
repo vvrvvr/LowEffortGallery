@@ -82,6 +82,13 @@ public class ObjectInteraction : MonoBehaviour
 
     public void TakeObject(InterfaceObject heldObjectInterface)
     {
+        if (heldObjectInterface.isCam)
+        {
+            GameManager.Instance.FlyCameraBought();
+            heldObjectInterface.DeleteInterface(true);
+            return;
+        }
+        
         if (heldObjectInterface.CanTake)
         {
             heldObjectInterface.IsTaken();
@@ -92,5 +99,7 @@ public class ObjectInteraction : MonoBehaviour
             // _characterController.radius = 1f;
             cursor.SetActive(false);
         }
+
+       
     }
 }

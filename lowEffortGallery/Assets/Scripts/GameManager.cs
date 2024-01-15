@@ -201,4 +201,9 @@ public class GameManager : MonoBehaviour
             Debug.Log("cant buy");
         }
     }
+
+    public void FlyCameraBought()
+    {
+        Debug.Log("cam boought");
+    }
 }

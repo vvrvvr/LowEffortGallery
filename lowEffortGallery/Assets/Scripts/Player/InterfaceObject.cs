@@ -19,6 +19,11 @@ public class InterfaceObject : MonoBehaviour
     private Rigidbody _rb;
     public int cost = 1;
     public bool isBought = false;
+    [Space(10)]
+    public bool isCam = false;
+
+    public ParticleSystem DeathParticles;
+    [Space(10)]
 
     private bool _isDropped = false;
     public bool isOnscreen = true;
@@ -150,6 +155,16 @@ public class InterfaceObject : MonoBehaviour
 
     public void DeleteInterface()
     {
+        Destroy(pricetag);
+        Destroy(gameObject);
+        
+    }
+    public void DeleteInterface(bool isDeathEffect)
+    {
+        if (isDeathEffect)
+        {
+            Instantiate(DeathParticles, transform.position, Quaternion.identity);
+        }
         Destroy(pricetag);
         Destroy(gameObject);
         
