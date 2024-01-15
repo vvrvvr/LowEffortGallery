@@ -775,7 +775,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 9149155151023740478}
+    m_TransformParent: {fileID: 447228288}
     m_Modifications:
     - target: {fileID: 1806290115292240549, guid: a259ac57c41889c4cb8ad9f621cf06d0,
         type: 3}
@@ -1184,6 +1184,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1989246959}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &447228287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 447228288}
+  m_Layer: 0
+  m_Name: PriceTags
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &447228288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447228287}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1775304471}
+  - {fileID: 1310783265}
+  - {fileID: 1670141544}
+  - {fileID: 339978094}
+  m_Father: {fileID: 1609324636}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &559680551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,7 +2606,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 9149155151023740478}
+    m_TransformParent: {fileID: 447228288}
     m_Modifications:
     - target: {fileID: 1806290115292240549, guid: a259ac57c41889c4cb8ad9f621cf06d0,
         type: 3}
@@ -2913,7 +2948,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1377772094}
-  - component: {fileID: 1377772095}
   m_Layer: 0
   m_Name: Postcards
   m_TagString: Untagged
@@ -2939,33 +2973,13 @@ Transform:
   - {fileID: 1239048300}
   m_Father: {fileID: 1609324636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1377772095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377772093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37238b4e42bf31140a68b5a85435c1d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _postcards:
-  - {fileID: 1863094535}
-  - {fileID: 2047877241}
-  - {fileID: 1239048301}
-  _priceTags:
-  - {fileID: 1310783264}
-  - {fileID: 1670141543}
-  - {fileID: 339978093}
 --- !u!1001 &1414933720
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 9149155151023740478}
+    m_TransformParent: {fileID: 447228288}
     m_Modifications:
     - target: {fileID: 1806290115292240549, guid: a259ac57c41889c4cb8ad9f621cf06d0,
         type: 3}
@@ -3238,7 +3252,7 @@ MonoBehaviour:
   flyCamController: {fileID: 1940329144}
   fadeImage: {fileID: 1834240475}
   fadeSpeed: 2
-  isFlyCam: 0
+  isFlyCam: 1
   coins: 2
   folderName: galleryFiles
   fileNamePrefix: Screenshot
@@ -3767,6 +3781,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1609324636}
+  - component: {fileID: 1609324638}
+  - component: {fileID: 1609324637}
+  - component: {fileID: 1609324639}
   m_Layer: 0
   m_Name: GiftShop
   m_TagString: Untagged
@@ -3788,9 +3805,58 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 421598823}
+  - {fileID: 447228288}
   - {fileID: 1377772094}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1609324637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609324635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37238b4e42bf31140a68b5a85435c1d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _postcards:
+  - {fileID: 1863094535}
+  - {fileID: 2047877241}
+  - {fileID: 1239048301}
+  _priceTags:
+  - {fileID: 1310783264}
+  - {fileID: 1670141543}
+  - {fileID: 339978093}
+--- !u!114 &1609324638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609324635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a269b520a09d3084db34385ba746a0c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyCam: {fileID: 0}
+  FlyCameraPriceTag: {fileID: 0}
+--- !u!114 &1609324639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609324635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a269b520a09d3084db34385ba746a0c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyCam: {fileID: 421598818}
+  FlyCameraPriceTag: {fileID: 1775304470}
 --- !u!114 &1635635543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5168,74 +5234,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &1774059241716706
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 127590928853816887, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198213803919709695, guid: 86f0cbbfb6948a340935cd22320ba8c3,
-        type: 3}
-      propertyPath: m_Name
-      value: FX_ElectricityCam
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 86f0cbbfb6948a340935cd22320ba8c3, type: 3}
 --- !u!4 &10718592280849244
 Transform:
   m_ObjectHideFlags: 0
@@ -9461,7 +9459,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 9149155151023740478}
+    m_TransformParent: {fileID: 447228288}
     m_Modifications:
     - target: {fileID: 1806290115292240549, guid: a259ac57c41889c4cb8ad9f621cf06d0,
         type: 3}
@@ -21997,10 +21995,6 @@ Transform:
   m_Children:
   - {fileID: 975970727886672161}
   - {fileID: 8754033750754837476}
-  - {fileID: 1310783265}
-  - {fileID: 1670141544}
-  - {fileID: 339978094}
-  - {fileID: 1775304471}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9149155151023740479
@@ -22581,4 +22575,3 @@ SceneRoots:
   - {fileID: 1462894729}
   - {fileID: 803528156934440033}
   - {fileID: 1798815536}
-  - {fileID: 1774059241716706}
