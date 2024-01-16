@@ -1257,6 +1257,39 @@ MonoBehaviour:
   isRotateY: 1
   isRotateZ: 1
   rotationSpeed: 25
+--- !u!1 &422310502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422310503}
+  m_Layer: 0
+  m_Name: Fly Cam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &422310503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422310502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1009838964}
+  - {fileID: 1940329150}
+  m_Father: {fileID: 1193300721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &425712161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c1f3fd7856a71714c920990f639a6032,
@@ -2445,12 +2478,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975632365}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.64, y: 0, z: 7.77}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.64, y: 0, z: 29.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1009838964}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1009838959
 GameObject:
@@ -2485,7 +2518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 50
-  _portalSpeed: 2
+  _portalSpeed: 0.5
   _edgePortal: {fileID: 975632369}
   _player: {fileID: 1940329150}
 --- !u!135 &1009838961
@@ -2567,12 +2600,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009838959}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 975632369}
+  m_Father: {fileID: 422310503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1017178832
 MonoBehaviour:
@@ -2967,7 +3001,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1940329150}
+  - {fileID: 422310503}
   - {fileID: 543450652645747619}
   - {fileID: 1184723472}
   - {fileID: 757496462}
@@ -3470,7 +3504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultController: {fileID: 757496461}
-  flyCamController: {fileID: 1940329144}
+  flyCamController: {fileID: 422310502}
   DefaultCamera: {fileID: 1979193645}
   FlyCamera: {fileID: 8762286022530738833}
   Cursor: {fileID: 381748311}
@@ -4225,7 +4259,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1193300721}
+    m_TransformParent: {fileID: 422310503}
     m_Modifications:
     - target: {fileID: 40516524490629778, guid: 93e0c8f325173bd479f16ba90ef1d72a,
         type: 3}
@@ -4290,12 +4324,12 @@ PrefabInstance:
     - target: {fileID: 5779585481046099783, guid: 93e0c8f325173bd479f16ba90ef1d72a,
         type: 3}
       propertyPath: m_Name
-      value: Fly Cam
+      value: Fly Cam Body
       objectReference: {fileID: 0}
     - target: {fileID: 5779585481046099783, guid: 93e0c8f325173bd479f16ba90ef1d72a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6523452871067122170, guid: 93e0c8f325173bd479f16ba90ef1d72a,
         type: 3}
@@ -4871,12 +4905,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5602746017602206784, guid: 4ca379971015bcb448ad1a7ac9a7b1e5,
     type: 3}
   m_PrefabInstance: {fileID: 6429928640724317130}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1940329144 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5779585481046099783, guid: 93e0c8f325173bd479f16ba90ef1d72a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1718775932}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1940329150 stripped
 Transform:
@@ -22995,5 +23023,3 @@ SceneRoots:
   - {fileID: 1609324636}
   - {fileID: 925049124}
   - {fileID: 604659262}
-  - {fileID: 1009838964}
-  - {fileID: 975632369}
