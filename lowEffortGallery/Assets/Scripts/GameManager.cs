@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject defaultController;
     [SerializeField] private GameObject flyCamController;
+    public CinemachineVirtualCamera DefaultCamera;
+    public CinemachineVirtualCamera FlyCamera;
     public Image fadeImage;
     public float fadeSpeed = 1.0f;
     
@@ -95,11 +97,15 @@ public class GameManager : MonoBehaviour
     {
         if (isFly)
         {
+            DefaultCamera.Priority = 0;
+            FlyCamera.Priority = 10;
             flyCamController.SetActive(true);
             defaultController.SetActive(false);
         }
         else
         {
+            FlyCamera.Priority = 0;
+            DefaultCamera.Priority = 10;
             flyCamController.SetActive(false);
             defaultController.SetActive(true);
         }
