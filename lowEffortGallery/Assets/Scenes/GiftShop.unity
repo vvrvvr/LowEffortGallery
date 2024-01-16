@@ -3285,6 +3285,7 @@ MonoBehaviour:
   flyCamController: {fileID: 1940329144}
   DefaultCamera: {fileID: 1979193645}
   FlyCamera: {fileID: 8762286022530738833}
+  Cursor: {fileID: 381748311}
   fadeImage: {fileID: 1834240475}
   fadeSpeed: 2
   isFlyCam: 0

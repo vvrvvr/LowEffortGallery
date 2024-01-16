@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject flyCamController;
     public CinemachineVirtualCamera DefaultCamera;
     public CinemachineVirtualCamera FlyCamera;
+    public GameObject Cursor;
     public Image fadeImage;
     public float fadeSpeed = 1.0f;
     
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            DontDestroyOnLoad(_instance.gameObject);
+            //DontDestroyOnLoad(_instance.gameObject);
 
             return _instance;
         }
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -101,6 +102,9 @@ public class GameManager : MonoBehaviour
             FlyCamera.Priority = 10;
             flyCamController.SetActive(true);
             defaultController.SetActive(false);
+            
+            if(Cursor != null)
+                Cursor.SetActive(false);
         }
         else
         {
@@ -108,6 +112,9 @@ public class GameManager : MonoBehaviour
             DefaultCamera.Priority = 10;
             flyCamController.SetActive(false);
             defaultController.SetActive(true);
+            
+            if(Cursor != null)
+                Cursor.SetActive(true);
         }
     }
 
