@@ -17,15 +17,15 @@ public class GameManager : MonoBehaviour
     public Image fadeImage;
     public float fadeSpeed = 1.0f;
     
-    public bool isFlyCam = false;
-    public int coins = 0;
+    [HideInInspector] public bool isFlyCam = false;
+    [HideInInspector] public int coins = 0;
+    [HideInInspector] public Texture2D[] texturesArray= new Texture2D[3];
+    [HideInInspector] public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
     
     public string folderName = "galleryFiles";
     public string fileNamePrefix = "Screenshot";
 
     private int screenshotCount = 0;
-    public Texture2D[] texturesArray= new Texture2D[3];
-    public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
     private CinemachineImpulseSource impulseSource;
     public float impulsePower;
     
@@ -61,6 +61,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        isFlyCam = GameVariables.instance.isFlyCam;
+        coins = GameVariables.instance.coins;
+        texturesArray = GameVariables.instance.texturesArray;
+        texturesArrayTest = GameVariables.instance.texturesArrayTest;
     }
 
     private void Start()
@@ -86,13 +91,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private int score = 0;
-
-    public void IncreaseScore()
-    {
-        score++;
-        Debug.Log("Score: " + score);
-    }
+    // private int score = 0;
+    //
+    // public void IncreaseScore()
+    // {
+    //     score++;
+    //     Debug.Log("Score: " + score);
+    // }
 
     private void ChangeController(bool isFly)
     {
@@ -121,6 +126,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseCoins()
     {
         coins++;
+        GameVariables.instance.coins = coins;
     }
     
     public void FadeIn()
@@ -154,27 +160,28 @@ public class GameManager : MonoBehaviour
 
     public void SavePhotoTextureToArray(Texture2D textureToSave)
     {
-        texturesArray[screenshotCount] = textureToSave;
+        texturesArray[screenshotCount] = textureToSave; //потом удалить чтобы хранилось только в переменных
+        GameVariables.instance.texturesArray[screenshotCount] = textureToSave;
         screenshotCount++;
         if (screenshotCount >= texturesArray.Length)
         {
             screenshotCount = 0;
         }
     }
-    private void ApplySavedTexture(Texture2D choosenTexture, GameObject photoObject)
-    {
-        // Apply the saved texture to the photoObject
-        Renderer renderer = photoObject.GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            renderer.material.mainTexture = choosenTexture;
-            Debug.Log("Texture applied to photoObject");
-        }
-        else
-        {
-            Debug.LogError("photoObject does not have a Renderer component");
-        }
-    }
+    // private void ApplySavedTexture(Texture2D choosenTexture, GameObject photoObject)
+    // {
+    //     // Apply the saved texture to the photoObject
+    //     Renderer renderer = photoObject.GetComponent<Renderer>();
+    //     if (renderer != null)
+    //     {
+    //         renderer.material.mainTexture = choosenTexture;
+    //         Debug.Log("Texture applied to photoObject");
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError("photoObject does not have a Renderer component");
+    //     }
+    // }
 
     public void SaveTextureToFile(Texture2D choosenTexture)
     {
@@ -205,6 +212,7 @@ public class GameManager : MonoBehaviour
         if (coins >= obj.cost)
         {
             coins -= obj.cost;
+            GameVariables.instance.coins = coins;
             obj.isBought = true;
             obj.InterfaceBought();
         }
