@@ -20,7 +20,21 @@ public class ObjectInteraction : MonoBehaviour
     [SerializeField] private Image pointerImage;
     [SerializeField] private Sprite crosshair;
     [SerializeField] private Sprite hand;
+    private bool isPause = false;
 
+    private void OnEnable()
+    {
+        EventManager.OnPause.AddListener(()=> isPause = true);
+        EventManager.OnResumeGame.AddListener(()=> isPause = false);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnPause.RemoveListener(()=> isPause = true);
+        EventManager.OnResumeGame.AddListener(()=> isPause = false);
+    }
+    
+    
     private void Start()
     {
         _camera = Camera.main;
@@ -31,7 +45,7 @@ public class ObjectInteraction : MonoBehaviour
 
     void Update()
     {
-        if (DialoguePrinter.instance.isDialogueCantInteract)
+        if (DialoguePrinter.instance.isDialogueCantInteract || isPause)
         {
             pointerImage.sprite = crosshair;
             return;

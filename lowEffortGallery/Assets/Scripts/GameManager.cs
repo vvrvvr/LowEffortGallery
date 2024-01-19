@@ -4,6 +4,8 @@ using DG.Tweening;
 using UnityEngine.UI;
 using System.IO;
 using Cinemachine;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +30,9 @@ public class GameManager : MonoBehaviour
     private int screenshotCount = 0;
     private CinemachineImpulseSource impulseSource;
     public float impulsePower;
+    
+    public TextMeshProUGUI CoinsText;
+    public bool isPause = false;
     
 
     public static GameManager Instance
@@ -64,6 +69,7 @@ public class GameManager : MonoBehaviour
 
         isFlyCam = GameVariables.instance.isFlyCam;
         coins = GameVariables.instance.coins;
+        UpdateCoins(coins);
         texturesArray = GameVariables.instance.texturesArray;
         texturesArrayTest = GameVariables.instance.texturesArrayTest;
     }
@@ -91,13 +97,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // private int score = 0;
-    //
-    // public void IncreaseScore()
-    // {
-    //     score++;
-    //     Debug.Log("Score: " + score);
-    // }
+    public void PauseGame()
+    {
+        isPause = true;
+    }
+
+    public void ResumeGame()
+    {
+        isPause = false;
+    }
 
     private void ChangeController(bool isFly)
     {
@@ -127,6 +135,7 @@ public class GameManager : MonoBehaviour
     {
         coins++;
         GameVariables.instance.coins = coins;
+        UpdateCoins(coins);
     }
     
     public void FadeIn()
@@ -155,6 +164,12 @@ public class GameManager : MonoBehaviour
     void afterWait()
     {
         Debug.Log("After waiting!");
+    }
+
+    private void UpdateCoins(int coins)
+    {
+        if(CoinsText!=null)
+            CoinsText.text = "coins: " + coins;
     }
 
 
@@ -213,6 +228,7 @@ public class GameManager : MonoBehaviour
         {
             coins -= obj.cost;
             GameVariables.instance.coins = coins;
+            UpdateCoins(coins);
             obj.isBought = true;
             obj.InterfaceBought();
         }
