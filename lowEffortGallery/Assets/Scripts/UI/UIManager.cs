@@ -1,18 +1,18 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject PausePannel;
     public GameObject CursorPanel;
+    public GameObject CoinsPanel;
     
 
 
     private void Start()
     {
-        
+        CoinsPanel.SetActive(false);
+        //временно
+        ResumeGame();
     }
 
     private void Update()
@@ -36,10 +36,12 @@ public class UIManager : MonoBehaviour
         
         PausePannel.SetActive(true);
         GameManager.Instance.PauseGame();
-        
-        CursorPanel.SetActive(false);
+        if(CursorPanel != null)
+            CursorPanel.SetActive(false);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        if(CoinsPanel != null)
+            CoinsPanel.SetActive(true);
         Time.timeScale = 0f;
     }
 
@@ -49,8 +51,20 @@ public class UIManager : MonoBehaviour
         
         PausePannel.SetActive(false);
         GameManager.Instance.ResumeGame();
+
+        if (GameManager.Instance.isFlyCam)
+        {
+            if(CoinsPanel != null)
+                CoinsPanel.SetActive(false);
+        }
+        else
+        {
+            if(CursorPanel !=null)
+                CursorPanel.SetActive(true);
+            if(CoinsPanel != null)
+                CoinsPanel.SetActive(true);
+        }    
         
-        CursorPanel.SetActive(true);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;

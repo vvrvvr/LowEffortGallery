@@ -109,11 +109,11 @@ public class FreeFlyCamera : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
-    private void OnEnable()
-    {
-        if (_active)
-            _wantedMode = CursorLockMode.Locked;
-    }
+    // private void OnEnable()
+    // {
+    //     if (_active)
+    //         _wantedMode = CursorLockMode.Locked;
+    // }
 
     // Apply requested cursor state
     private void SetCursorState()
@@ -155,10 +155,10 @@ public class FreeFlyCamera : MonoBehaviour
         
         _rb.velocity = Vector3.zero;
         
-        SetCursorState();
+       //SetCursorState();
 
-        if (Cursor.visible)
-            return;
+        // if (Cursor.visible)
+        //     return;
 
         // Translation
         if (_enableTranslation)

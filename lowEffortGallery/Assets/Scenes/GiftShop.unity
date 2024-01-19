@@ -1621,7 +1621,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584133826}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5e432bcfb6c97d44a9d385e49fdfc011, type: 3}
@@ -5717,6 +5717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PausePannel: {fileID: 1443927180}
   CursorPanel: {fileID: 381748311}
+  CoinsPanel: {fileID: 598923283}
 --- !u!4 &2042956296
 Transform:
   m_ObjectHideFlags: 0
