@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     
     public TextMeshProUGUI CoinsText;
     public bool isPause = false;
+    public UIManager _UIManager;
     
 
     public static GameManager Instance
@@ -107,7 +108,7 @@ public class GameManager : MonoBehaviour
         isPause = false;
     }
 
-    private void ChangeController(bool isFly)
+    public void ChangeController(bool isFly)
     {
         if (isFly)
         {
@@ -242,5 +243,15 @@ public class GameManager : MonoBehaviour
     public void FlyCameraBought()
     {
         Debug.Log("cam boought");
+        GameVariables.instance.isCameraBought = true;
+        if(_UIManager !=null)
+            _UIManager.SetupControls();
+    }
+
+    public void ChangeIsFly()
+    {
+        isFlyCam = !isFlyCam;
+        GameVariables.instance.isFlyCam = isFlyCam;
+        ChangeController(isFlyCam);
     }
 }

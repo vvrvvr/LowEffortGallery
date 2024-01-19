@@ -6,7 +6,7 @@ public class FlyCameraHandler : MonoBehaviour
     public GameObject FlyCameraPriceTag;
     void Start()
     {
-        if (GameManager.Instance.isFlyCam)
+        if (GameVariables.instance.isCameraBought)
         {
             if(flyCam!=null)
                 flyCam.SetActive(false);

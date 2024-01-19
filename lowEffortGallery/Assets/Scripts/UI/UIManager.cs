@@ -5,6 +5,9 @@ public class UIManager : MonoBehaviour
     public GameObject PausePannel;
     public GameObject CursorPanel;
     public GameObject CoinsPanel;
+    public GameObject ControlsPanel;
+    public GameObject DefaultAvatarPanel;
+    public GameObject FlyCamAvatarPanel;
     
 
 
@@ -13,6 +16,7 @@ public class UIManager : MonoBehaviour
         CoinsPanel.SetActive(false);
         //временно
         ResumeGame();
+        SetupControls();
     }
 
     private void Update()
@@ -30,7 +34,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void PauseGame()
+    public void PauseGame()
     {
         EventManager.OnPause.Invoke();
         
@@ -45,7 +49,7 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    private void ResumeGame()
+    public void ResumeGame()
     {
         EventManager.OnResumeGame.Invoke();
         
@@ -68,5 +72,30 @@ public class UIManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
+    }
+
+    public void SetupControls()
+    {
+        if (GameManager.Instance.isFlyCam)
+        {
+            DefaultAvatarPanel.SetActive(false);
+            FlyCamAvatarPanel.SetActive(true);
+        }
+        else
+        {
+            DefaultAvatarPanel.SetActive(true);
+            FlyCamAvatarPanel.SetActive(false);
+            ControlsPanel.SetActive(true);
+        }
+        if(GameVariables.instance.isCameraBought)
+            ControlsPanel.SetActive(true);
+        else
+            ControlsPanel.SetActive(false);
+    }
+
+    public void SwitchControls()
+    {
+        GameManager.Instance.ChangeIsFly();
+        SetupControls();
     }
 }
