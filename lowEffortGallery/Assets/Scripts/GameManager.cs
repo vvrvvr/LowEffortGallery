@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        ChangeController(isFlyCam);
+       // ChangeController(isFlyCam);
         fadeImage.gameObject.SetActive(true);
         FadeOut();
         impulseSource = GetComponent<CinemachineImpulseSource>();

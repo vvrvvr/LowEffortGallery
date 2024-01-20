@@ -8,20 +8,31 @@ public class UIManager : MonoBehaviour
     public GameObject ControlsPanel;
     public GameObject DefaultAvatarPanel;
     public GameObject FlyCamAvatarPanel;
+    public bool isMenu = false;
     
 
 
     private void Start()
     {
-        CoinsPanel.SetActive(false);
-        //временно
-        ResumeGame();
-        SetupControls();
+        if (isMenu)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            CursorPanel.SetActive(false);
+        }
+        else
+        {
+            //временно
+            CoinsPanel.SetActive(false);
+            ResumeGame();
+            SetupControls(); 
+        }
+       
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!isMenu && Input.GetKeyDown(KeyCode.Escape))
         {
             if (!GameManager.Instance.isPause)
             {
