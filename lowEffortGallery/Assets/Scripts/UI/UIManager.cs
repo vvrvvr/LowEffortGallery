@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
+            GameManager.Instance.ChangeAvatar();
             //временно
             GameManager.Instance.ChangeController(GameManager.Instance.isFlyCam);
             CoinsPanel.SetActive(false);
@@ -126,6 +127,8 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.ChangeController(GameManager.Instance.isFlyCam);
         isMenu = false;
         CoinsToAnchor(coinsAnchorGame.position);
+        GameManager.Instance.ChangeAvatar();
+        EventManager.OnNewGame.Invoke();
     }
 
     public void  CoinsToAnchor(Vector3 pos)

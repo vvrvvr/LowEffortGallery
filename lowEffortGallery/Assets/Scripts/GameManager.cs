@@ -22,7 +22,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool isFlyCam = false;
     [HideInInspector] public int coins = 0;
     [HideInInspector] public Texture2D[] texturesArray= new Texture2D[3];
-    [HideInInspector] public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
+    [HideInInspector] public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after
+    public FollowAnchor _Avatars;
     
     public string folderName = "galleryFiles";
     public string fileNamePrefix = "Screenshot";
@@ -253,5 +254,11 @@ public class GameManager : MonoBehaviour
         isFlyCam = !isFlyCam;
         GameVariables.instance.isFlyCam = isFlyCam;
         ChangeController(isFlyCam);
+    }
+
+    public void ChangeAvatar()
+    {
+        if(_Avatars != null)
+            _Avatars.SetupAvatars(GameVariables.instance.AvatarID, 0.7f);
     }
 }
