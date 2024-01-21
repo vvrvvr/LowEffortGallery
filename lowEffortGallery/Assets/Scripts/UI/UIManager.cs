@@ -109,4 +109,12 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.ChangeIsFly();
         SetupControls();
     }
+
+    public void NewGame()
+    {
+        ResumeGame();
+        SetupControls(); 
+        GameManager.Instance.ChangeController(GameManager.Instance.isFlyCam);
+        isMenu = false;
+    }
 }
