@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,6 +10,13 @@ public class UIManager : MonoBehaviour
     public GameObject DefaultAvatarPanel;
     public GameObject FlyCamAvatarPanel;
     public bool isMenu = false;
+    
+    public float time = 1f;
+    //public Vector2 coinsAnchorPos = new Vector2(-840, -470);
+    public float anchorScale = 1f;
+    public Vector3 anchorRotation = Vector3.zero;
+    public RectTransform coinsAnchorGame;
+    public RectTransform coinsAnchorMenu;
     
 
 
@@ -23,6 +31,7 @@ public class UIManager : MonoBehaviour
         else
         {
             //временно
+            GameManager.Instance.ChangeController(GameManager.Instance.isFlyCam);
             CoinsPanel.SetActive(false);
             ResumeGame();
             SetupControls(); 
@@ -116,5 +125,18 @@ public class UIManager : MonoBehaviour
         SetupControls(); 
         GameManager.Instance.ChangeController(GameManager.Instance.isFlyCam);
         isMenu = false;
+        CoinsToAnchor(coinsAnchorGame.position);
+    }
+
+    public void  CoinsToAnchor(Vector3 pos)
+    {
+        RectTransform coinsRectTransform = CoinsPanel.transform.GetChild(0).GetComponent<RectTransform>();
+        if (coinsRectTransform != null)
+        {
+            coinsRectTransform.DOMove(pos, time).SetEase(Ease.Flash);
+            coinsRectTransform.DOScale(anchorScale, time);
+            coinsRectTransform.DORotate(anchorRotation, time);
+        }
+            
     }
 }
