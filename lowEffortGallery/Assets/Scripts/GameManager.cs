@@ -4,6 +4,8 @@ using DG.Tweening;
 using UnityEngine.UI;
 using System.IO;
 using Cinemachine;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -11,20 +13,27 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject defaultController;
     [SerializeField] private GameObject flyCamController;
+    public CinemachineVirtualCamera DefaultCamera;
+    public CinemachineVirtualCamera FlyCamera;
+    public GameObject Cursor;
     public Image fadeImage;
     public float fadeSpeed = 1.0f;
     
-    public bool isFlyCam = false;
-    public int coins = 0;
+    [HideInInspector] public bool isFlyCam = false;
+    [HideInInspector] public int coins = 0;
+    [HideInInspector] public Texture2D[] texturesArray= new Texture2D[3];
+    [HideInInspector] public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
     
     public string folderName = "galleryFiles";
     public string fileNamePrefix = "Screenshot";
 
     private int screenshotCount = 0;
-    public Texture2D[] texturesArray= new Texture2D[3];
-    public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
     private CinemachineImpulseSource impulseSource;
     public float impulsePower;
+    
+    public TextMeshProUGUI CoinsText;
+    public bool isPause = false;
+    public UIManager _UIManager;
     
 
     public static GameManager Instance
@@ -41,7 +50,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            DontDestroyOnLoad(_instance.gameObject);
+            //DontDestroyOnLoad(_instance.gameObject);
 
             return _instance;
         }
@@ -52,17 +61,23 @@ public class GameManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+
+        isFlyCam = GameVariables.instance.isFlyCam;
+        coins = GameVariables.instance.coins;
+        UpdateCoins(coins);
+        texturesArray = GameVariables.instance.texturesArray;
+        texturesArrayTest = GameVariables.instance.texturesArrayTest;
     }
 
     private void Start()
     {
-        ChangeController(isFlyCam);
+       // ChangeController(isFlyCam);
         fadeImage.gameObject.SetActive(true);
         FadeOut();
         impulseSource = GetComponent<CinemachineImpulseSource>();
@@ -83,31 +98,45 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private int score = 0;
-
-    public void IncreaseScore()
+    public void PauseGame()
     {
-        score++;
-        Debug.Log("Score: " + score);
+        isPause = true;
     }
 
-    private void ChangeController(bool isFly)
+    public void ResumeGame()
+    {
+        isPause = false;
+    }
+
+    public void ChangeController(bool isFly)
     {
         if (isFly)
         {
+            DefaultCamera.Priority = 0;
+            FlyCamera.Priority = 10;
             flyCamController.SetActive(true);
             defaultController.SetActive(false);
+            
+            if(Cursor != null)
+                Cursor.SetActive(false);
         }
         else
         {
+            FlyCamera.Priority = 0;
+            DefaultCamera.Priority = 10;
             flyCamController.SetActive(false);
             defaultController.SetActive(true);
+            
+            if(Cursor != null)
+                Cursor.SetActive(true);
         }
     }
 
     public void IncreaseCoins()
     {
         coins++;
+        GameVariables.instance.coins = coins;
+        UpdateCoins(coins);
     }
     
     public void FadeIn()
@@ -138,30 +167,37 @@ public class GameManager : MonoBehaviour
         Debug.Log("After waiting!");
     }
 
+    private void UpdateCoins(int coins)
+    {
+        if(CoinsText!=null)
+            CoinsText.text = "coins: " + coins;
+    }
+
 
     public void SavePhotoTextureToArray(Texture2D textureToSave)
     {
-        texturesArray[screenshotCount] = textureToSave;
+        texturesArray[screenshotCount] = textureToSave; //потом удалить чтобы хранилось только в переменных
+        GameVariables.instance.texturesArray[screenshotCount] = textureToSave;
         screenshotCount++;
         if (screenshotCount >= texturesArray.Length)
         {
             screenshotCount = 0;
         }
     }
-    private void ApplySavedTexture(Texture2D choosenTexture, GameObject photoObject)
-    {
-        // Apply the saved texture to the photoObject
-        Renderer renderer = photoObject.GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            renderer.material.mainTexture = choosenTexture;
-            Debug.Log("Texture applied to photoObject");
-        }
-        else
-        {
-            Debug.LogError("photoObject does not have a Renderer component");
-        }
-    }
+    // private void ApplySavedTexture(Texture2D choosenTexture, GameObject photoObject)
+    // {
+    //     // Apply the saved texture to the photoObject
+    //     Renderer renderer = photoObject.GetComponent<Renderer>();
+    //     if (renderer != null)
+    //     {
+    //         renderer.material.mainTexture = choosenTexture;
+    //         Debug.Log("Texture applied to photoObject");
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError("photoObject does not have a Renderer component");
+    //     }
+    // }
 
     public void SaveTextureToFile(Texture2D choosenTexture)
     {
@@ -192,6 +228,8 @@ public class GameManager : MonoBehaviour
         if (coins >= obj.cost)
         {
             coins -= obj.cost;
+            GameVariables.instance.coins = coins;
+            UpdateCoins(coins);
             obj.isBought = true;
             obj.InterfaceBought();
         }
@@ -200,5 +238,20 @@ public class GameManager : MonoBehaviour
             impulseSource.GenerateImpulse(impulsePower);
             Debug.Log("cant buy");
         }
+    }
+
+    public void FlyCameraBought()
+    {
+        Debug.Log("cam boought");
+        GameVariables.instance.isCameraBought = true;
+        if(_UIManager !=null)
+            _UIManager.SetupControls();
+    }
+
+    public void ChangeIsFly()
+    {
+        isFlyCam = !isFlyCam;
+        GameVariables.instance.isFlyCam = isFlyCam;
+        ChangeController(isFlyCam);
     }
 }

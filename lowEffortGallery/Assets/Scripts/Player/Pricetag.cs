@@ -7,7 +7,7 @@ public class Pricetag : MonoBehaviour
     [SerializeField] private GameObject priceTagBought;
     [SerializeField] private TextMeshProUGUI priceText;
 
-    private void Start()
+    private void Awake()
     {
         priceTag.SetActive(false);
         priceTagBought.SetActive(false);

@@ -55,7 +55,7 @@ public class DialoguePrinter : MonoBehaviour
         }
         if (isDialogue)
         {
-            if (Input.GetMouseButtonDown(0) || startSpeaking)
+            if ((Input.GetMouseButtonDown(0) && !GameManager.Instance.isPause) || startSpeaking)
             {
                 startSpeaking = false;
                 if (!isSpeaking || isWaitingForUserInput)
