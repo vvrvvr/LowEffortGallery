@@ -11,11 +11,16 @@ public class ChooseCharacter : MonoBehaviour
     public Transform CharacterWheel;
     public Button prevButton;
     public Button nextButton;
-    
 
-    // Start is called before the first frame update
-    void Start()
+    public GameObject[] characters = new GameObject[2];
+
+
+    public void ActivateCharacters()
     {
+        for (int i = 0; i < characters.Length; i++)
+        {
+            characters[i].SetActive(true);
+        }
     }
 
     // Update is called once per frame

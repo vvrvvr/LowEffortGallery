@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     public Vector3 anchorRotation = Vector3.zero;
     public RectTransform coinsAnchorGame;
     public RectTransform coinsAnchorMenu;
+
+    public ChooseCharacter chooseCharacters;
     
 
 
@@ -30,8 +32,8 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            GameManager.Instance.ChangeAvatar();
-            //временно
+            //запуск игры не в сцене меню
+            GameManager.Instance.ChangeAvatar(0f);
             GameManager.Instance.ChangeController(GameManager.Instance.isFlyCam);
             CoinsPanel.SetActive(false);
             ResumeGame();
@@ -127,8 +129,26 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.ChangeController(GameManager.Instance.isFlyCam);
         isMenu = false;
         CoinsToAnchor(coinsAnchorGame.position);
-        GameManager.Instance.ChangeAvatar();
+        GameManager.Instance.ChangeAvatar(2f);
         EventManager.OnNewGame.Invoke();
+        Time.timeScale = 1f;
+    }
+
+    public void ExitToMenu()
+    {
+        Time.timeScale = 1f;
+        isMenu = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        CursorPanel.SetActive(false);
+        CoinsPanel.SetActive(true);
+        CoinsToAnchor(coinsAnchorMenu.position);
+        EventManager.OnResumeGame.Invoke();
+        PausePannel.SetActive(false);
+        GameManager.Instance.ExitToMenu();
+        
+        if(chooseCharacters != null)
+            chooseCharacters.ActivateCharacters();
     }
 
     public void  CoinsToAnchor(Vector3 pos)

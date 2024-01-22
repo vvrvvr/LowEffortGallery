@@ -1,10 +1,18 @@
+using System;
 using UnityEngine;
 
 public class Character : MonoBehaviour
 {
     public ChooseCharacter _chooseCharacter;
+    private Vector3 startPosition;
     public int characterId = 0;
     private float delay = 1f;
+
+    private void Start()
+    {
+        startPosition = transform.localPosition;
+    }
+
     private void OnEnable()
     {
         EventManager.OnNewGame.AddListener(ReleaseAvatar );
@@ -21,14 +29,19 @@ public class Character : MonoBehaviour
         {
             var rb = GetComponent<Rigidbody>();
             rb.isKinematic = false;
-            StartCoroutine(DestroyAvatarWithDelay(delay));
+            StartCoroutine(DeactivateAvatarWithDelay(delay, rb));
         }
     }
-    private System.Collections.IEnumerator DestroyAvatarWithDelay(float delay)
+    private System.Collections.IEnumerator DeactivateAvatarWithDelay(float delay, Rigidbody rb)
     {
         yield return new WaitForSeconds(delay);
-        Destroy(gameObject);
+        
+        rb.isKinematic = true;
+        transform.localPosition = startPosition;
+        gameObject.SetActive(false);
     }
+    
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Character"))

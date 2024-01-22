@@ -3229,9 +3229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2d17f7125b0c14699651300837daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFlyCam: 0
+  isFlyCam: 1
   coins: 0
-  isCameraBought: 0
+  isCameraBought: 1
   texturesArray:
   - {fileID: 0}
   - {fileID: 0}
@@ -5421,6 +5421,9 @@ MonoBehaviour:
   CharacterWheel: {fileID: 1161297671}
   prevButton: {fileID: 427575641}
   nextButton: {fileID: 905760369}
+  characters:
+  - {fileID: 660784916}
+  - {fileID: 1234864498}
 --- !u!1 &722575718
 GameObject:
   m_ObjectHideFlags: 0
@@ -11668,6 +11671,7 @@ MonoBehaviour:
   anchorRotation: {x: 0, y: 0, z: 0}
   coinsAnchorGame: {fileID: 1324578759}
   coinsAnchorMenu: {fileID: 1672380059}
+  chooseCharacters: {fileID: 694012494}
 --- !u!4 &1693028403
 Transform:
   m_ObjectHideFlags: 0
@@ -12373,6 +12377,7 @@ MonoBehaviour:
   flyCamController: {fileID: 1586854913}
   DefaultCamera: {fileID: 147862818}
   FlyCamera: {fileID: 1596811110}
+  MenuCamera: {fileID: 8313306963524609938}
   Cursor: {fileID: 1047438160}
   fadeImage: {fileID: 1462883663}
   fadeSpeed: 2
@@ -14406,7 +14411,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1992297276}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1693028402}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: ExitToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1992297276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57071,7 +57088,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 2
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}

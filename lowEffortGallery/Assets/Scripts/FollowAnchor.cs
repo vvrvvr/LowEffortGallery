@@ -10,10 +10,10 @@ public class FollowAnchor : MonoBehaviour
 
     private void Start()
     {
-        if (GameManager.Instance.isFlyCam)
-        {
-            _isFollow = false;
-        }
+        // if (GameManager.Instance.isFlyCam)
+        // {
+        //    // _isFollow = false;
+        // }
     }
     
     private void LateUpdate()
@@ -28,6 +28,14 @@ public class FollowAnchor : MonoBehaviour
     public void SetupAvatars(int numb, float delay)
     {
         StartCoroutine(ActivateAvatarWithDelay(numb, delay));
+    }
+
+    public void HideAvatars()
+    {
+        for (int i = 0; i < Avatars.Length; i++)
+        {
+            Avatars[i].SetActive(false);
+        }
     }
 
     private System.Collections.IEnumerator ActivateAvatarWithDelay(int numb, float delay)
