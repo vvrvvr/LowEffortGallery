@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
     public RectTransform coinsAnchorMenu;
 
     public ChooseCharacter chooseCharacters;
+
+    public GameObject exitMenu;
     
 
 
@@ -161,5 +163,22 @@ public class UIManager : MonoBehaviour
             coinsRectTransform.DORotate(anchorRotation, time);
         }
             
+    }
+
+    public void AreYouSure()
+    {
+        exitMenu.SetActive(true);
+    }
+
+    public void ExitNo()
+    {
+        exitMenu.SetActive(false);
+    }
+    public void QuitGame(){
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+				Application.Quit();
+#endif
     }
 }
