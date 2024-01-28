@@ -5504,7 +5504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a16829b7e748bc4283b91b6a90ab579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMesh: {fileID: 0}
+  avatars: {fileID: 432118017}
 --- !u!65 &860324528
 BoxCollider:
   m_ObjectHideFlags: 0
