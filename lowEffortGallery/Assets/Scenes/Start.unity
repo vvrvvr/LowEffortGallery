@@ -1751,10 +1751,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Welcome to the first virtual gallery of the future \n\"NOT GALLERY 2\"!\n\n\u25E6
-    Press ESCAPE to see the controls and pause the game. \n\u25E6 Collect coins (step
-    on them) to buy souvenirs at the end of the exhibition in our famous HAZE GIFT
-    SHOP. \n\u25E6 Follow the direction of the arrows and have fun. \n\u25E6 Beware
-    of digital cryptids"
+    Press 'ESCAPE' key to see the controls and pause the game. \n\u25E6 Collect coins
+    (step on them) to buy souvenirs at the end of the exhibition in our famous HAZE
+    GIFT SHOP. \n\u25E6 Follow the direction of the arrows and have fun. \n\u25E6
+    Beware of digital cryptids"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2032339f567bde146b32a51cb1425adf, type: 2}
   m_sharedMaterial: {fileID: 21694689038030200, guid: 2032339f567bde146b32a51cb1425adf,
@@ -4914,6 +4914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RendererIndex
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664395862120840675, guid: 93e0c8f325173bd479f16ba90ef1d72a,
+        type: 3}
+      propertyPath: _boostedSpeed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8082,7 +8087,7 @@ PrefabInstance:
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: far clip plane
-      value: 500
+      value: 161.0897
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
@@ -10625,7 +10630,7 @@ GameObject:
   - component: {fileID: 1475421475}
   - component: {fileID: 1475421474}
   m_Layer: 0
-  m_Name: Exit FlyCam
+  m_Name: Exit FlyCam Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12042,7 +12047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1656997654
 Transform:
   m_ObjectHideFlags: 0
@@ -54455,7 +54460,7 @@ MonoBehaviour:
     FieldOfView: 79.2
     OrthographicSize: 10
     NearClipPlane: 0.2
-    FarClipPlane: 500
+    FarClipPlane: 161.0897
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
