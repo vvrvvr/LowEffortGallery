@@ -5,27 +5,30 @@ public class AxisMovement : MonoBehaviour
     public float speed = 5f;
     public float minStart = 0f;
     public float maxEnd = 10f;
-    public string inputAxis = "Vertical";
     public bool axisX = true;
     public bool axisY = false;
     public bool axisZ = false;
 
     void FixedUpdate()
     {
-        float moveInput = Input.GetAxis(inputAxis);
-        float newPosition = GetNewPosition(moveInput);
+        float moveInputVertical = Input.GetAxis("Vertical");
+        float moveInputHorizontal = Input.GetAxis("Horizontal");
+
+        float newPosition = GetNewPosition(moveInputVertical, moveInputHorizontal);
         newPosition = ClampPosition(newPosition);
         SetNewPosition(newPosition);
     }
 
-    float GetNewPosition(float input)
+    float GetNewPosition(float inputVertical, float inputHorizontal)
     {
+        float moveInput = inputVertical + inputHorizontal;
+
         if (axisX)
-            return transform.position.x + input * speed * Time.fixedDeltaTime;
+            return transform.position.x + moveInput * speed * Time.fixedDeltaTime;
         else if (axisY)
-            return transform.position.y + input * speed * Time.fixedDeltaTime;
+            return transform.position.y + moveInput * speed * Time.fixedDeltaTime;
         else if (axisZ)
-            return transform.position.z + input * speed * Time.fixedDeltaTime;
+            return transform.position.z + moveInput * speed * Time.fixedDeltaTime;
 
         return transform.position.y; // Default to Y-axis if none is selected
     }

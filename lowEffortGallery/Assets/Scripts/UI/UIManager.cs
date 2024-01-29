@@ -1,6 +1,8 @@
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
@@ -212,6 +214,28 @@ public class UIManager : MonoBehaviour
             CreditsPanel.SetActive(true);
         }
     }
+    
+   
+    public void LoadSceneByNameAsync(string sceneName)
+    {
+        GameManager.Instance.FadeIn(true);
+        Time.timeScale = 1f;
+        StartCoroutine(LoadSceneAsyncCoroutine(sceneName));
+    }
+    private IEnumerator LoadSceneAsyncCoroutine(string sceneName)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        // Ждем, пока сцена не будет полностью загружена
+        while (!asyncLoad.isDone)
+        {
+            float progress = Mathf.Clamp01(asyncLoad.progress / 0.9f); // progress становится 1, когда загрузка завершена
+            Debug.Log("Loading progress: " + (progress * 100) + "%");
+
+            yield return null;
+        }
+    }
+    
     public void QuitGame(){
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;

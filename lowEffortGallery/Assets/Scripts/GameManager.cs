@@ -161,6 +161,10 @@ public class GameManager : MonoBehaviour
     {
         fadeImage.DOFade(1.0f, fadeSpeed).OnComplete(AfterFade);
     }
+    public void FadeIn(bool b)
+    {
+        fadeImage.DOFade(1.0f, fadeSpeed);
+    }
     
     public void FadeOut()
     {
@@ -233,6 +237,7 @@ public class GameManager : MonoBehaviour
 
     public void PhotoFlash()
     {
+        Debug.Log("photo!");
         Sequence sequence = DOTween.Sequence();
         sequence.Append(fadeImage.DOColor(Color.white, 0f));
         sequence.Append(fadeImage.DOFade(1f, 0.2f));
