@@ -10,6 +10,7 @@ public class GameVariables : MonoBehaviour
     public Texture2D[] texturesArray= new Texture2D[3];
     public int AvatarID = 0;
     public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
+    public int RunsCompleted = 0;
     private void Awake()
     {
         if (instance == null)

@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class UIManager : MonoBehaviour
     public ChooseCharacter chooseCharacters;
 
     public GameObject exitMenu;
+    public GameObject CreditsPanel;
+    public TextMeshProUGUI NewGameText;
     
 
 
@@ -31,6 +34,8 @@ public class UIManager : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             CursorPanel.SetActive(false);
+
+            NewGamesCounter();
         }
         else
         {
@@ -165,14 +170,47 @@ public class UIManager : MonoBehaviour
             
     }
 
+    private void NewGamesCounter()
+    {
+        var runs = GameVariables.instance.RunsCompleted;
+        NewGameText.fontSize = 40 + 30 * runs;
+        string pluses = "";
+        
+        for (int i = 0; i < runs; i++)
+        {
+            pluses += "+ ";
+        }
+
+        NewGameText.text = "New Game " + pluses;
+    }
+
     public void AreYouSure()
     {
-        exitMenu.SetActive(true);
+        if (exitMenu.activeSelf)
+        {
+            exitMenu.SetActive(false);
+        }
+        else
+        {
+            exitMenu.SetActive(true);
+        }
     }
 
     public void ExitNo()
     {
         exitMenu.SetActive(false);
+    }
+
+    public void Credits()
+    {
+        if (CreditsPanel.activeSelf)
+        {
+            CreditsPanel.SetActive(false);
+        }
+        else
+        {
+            CreditsPanel.SetActive(true);
+        }
     }
     public void QuitGame(){
 #if UNITY_EDITOR
