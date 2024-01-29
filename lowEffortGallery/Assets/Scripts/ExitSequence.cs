@@ -20,6 +20,8 @@ public class ExitSequence : MonoBehaviour
 
     public void Exit()
     {
+        Debug.Log("Reach Exit");
         GameManager.Instance.LoadNextLevel();
+        
     }
 }
