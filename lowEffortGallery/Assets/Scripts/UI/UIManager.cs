@@ -64,6 +64,11 @@ public class UIManager : MonoBehaviour
                 ResumeGame();
             }
         }
+
+        if (isMenu && Input.GetKeyDown(KeyCode.Escape))
+        {
+            AreYouSure();
+        }
     }
 
     public void PauseGame()
