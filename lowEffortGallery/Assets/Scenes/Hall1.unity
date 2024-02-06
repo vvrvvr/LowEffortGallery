@@ -2630,7 +2630,7 @@ Transform:
   m_GameObject: {fileID: 260806714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2339997, y: 0, z: 0}
+  m_LocalPosition: {x: 0.7339997, y: 0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8023,7 +8023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _photoWarning: {fileID: 1620840345}
   cameraToCapture: {fileID: 244729061}
-  maskTexture: {fileID: 2800000, guid: 491d702c558080841bdf97c93bb5e14f, type: 3}
+  maskTexture: {fileID: 2800000, guid: b1a2a57d47e9338449812be8749b21f6, type: 3}
   isApplyMaskToPhoto: 1
 --- !u!54 &920435010
 Rigidbody:
@@ -11465,7 +11465,7 @@ Transform:
   m_GameObject: {fileID: 1297152725}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2339997, y: 0, z: 0}
+  m_LocalPosition: {x: 2.9839997, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14031,7 +14031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _photoWarning: {fileID: 1035688450}
   cameraToCapture: {fileID: 244729061}
-  maskTexture: {fileID: 2800000, guid: 491d702c558080841bdf97c93bb5e14f, type: 3}
+  maskTexture: {fileID: 2800000, guid: b1a2a57d47e9338449812be8749b21f6, type: 3}
   isApplyMaskToPhoto: 1
 --- !u!54 &1452537199
 Rigidbody:
@@ -18509,7 +18509,7 @@ Transform:
   m_GameObject: {fileID: 1976891825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2339997, y: 0, z: 0}
+  m_LocalPosition: {x: -1.6660004, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18798,7 +18798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _photoWarning: {fileID: 174629391}
   cameraToCapture: {fileID: 244729061}
-  maskTexture: {fileID: 2800000, guid: 491d702c558080841bdf97c93bb5e14f, type: 3}
+  maskTexture: {fileID: 2800000, guid: b1a2a57d47e9338449812be8749b21f6, type: 3}
   isApplyMaskToPhoto: 1
 --- !u!54 &2000623314
 Rigidbody:
@@ -20095,7 +20095,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  AvatarID: 2
+  AvatarID: 0
   texturesArrayTest:
   - {fileID: 0}
   - {fileID: 0}
@@ -20543,7 +20543,7 @@ PrefabInstance:
         type: 3}
       propertyPath: maskTexture
       value: 
-      objectReference: {fileID: 2800000, guid: 491d702c558080841bdf97c93bb5e14f, type: 3}
+      objectReference: {fileID: 2800000, guid: b1a2a57d47e9338449812be8749b21f6, type: 3}
     - target: {fileID: 1721260286640333958, guid: ffc6daa06e0ca1d42b004c4ae54dde69,
         type: 3}
       propertyPath: cameraToCapture
@@ -20553,6 +20553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PhotoManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449848965032637103, guid: ffc6daa06e0ca1d42b004c4ae54dde69,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.0339997
       objectReference: {fileID: 0}
     - target: {fileID: 6472460000462547245, guid: ffc6daa06e0ca1d42b004c4ae54dde69,
         type: 3}
