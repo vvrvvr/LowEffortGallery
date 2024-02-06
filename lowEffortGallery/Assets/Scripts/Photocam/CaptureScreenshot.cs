@@ -4,6 +4,7 @@ public class CaptureScreenshot : MonoBehaviour
 {
     [SerializeField] private PhotoWarning _photoWarning;
     public Camera cameraToCapture;
+    public Camera[] camerasToCaptureList = new Camera[0];
     public Texture2D maskTexture;
     private Texture2D savedTexture;
     public bool isApplyMaskToPhoto = true;
@@ -12,7 +13,12 @@ public class CaptureScreenshot : MonoBehaviour
 
     private void Start()
     {
-        cameraToCapture.gameObject.SetActive(false);
+        if (camerasToCaptureList.Length !=0 && camerasToCaptureList[0] != null )
+        {
+            cameraToCapture = RandomExtensions.GetRandomElement(camerasToCaptureList);
+            Debug.Log("Executed");
+        }
+        
     }
 
     private void Update() //удалить метод
