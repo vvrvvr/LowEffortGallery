@@ -2,12 +2,14 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class DialoguePrinter : MonoBehaviour
 {
     public static DialoguePrinter instance;
     public Elements elements;
     public GameObject DelayObj;
+    public float delayTime;
 
     [System.Serializable]
     public class Elements
@@ -50,8 +52,8 @@ public class DialoguePrinter : MonoBehaviour
        
         if (Input.GetKeyDown(KeyCode.N))
         {
-            string[] doorPhrase = new string[] { "I fixed this by generating a new font asset and increasing the padding from 5 to 10.", "Take a look at FAQ Question 2 and Question 11 on the TextMesh Pro user forum" };
-            NewSay(doorPhrase);
+            string[] doorPhrase = new string[] { "I fixed this by generating a new font asset and increasing the padding from 5 to 10." };
+            NewSay(doorPhrase, true);
         }
         if (isDialogue)
         {
@@ -91,6 +93,24 @@ public class DialoguePrinter : MonoBehaviour
         startSpeaking = true;
         isDialogue = true;
         isDialogueCantInteract = true;
+    }
+    public void NewSay(string[] s, bool isDelay)
+    {
+        StopSpeaking();
+        str = s;
+        startSpeaking = true;
+        isDialogue = true;
+        isDialogueCantInteract = true;
+        AutoEndPhrase();
+    }
+
+    public void AutoEndPhrase()
+    {
+        DOTween.Sequence()
+            .AppendInterval(10)
+            .OnComplete(() => {
+                startSpeaking = true;
+            });
     }
 
     public void Say(string speech)
