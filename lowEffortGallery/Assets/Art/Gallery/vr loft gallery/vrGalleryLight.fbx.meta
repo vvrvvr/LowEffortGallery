@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 0589d22098faaf44e82d90f9a23e48f4
+guid: 27ea9ae3957a507478ecf067dfe9c419
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 12268_banjofrog_
-    second: {fileID: 2100000, guid: a994db5a11ffe8047a42d0ea7e7216c0, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -53,7 +48,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
