@@ -16,7 +16,14 @@ public class Pricetag : MonoBehaviour
     public void ActivatePriceTag(int price)
     {
         priceTag.SetActive(true);
-        priceText.text = "Cost: "+price+" coins";
+        if (price == 1)
+        {
+            priceText.text = price+" coin";
+        }
+        else
+        {
+            priceText.text = price+" coins";
+        }
     }
 
     public void ActivatepriceTagBought()
