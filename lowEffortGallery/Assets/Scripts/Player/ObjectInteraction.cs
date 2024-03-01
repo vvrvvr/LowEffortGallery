@@ -8,6 +8,7 @@ public class ObjectInteraction : MonoBehaviour
     public GameObject heldObject = null;
     [SerializeField] private float grabDistance = 5f;
     [SerializeField] private LayerMask layerMaskInteract;
+    [SerializeField] private LayerMask layerMaskExit;
     [SerializeField] private Transform heldObjectLocalPosition;
     [SerializeField] private float impulseForce = 1f;
     [SerializeField] private GameObject cursor;
@@ -20,6 +21,7 @@ public class ObjectInteraction : MonoBehaviour
     [SerializeField] private Image pointerImage;
     [SerializeField] private Sprite crosshair;
     [SerializeField] private Sprite hand;
+    [SerializeField] private Sprite door;
     private bool isPause = false;
 
     private void OnEnable()
@@ -61,6 +63,15 @@ public class ObjectInteraction : MonoBehaviour
             heldObject = null;
            // _characterController.radius = defaultCharacterRadius;
             cursor.SetActive(true);
+        }
+        else if (heldObject == null &&
+                 Physics.Raycast(_camera.transform.position, fwd, out hit, grabDistance, layerMaskExit.value))
+        {
+            pointerImage.sprite = door;
+            if (Input.GetMouseButtonDown(0)) //exit level
+            {
+                GameManager.Instance.LoadNextLevel();
+            }
         }
         else if (heldObject == null &&
                  Physics.Raycast(_camera.transform.position, fwd, out hit, grabDistance, layerMaskInteract.value))
