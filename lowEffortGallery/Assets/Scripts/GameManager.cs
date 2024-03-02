@@ -182,9 +182,16 @@ public class GameManager : MonoBehaviour
         FadeIn();
         DOTween.Sequence()
             .AppendInterval(fadeSpeed)  
-            .OnComplete(afterWait);
+            .OnComplete(() => afterWait(""));
     }
-    void afterWait()
+    public void LoadNextLevel(string levelName)
+    {
+        FadeIn();
+        DOTween.Sequence()
+            .AppendInterval(fadeSpeed)  
+            .OnComplete(() => afterWait("levelName"));
+    }
+    void afterWait(string level)
     {
         Debug.Log("After waiting!");
     }

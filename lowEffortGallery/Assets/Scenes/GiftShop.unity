@@ -5999,7 +5999,7 @@ Transform:
   m_GameObject: {fileID: 506016788}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.71}
+  m_LocalPosition: {x: 0.11, y: 0, z: 0.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6018,8 +6018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f0eb30480bc6343a2f98013141f001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 50
-  _portalSpeed: 0.5
+  distance: 55.6
+  _portalSpeed: 0.1
   _edgePortal: {fileID: 1735231556}
   _player: {fileID: 1072579999}
 --- !u!135 &506016791
@@ -17888,6 +17888,7 @@ GameObject:
   - component: {fileID: 1735231559}
   - component: {fileID: 1735231558}
   - component: {fileID: 1735231557}
+  - component: {fileID: 1735231560}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -17904,8 +17905,8 @@ Transform:
   m_GameObject: {fileID: 1735231555}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3, y: 0.07, z: -3.86}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -24.84, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 506016789}
@@ -17925,7 +17926,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -17938,7 +17939,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735231555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -17980,7 +17981,19 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735231555}
-  m_Mesh: {fileID: 4711208715938537054, guid: 47deb4e526706414da0332f7c833e2ae, type: 3}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1735231560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735231555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b526cd1aa15dcdd4a879a1d17af9cdb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1753347749
 GameObject:
   m_ObjectHideFlags: 0
@@ -19531,9 +19544,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2d17f7125b0c14699651300837daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFlyCam: 0
+  isFlyCam: 1
   coins: 5
-  isCameraBought: 0
+  isCameraBought: 1
   texturesArray:
   - {fileID: 0}
   - {fileID: 0}
