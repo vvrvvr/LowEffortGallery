@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after
     public FollowAnchor _Avatars;
     
-    public string folderName = "galleryFiles";
-    public string fileNamePrefix = "Screenshot";
+    public string folderName = "NOT GALLERY 2 PHOTOS";
+    public string fileNamePrefix = "ingame photo ";
 
     private int screenshotCount = 0;
     private CinemachineImpulseSource impulseSource;
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             Debug.Log("saved");
-           // SaveTextureToFile();
+           //SaveTextureToFile(1);
         }
     }
 
@@ -213,23 +213,10 @@ public class GameManager : MonoBehaviour
             screenshotCount = 0;
         }
     }
-    // private void ApplySavedTexture(Texture2D choosenTexture, GameObject photoObject)
-    // {
-    //     // Apply the saved texture to the photoObject
-    //     Renderer renderer = photoObject.GetComponent<Renderer>();
-    //     if (renderer != null)
-    //     {
-    //         renderer.material.mainTexture = choosenTexture;
-    //         Debug.Log("Texture applied to photoObject");
-    //     }
-    //     else
-    //     {
-    //         Debug.LogError("photoObject does not have a Renderer component");
-    //     }
-    // }
 
-    public void SaveTextureToFile(Texture2D choosenTexture)
+    public void SaveTextureToFile(int photosArrayId)
     {
+        
         // Create the folder if it does not exist
         string folderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), folderName);
         if (!Directory.Exists(folderPath))
@@ -238,7 +225,7 @@ public class GameManager : MonoBehaviour
         }
         // Save texture to file
         string filePath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), folderName, fileNamePrefix + screenshotCount.ToString() + ".png");
-        byte[] bytes = choosenTexture.EncodeToPNG();
+        byte[] bytes = texturesArrayTest[photosArrayId].EncodeToPNG();
         File.WriteAllBytes(filePath, bytes);
     }
 

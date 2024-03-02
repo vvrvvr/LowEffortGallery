@@ -4976,6 +4976,7 @@ MonoBehaviour:
   cost: 2
   isBought: 0
   isCam: 1
+  photoArrayID: 0
   DeathParticles: {fileID: 198175801688348628, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
     type: 3}
   isOnscreen: 1
@@ -16361,8 +16362,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _Avatars: {fileID: 1888708254}
-  folderName: galleryFiles
-  fileNamePrefix: Screenshot
+  folderName: NOT GALLERY 2 PHOTOS
+  fileNamePrefix: 'ingame photo '
   impulsePower: 0.05
   CoinsText: {fileID: 1575283940}
   isPause: 0
@@ -19950,8 +19951,8 @@ MonoBehaviour:
   AvatarID: 0
   texturesArrayTest:
   - {fileID: 2800000, guid: b9aa64bfa642f18448a3fabb7949d799, type: 3}
-  - {fileID: 2800000, guid: a5ce76b7f3524cb47b3abd17dc5e1d0d, type: 3}
-  - {fileID: 2800000, guid: 9245933826a134649b006878cafee915, type: 3}
+  - {fileID: 2800000, guid: 49869d0e198539846845e88ba2467bb1, type: 3}
+  - {fileID: 2800000, guid: 91077ae8605bfb446ac42e06aa279ace, type: 3}
   RunsCompleted: 0
 --- !u!1 &1888708252
 GameObject:

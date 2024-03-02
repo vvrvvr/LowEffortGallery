@@ -15,6 +15,7 @@ public class Postcards : MonoBehaviour
         {
             if (photos[photoCounter] != null)
             {
+                _postcards[postcardCounter].GetComponent<InterfaceObject>().photoArrayID = photoCounter;
                 ApplySavedTexture(photos[photoCounter],_postcards[postcardCounter]);
                 postcardCounter++;
             }

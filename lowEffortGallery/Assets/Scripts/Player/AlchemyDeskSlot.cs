@@ -67,6 +67,7 @@ public class AlchemyDeskSlot : MonoBehaviour
        
     public void ApplyBuy()
     {
+        GameManager.Instance.SaveTextureToFile(currentInterface.photoArrayID);
         currentInterface.DeleteInterface();
         animator.enabled = false;
         animator.enabled = true;

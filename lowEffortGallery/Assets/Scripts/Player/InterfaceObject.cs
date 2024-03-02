@@ -22,6 +22,8 @@ public class InterfaceObject : MonoBehaviour
     [Space(10)]
     public bool isCam = false;
 
+    public int photoArrayID;
+
     public ParticleSystem DeathParticles;
     [Space(10)]
 
