@@ -25,6 +25,7 @@ public class GiftshopPlayerTeleportator : MonoBehaviour
             player.SetActive(false);
             player.transform.position = teleportSpot.position;
             player.SetActive(true);
+            DialogueManager.instance.FrogSay("playerTeleport");
         }
     }
 }

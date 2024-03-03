@@ -5,6 +5,17 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
     [SerializeField] private DialoguePrinter _dialoguePrinter;
     string[] phrase = new string[] {""};
+    
+    
+    //bools for counting phrase tries
+    private bool cantBuyCam = true;
+    private bool cantBuyPhoto = true;
+    private bool photoBought = true;
+    private bool playerTeleport = true;
+    
+        
+    
+    
     private void Awake()
     {
         instance = this;
@@ -28,9 +39,61 @@ public class DialogueManager : MonoBehaviour
             case "startAgain":
                 phrase = new string[] {"start again phrase test"};
                 break;
+                
+            case "cantBuyCam":
+                if (cantBuyCam)
+                {
+                    phrase = new string[] {"cant buy cam first"};
+                    cantBuyCam = false;
+                }
+                else
+                {
+                    phrase = new string[] {"cant buy cam next try"};
+                }
+                break;
+                
+            case "cameraBought":
+                phrase = new string[] {"camera bought"};
+                break;
+            
+            case "cantBuyPhoto":
+                if (cantBuyPhoto)
+                {
+                    phrase = new string[] {"cantBuyPhoto"};
+                    cantBuyPhoto = false;
+                }
+                else
+                {
+                    phrase = new string[] {"cantBuyPhoto next try"};
+                }
+                break;
+            
+            case "photoBought":
+                if (photoBought)
+                {
+                    phrase = new string[] {"photo bought"};
+                    photoBought = false;
+                }
+                else
+                {
+                    phrase = new string[] {"photo bought again"};
+                }
+                break;
+                
+            case "playerTeleport":
+                if (playerTeleport)
+                {
+                    phrase = new string[] {"first teleport"};
+                    playerTeleport = false;
+                }
+                else
+                {
+                    phrase = new string[] {"next teleports"};
+                }
+                break;
             
             default:
-                phrase = new string[] {"yo"};
+                phrase = new string[] {"yo, some problems with code. we work hard to fix it"};
                 break;
         }
     }

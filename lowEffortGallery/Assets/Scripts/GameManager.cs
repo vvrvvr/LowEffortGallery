@@ -249,10 +249,28 @@ public class GameManager : MonoBehaviour
             UpdateCoins(coins);
             obj.isBought = true;
             obj.InterfaceBought();
+            if (obj.isCam)
+            {
+                DialogueManager.instance.FrogSay("cameraBought");
+            }
+            else
+            {
+                DialogueManager.instance.FrogSay("photoBought");
+            }
         }
         else
         {
             impulseSource.GenerateImpulse(impulsePower);
+            
+            if (obj.isCam) //не удалось купить камеру
+            {
+                DialogueManager.instance.FrogSay("cantBuyCam");
+            }
+            else
+            {
+                DialogueManager.instance.FrogSay("cantBuyPhoto");
+            }
+            
             Debug.Log("cant buy");
         }
     }
