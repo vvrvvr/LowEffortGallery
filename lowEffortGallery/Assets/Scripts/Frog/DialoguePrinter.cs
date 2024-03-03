@@ -52,7 +52,7 @@ public class DialoguePrinter : MonoBehaviour
        
         if (Input.GetKeyDown(KeyCode.N))
         {
-            string[] doorPhrase = new string[] { "I fixed this by generating a new font asset and increasing the padding from 5 to 10." };
+            string[] doorPhrase = new string[] { "I fixed this by generating a new font asset and increasing the padding from 5 to 10.", "thats all" };
             NewSay(doorPhrase);
         }
         if (isDialogue)
