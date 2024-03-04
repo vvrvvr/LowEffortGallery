@@ -5,6 +5,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
     [SerializeField] private DialoguePrinter _dialoguePrinter;
     string[] phrase = new string[] {""};
+    private bool isSayPhrase = true;
     
     
     //bools for counting phrase tries
@@ -24,8 +25,10 @@ public class DialogueManager : MonoBehaviour
     public void FrogSay(string key)
     {
         phrase = null;
+        isSayPhrase = true;
         ChoosePhrase(key);
-        _dialoguePrinter.NewSay(phrase);
+        if(isSayPhrase)
+            _dialoguePrinter.NewSay(phrase);
     }
     
     private void ChoosePhrase(string key)
