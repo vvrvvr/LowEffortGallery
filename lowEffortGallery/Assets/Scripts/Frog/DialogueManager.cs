@@ -13,8 +13,7 @@ public class DialogueManager : MonoBehaviour
     private bool cantBuyPhoto = true;
     private bool photoBought = true;
     private bool playerTeleport = true;
-    
-        
+    private bool photoSavedToDesktop = true;
     
     
     private void Awake()
@@ -92,6 +91,19 @@ public class DialogueManager : MonoBehaviour
                 else
                 {
                     phrase = new string[] {"next teleports"};
+                }
+                break;
+                
+                
+            case "photoSavedToDesktop":
+                if (photoSavedToDesktop)
+                {
+                    phrase = new string[] {"first photoSaved"};
+                    photoSavedToDesktop = false;
+                }
+                else
+                {
+                    phrase = new string[] {"next photo saved"};
                 }
                 break;
             
