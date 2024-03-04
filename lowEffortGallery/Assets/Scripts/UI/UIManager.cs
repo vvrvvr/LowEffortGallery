@@ -26,6 +26,8 @@ public class UIManager : MonoBehaviour
     public GameObject exitMenu;
     public GameObject CreditsPanel;
     public TextMeshProUGUI NewGameText;
+    public GameObject firstTimeCameraBoughtPanel;
+    
     
 
 
@@ -33,10 +35,19 @@ public class UIManager : MonoBehaviour
     {
         if (isMenu)
         {
+            firstTimeCameraBoughtPanel.SetActive(false);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             CursorPanel.SetActive(false);
-
+            if (GameVariables.instance.isCameraBought && GameVariables.instance.cameraBoughtFirstTimeMenu)
+            {
+                GameVariables.instance.cameraBoughtFirstTimeMenu = false;
+                GameManager.Instance.isFlyCam = true;
+                GameVariables.instance.isFlyCam = true;
+                firstTimeCameraBoughtPanel.SetActive(true);
+                Debug.Log("Camera bought first time show menu and logic");
+            }
+            
             NewGamesCounter();
         }
         else
@@ -146,6 +157,7 @@ public class UIManager : MonoBehaviour
         GameManager.Instance.ChangeAvatar(2f);
         EventManager.OnNewGame.Invoke();
         Time.timeScale = 1f;
+        firstTimeCameraBoughtPanel.SetActive(false);
     }
 
     public void ExitToMenu()

@@ -16288,7 +16288,7 @@ MonoBehaviour:
   - {fileID: 0}
   _Avatars: {fileID: 1888708254}
   folderName: NOT GALLERY 2 PHOTOS
-  fileNamePrefix: 'ingame photo '
+  fileNamePrefix: 'tourist photo '
   impulsePower: 0.05
   CoinsText: {fileID: 1575283940}
   isPause: 0

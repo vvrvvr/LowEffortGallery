@@ -11,6 +11,7 @@ public class GameVariables : MonoBehaviour
     public int AvatarID = 0;
     public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
     public int RunsCompleted = 0;
+    public bool cameraBoughtFirstTimeMenu = false;
     private void Awake()
     {
         if (instance == null)

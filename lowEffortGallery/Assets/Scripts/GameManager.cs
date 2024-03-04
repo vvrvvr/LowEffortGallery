@@ -252,6 +252,7 @@ public class GameManager : MonoBehaviour
             if (obj.isCam)
             {
                 DialogueManager.instance.FrogSay("cameraBought");
+                GameVariables.instance.cameraBoughtFirstTimeMenu = true;
             }
             else
             {
