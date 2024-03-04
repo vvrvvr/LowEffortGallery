@@ -3578,7 +3578,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   RunsCompleted: 1
-  cameraBoughtFirstTimeMenu: 1
+  cameraBoughtFirstTimeMenu: 0
 --- !u!1 &427575637
 GameObject:
   m_ObjectHideFlags: 0

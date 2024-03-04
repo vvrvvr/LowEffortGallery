@@ -896,6 +896,7 @@ MonoBehaviour:
   exitMenu: {fileID: 0}
   CreditsPanel: {fileID: 0}
   NewGameText: {fileID: 0}
+  firstTimeCameraBoughtPanel: {fileID: 0}
 --- !u!4 &32325724
 Transform:
   m_ObjectHideFlags: 0
@@ -32697,6 +32698,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   RunsCompleted: 0
+  cameraBoughtFirstTimeMenu: 0
 --- !u!4 &1976331678
 Transform:
   m_ObjectHideFlags: 0
