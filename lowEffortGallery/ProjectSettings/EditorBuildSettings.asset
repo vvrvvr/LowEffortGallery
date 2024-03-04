@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Hall1.unity
     guid: 43da964a9f8d64b21bcfe5ecded1f664
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Hall2Rotation.unity
     guid: 721f0dcdcb8227e478ad3fac4abd6b41
   - enabled: 0
     path: Assets/Scenes/GiftShop.unity
     guid: 4a080384af484e84da3facbea85316fe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Start.unity
     guid: 707acc8dffb72b144bb1ffbe1c965f3d
   m_configObjects: {}
