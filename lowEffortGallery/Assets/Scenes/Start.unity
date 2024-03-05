@@ -2723,6 +2723,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -3510264905822749958, guid: 1282d53553c844e4c8c164883ad94152, type: 2}
     value: {fileID: 1426457947}
+  - key: {fileID: 2772744249981688295, guid: 1282d53553c844e4c8c164883ad94152, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &315460397
@@ -2738,6 +2740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 315460396}
+  nextLevelName: Hall1
 --- !u!65 &315460398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3567,7 +3570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFlyCam: 0
   coins: 0
-  isCameraBought: 1
+  isCameraBought: 0
   texturesArray:
   - {fileID: 0}
   - {fileID: 0}
@@ -17791,6 +17794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 2028353007}
+  nextLevelName: Hall1
 --- !u!65 &2028353004
 BoxCollider:
   m_ObjectHideFlags: 0

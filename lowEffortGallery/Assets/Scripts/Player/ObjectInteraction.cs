@@ -70,7 +70,7 @@ public class ObjectInteraction : MonoBehaviour
             pointerImage.sprite = door;
             if (Input.GetMouseButtonDown(0)) //exit level
             {
-                GameManager.Instance.LoadNextLevel();
+                GameManager.Instance.LoadNextLevel("Start");
             }
         }
         else if (heldObject == null &&

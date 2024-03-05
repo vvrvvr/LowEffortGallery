@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.IO;
 using Cinemachine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -176,23 +177,17 @@ public class GameManager : MonoBehaviour
         Debug.Log("Fade completed! Do something here.");
         // Дополнительные действия после завершения анимации
     }
-
-    public void LoadNextLevel()
-    {
-        FadeIn();
-        DOTween.Sequence()
-            .AppendInterval(fadeSpeed)  
-            .OnComplete(() => afterWait(""));
-    }
+    
     public void LoadNextLevel(string levelName)
     {
         FadeIn();
         DOTween.Sequence()
             .AppendInterval(fadeSpeed)  
-            .OnComplete(() => afterWait("levelName"));
+            .OnComplete(() => afterWait(levelName));
     }
     void afterWait(string level)
     {
+        SceneManager.LoadScene(level);
         Debug.Log("After waiting!");
     }
 

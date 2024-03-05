@@ -5,6 +5,7 @@ public class ExitSequence : MonoBehaviour
 {
     public PlayableDirector _playableDirector;
     private bool isOnce = true;
+    public string nextLevelName = "Start";
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && isOnce)
@@ -21,7 +22,6 @@ public class ExitSequence : MonoBehaviour
     public void Exit()
     {
         Debug.Log("Reach Exit");
-        GameManager.Instance.LoadNextLevel();
-        
+        GameManager.Instance.LoadNextLevel(nextLevelName);
     }
 }
