@@ -2069,6 +2069,7 @@ MonoBehaviour:
   exitMenu: {fileID: 0}
   CreditsPanel: {fileID: 0}
   NewGameText: {fileID: 0}
+  firstTimeCameraBoughtPanel: {fileID: 0}
 --- !u!4 &171744697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 714bd48206a89794488390b9398202d5,
@@ -5724,6 +5725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 489848991}
+  nextLevelName: Start
 --- !u!65 &489848993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7141,6 +7143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 593645626}
+  nextLevelName: Start
 --- !u!65 &593645628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19898,9 +19901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2d17f7125b0c14699651300837daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFlyCam: 0
+  isFlyCam: 1
   coins: 10
-  isCameraBought: 0
+  isCameraBought: 1
   texturesArray:
   - {fileID: 0}
   - {fileID: 0}
@@ -19911,6 +19914,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 49869d0e198539846845e88ba2467bb1, type: 3}
   - {fileID: 2800000, guid: 91077ae8605bfb446ac42e06aa279ace, type: 3}
   RunsCompleted: 0
+  cameraBoughtFirstTimeMenu: 0
 --- !u!1 &1888708252
 GameObject:
   m_ObjectHideFlags: 0

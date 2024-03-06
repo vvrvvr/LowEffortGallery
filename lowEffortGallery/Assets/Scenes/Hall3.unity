@@ -18258,6 +18258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 1134837083}
+  nextLevelName: GiftShop
 --- !u!65 &1134837085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21832,6 +21833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 0}
+  nextLevelName: GiftShop
 --- !u!65 &1338669014
 BoxCollider:
   m_ObjectHideFlags: 0

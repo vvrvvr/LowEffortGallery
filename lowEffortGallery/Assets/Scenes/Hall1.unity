@@ -19456,7 +19456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 0}
-  nextLevelName: Hall2Rotation
+  nextLevelName: Hall2
 --- !u!65 &1972176744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21353,7 +21353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 2146776968}
-  nextLevelName: Hall2Rotation
+  nextLevelName: Hall2
 --- !u!65 &2146776970
 BoxCollider:
   m_ObjectHideFlags: 0

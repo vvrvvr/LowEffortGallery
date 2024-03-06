@@ -3787,6 +3787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 0}
+  nextLevelName: Hall3
 --- !u!65 &256688178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20718,6 +20719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 1312570032}
+  nextLevelName: Hall3
 --- !u!65 &1312570034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30412,7 +30414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2d17f7125b0c14699651300837daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFlyCam: 0
+  isFlyCam: 1
   coins: 0
   isCameraBought: 1
   texturesArray:
