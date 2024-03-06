@@ -3582,6 +3582,7 @@ MonoBehaviour:
   - {fileID: 0}
   RunsCompleted: 0
   cameraBoughtFirstTimeMenu: 0
+  screenshotCount: 0
 --- !u!1 &427575637
 GameObject:
   m_ObjectHideFlags: 0
@@ -15187,10 +15188,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  texturesArrayTest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _Avatars: {fileID: 432118017}
   folderName: galleryFiles
   fileNamePrefix: Screenshot
@@ -17165,7 +17162,7 @@ RectTransform:
   m_GameObject: {fileID: 1984671761}
   m_LocalRotation: {x: -0, y: -0.758613, z: -0, w: 0.65154153}
   m_LocalPosition: {x: 0, y: 0, z: -191.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 952495605263695060}
@@ -17195,7 +17192,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: artwork 1(hidden)
+  m_text: 'artwork 1(hidden)
+
+    it''s the only hidden object in the game'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
