@@ -66,7 +66,7 @@ public class CaptureScreenshot : MonoBehaviour
 
         cameraToCapture.gameObject.SetActive(false);
         
-        GameManager.Instance.SavePhotoTextureToArray(savedTexture);
+        GameVariables.instance.SavePhotoTextureToArray(savedTexture);
         savedTexture = null;
         
         Debug.Log("screenshot made");

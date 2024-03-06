@@ -198,16 +198,16 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void SavePhotoTextureToArray(Texture2D textureToSave)
-    {
-        texturesArray[screenshotCount] = textureToSave; //потом удалить чтобы хранилось только в переменных
-        GameVariables.instance.texturesArray[screenshotCount] = textureToSave;
-        screenshotCount++;
-        if (screenshotCount >= texturesArray.Length)
-        {
-            screenshotCount = 0;
-        }
-    }
+    // public void SavePhotoTextureToArray(Texture2D textureToSave)
+    // {
+    //     //texturesArray[screenshotCount] = textureToSave; //потом удалить чтобы хранилось только в переменных
+    //     GameVariables.instance.texturesArray[screenshotCount] = textureToSave;
+    //     screenshotCount++;
+    //     if (screenshotCount >= texturesArray.Length)
+    //     {
+    //         screenshotCount = 0;
+    //     }
+    // }
 
     public void SaveTextureToFile(int photosArrayId)
     {
@@ -220,6 +220,7 @@ public class GameManager : MonoBehaviour
         }
         // Save texture to file
         string filePath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), folderName, fileNamePrefix + screenshotCount.ToString() + ".png");
+        screenshotCount++;
         byte[] bytes = texturesArrayTest[photosArrayId].EncodeToPNG();
         File.WriteAllBytes(filePath, bytes);
     }
