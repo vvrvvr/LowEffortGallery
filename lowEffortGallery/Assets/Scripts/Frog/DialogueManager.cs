@@ -93,8 +93,7 @@ public class DialogueManager : MonoBehaviour
                     phrase = new string[] {"next teleports"};
                 }
                 break;
-                
-                
+            
             case "photoSavedToDesktop":
                 if (photoSavedToDesktop)
                 {

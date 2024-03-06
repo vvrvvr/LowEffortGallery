@@ -21,15 +21,15 @@ public class CaptureScreenshot : MonoBehaviour
         
     }
 
-    private void Update() //удалить метод
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Debug.Log("pressed P for photo");
-            MakeScreenshot();
-        }
-        
-    }
+    // private void Update() //удалить метод
+    // {
+    //     if (Input.GetKeyDown(KeyCode.P))
+    //     {
+    //         Debug.Log("pressed P for photo");
+    //         MakeScreenshot();
+    //     }
+    //     
+    // }
     
     private void OnTriggerEnter(Collider other)
     {

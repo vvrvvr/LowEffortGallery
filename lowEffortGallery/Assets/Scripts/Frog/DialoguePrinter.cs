@@ -49,12 +49,11 @@ public class DialoguePrinter : MonoBehaviour
 
     private void Update()
     {
-       
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            string[] doorPhrase = new string[] { "I fixed this by generating a new font asset and increasing the padding from 5 to 10.", "thats all" };
-            NewSay(doorPhrase);
-        }
+        // if (Input.GetKeyDown(KeyCode.N))
+        // {
+        //     string[] doorPhrase = new string[] { "I fixed this by generating a new font asset and increasing the padding from 5 to 10.", "thats all" };
+        //     NewSay(doorPhrase);
+        // }
         if (isDialogue)
         {
             if ((Input.GetMouseButtonDown(0) && !GameManager.Instance.isPause) || startSpeaking)

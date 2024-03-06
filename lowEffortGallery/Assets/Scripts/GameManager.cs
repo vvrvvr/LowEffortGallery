@@ -87,19 +87,19 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-           
-               // ApplySavedTexture();
-        }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            Debug.Log("saved");
-           //SaveTextureToFile(1);
-        }
-    }
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.O))
+    //     {
+    //        
+    //            // ApplySavedTexture();
+    //     }
+    //     if (Input.GetKeyDown(KeyCode.I))
+    //     {
+    //         Debug.Log("saved");
+    //        //SaveTextureToFile(1);
+    //     }
+    // }
 
     public void PauseGame()
     {

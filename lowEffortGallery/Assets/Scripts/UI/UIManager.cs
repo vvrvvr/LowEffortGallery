@@ -79,6 +79,7 @@ public class UIManager : MonoBehaviour
         if (isMenu && Input.GetKeyDown(KeyCode.Escape))
         {
             AreYouSure();
+            CreditsPanel.SetActive(false);
         }
     }
 
