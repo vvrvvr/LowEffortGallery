@@ -8,7 +8,7 @@ public class Postcards : MonoBehaviour
 
     private void Start()
     {
-        var photos = GameManager.Instance.texturesArrayTest;
+        var photos = GameManager.Instance.texturesArray;
         int postcardCounter = 0;
         int photoCounter = 0;
         for (; photoCounter < photos.Length; photoCounter++)

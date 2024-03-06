@@ -19181,10 +19181,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  texturesArrayTest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _Avatars: {fileID: 371965632}
   folderName: galleryFiles
   fileNamePrefix: Screenshot
@@ -30415,7 +30411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFlyCam: 1
-  coins: 0
+  coins: 5
   isCameraBought: 1
   texturesArray:
   - {fileID: 0}
@@ -30428,6 +30424,7 @@ MonoBehaviour:
   - {fileID: 0}
   RunsCompleted: 0
   cameraBoughtFirstTimeMenu: 0
+  screenshotCount: 0
 --- !u!4 &2027733145
 Transform:
   m_ObjectHideFlags: 0

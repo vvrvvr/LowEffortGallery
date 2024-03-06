@@ -16285,10 +16285,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  texturesArrayTest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _Avatars: {fileID: 1888708254}
   folderName: NOT GALLERY 2 PHOTOS
   fileNamePrefix: 'tourist photo '
@@ -19905,16 +19901,17 @@ MonoBehaviour:
   coins: 10
   isCameraBought: 1
   texturesArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 9245933826a134649b006878cafee915, type: 3}
+  - {fileID: 2800000, guid: 1fb7aebc52bedc643abcc645e7bc2f93, type: 3}
+  - {fileID: 2800000, guid: b73a87cd881148345aedf6cdd26148ae, type: 3}
   AvatarID: 0
   texturesArrayTest:
-  - {fileID: 2800000, guid: b9aa64bfa642f18448a3fabb7949d799, type: 3}
-  - {fileID: 2800000, guid: 49869d0e198539846845e88ba2467bb1, type: 3}
-  - {fileID: 2800000, guid: 91077ae8605bfb446ac42e06aa279ace, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   RunsCompleted: 0
   cameraBoughtFirstTimeMenu: 0
+  screenshotCount: 0
 --- !u!1 &1888708252
 GameObject:
   m_ObjectHideFlags: 0

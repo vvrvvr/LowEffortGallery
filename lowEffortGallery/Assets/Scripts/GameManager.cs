@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
     
     [HideInInspector] public bool isFlyCam = false;
     [HideInInspector] public int coins = 0;
-    [HideInInspector] public Texture2D[] texturesArray= new Texture2D[3];
-    [HideInInspector] public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after
+    public Texture2D[] texturesArray= new Texture2D[3];
+    //[HideInInspector] public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after
     public FollowAnchor _Avatars;
     
     public string folderName = "NOT GALLERY 2 PHOTOS";
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         coins = GameVariables.instance.coins;
         UpdateCoins(coins);
         texturesArray = GameVariables.instance.texturesArray;
-        texturesArrayTest = GameVariables.instance.texturesArrayTest;
+        //texturesArrayTest = GameVariables.instance.texturesArrayTest;
     }
 
     private void Start()
@@ -221,7 +221,7 @@ public class GameManager : MonoBehaviour
         // Save texture to file
         string filePath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop), folderName, fileNamePrefix + screenshotCount.ToString() + ".png");
         screenshotCount++;
-        byte[] bytes = texturesArrayTest[photosArrayId].EncodeToPNG();
+        byte[] bytes = texturesArray[photosArrayId].EncodeToPNG();
         File.WriteAllBytes(filePath, bytes);
     }
 
