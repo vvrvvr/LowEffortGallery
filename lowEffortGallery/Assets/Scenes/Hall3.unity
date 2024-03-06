@@ -12515,10 +12515,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  texturesArrayTest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _Avatars: {fileID: 1470529367}
   folderName: galleryFiles
   fileNamePrefix: Screenshot
@@ -24669,7 +24665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1527202626
 Transform:
   m_ObjectHideFlags: 0
@@ -32183,6 +32179,7 @@ MonoBehaviour:
   - {fileID: 0}
   RunsCompleted: 0
   cameraBoughtFirstTimeMenu: 0
+  screenshotCount: 0
 --- !u!4 &1976331678
 Transform:
   m_ObjectHideFlags: 0
