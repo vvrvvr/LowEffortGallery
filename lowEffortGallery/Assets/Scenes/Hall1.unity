@@ -442,6 +442,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2000623312}
     m_Modifications:
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[0]
+      value: Yo! What's poppin', fam? Listen up, in our spot, we're snapping pics
+        of y'all in random spots
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[1]
+      value: You can cop those shots at the souvenir shack at the end of the exhibition
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[2]
+      value: It's a sick way to keep those memories of your gallery visit alive.
+        Slide through, yo!
+      objectReference: {fileID: 0}
     - target: {fileID: 2136492826957796457, guid: d614c07114b36814085350d47f04719b,
         type: 3}
       propertyPath: m_Name
@@ -896,7 +918,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Some text
+  m_text: Some text Some text Some text Some text Some text Some text Some text Some
+    text Some text Some text Some text Some text Some text text text text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8dce158df9241147891853f0c29bb11, type: 2}
   m_sharedMaterial: {fileID: 584203229701792017, guid: b8dce158df9241147891853f0c29bb11,
@@ -924,8 +947,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4070,6 +4093,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 920435008}
     m_Modifications:
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[0]
+      value: Yo! What's poppin', fam? Listen up, in our spot, we're snapping pics
+        of y'all in random spots
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[1]
+      value: You can cop those shots at the souvenir shack at the end of the exhibition
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[2]
+      value: It's a sick way to keep those memories of your gallery visit alive.
+        Slide through, yo!
+      objectReference: {fileID: 0}
     - target: {fileID: 2136492826957796457, guid: d614c07114b36814085350d47f04719b,
         type: 3}
       propertyPath: m_Name
@@ -6584,6 +6629,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1452537197}
     m_Modifications:
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[0]
+      value: Yo! What's poppin', fam? Listen up, in our spot, we're snapping pics
+        of y'all in random spots
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[1]
+      value: You can cop those shots at the souvenir shack at the end of the exhibition
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[2]
+      value: It's a sick way to keep those memories of your gallery visit alive.
+        Slide through, yo!
+      objectReference: {fileID: 0}
     - target: {fileID: 2136492826957796457, guid: d614c07114b36814085350d47f04719b,
         type: 3}
       propertyPath: m_Name
@@ -8717,7 +8784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &920435008
 Transform:
   m_ObjectHideFlags: 0
@@ -15121,7 +15188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1452537197
 Transform:
   m_ObjectHideFlags: 0
@@ -19820,7 +19887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2000623312
 Transform:
   m_ObjectHideFlags: 0
@@ -21719,6 +21786,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 979071919}
     m_Modifications:
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[0]
+      value: Yo! What's poppin', fam? Listen up, in our spot, we're snapping pics
+        of y'all in random spots
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[1]
+      value: You can cop those shots at the souvenir shack at the end of the exhibition
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415498406765962261, guid: d614c07114b36814085350d47f04719b,
+        type: 3}
+      propertyPath: Phrase.Array.data[2]
+      value: It's a sick way to keep those memories of your gallery visit alive.
+        Slide through, yo!
+      objectReference: {fileID: 0}
     - target: {fileID: 2136492826957796457, guid: d614c07114b36814085350d47f04719b,
         type: 3}
       propertyPath: m_Name
@@ -21863,6 +21952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PhotoManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480789447661556351, guid: ffc6daa06e0ca1d42b004c4ae54dde69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6449848965032637103, guid: ffc6daa06e0ca1d42b004c4ae54dde69,
         type: 3}
