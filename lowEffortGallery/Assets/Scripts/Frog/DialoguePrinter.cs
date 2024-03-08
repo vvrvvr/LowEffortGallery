@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using System;
+using System.Linq;
 
 public class DialoguePrinter : MonoBehaviour
 {
@@ -36,6 +38,7 @@ public class DialoguePrinter : MonoBehaviour
 
     public float textSpeed = 0.02f;
     public float dialogueDelay = 2.0f; // Время задержки после завершения написания фразы
+    string inbetween = "between";
 
     private void Awake()
     {
@@ -92,19 +95,33 @@ public class DialoguePrinter : MonoBehaviour
 
     public void NewSay(string[] s)
     {
-        StopSpeaking();
-        str = s;
-        startSpeaking = true;
-        isDialogue = true;
-        isDialogueCantInteract = true;
+        //StopSpeaking();
+        if (isSpeaking)
+        {
+            str = str.Concat(new string[] { inbetween }).Concat(s).ToArray();
+        }
+        else
+        {
+            str = s;
+            startSpeaking = true;
+            isDialogue = true;
+            isDialogueCantInteract = true;
+        }
     }
     public void NewSay(string[] s, bool isDelay)
     {
-        StopSpeaking();
-        str = s;
-        startSpeaking = true;
-        isDialogue = true;
-        isDialogueCantInteract = true;
+        //StopSpeaking();
+        if (isSpeaking)
+        {
+            str = str.Concat(new string[] { inbetween }).Concat(s).ToArray();
+        }
+        else
+        {
+            str = s;
+            startSpeaking = true;
+            isDialogue = true;
+            isDialogueCantInteract = true;
+        }
     }
 
     public void AutoEndPhrase()
