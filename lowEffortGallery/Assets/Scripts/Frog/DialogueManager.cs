@@ -26,8 +26,10 @@ public class DialogueManager : MonoBehaviour
         phrase = null;
         isSayPhrase = true;
         ChoosePhrase(key);
-        if(isSayPhrase)
-            _dialoguePrinter.NewSay(phrase);
+        if (isSayPhrase)
+        {
+            DialoguePrinter.instance.NewSay(phrase);
+        }
     }
     
     private void ChoosePhrase(string key)

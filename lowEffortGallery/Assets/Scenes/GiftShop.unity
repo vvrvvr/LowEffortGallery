@@ -12917,11 +12917,11 @@ Transform:
   m_GameObject: {fileID: 1231457774}
   serializedVersion: 2
   m_LocalRotation: {x: -0.21713105, y: -0.283124, z: 0.04346861, w: -0.93316954}
-  m_LocalPosition: {x: -295.50098, y: -859.747, z: 0.679}
+  m_LocalPosition: {x: -13.500977, y: 6.2529907, z: 0.679}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1254952398}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 25.458, y: 34.355, z: 2.655}
 --- !u!114 &1231457776
 MonoBehaviour:
@@ -13256,7 +13256,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1231457775}
   - {fileID: 1213318481}
   - {fileID: 1187577812}
   - {fileID: 1210001016}
@@ -14139,11 +14138,10 @@ MonoBehaviour:
     SpeechPanel: {fileID: 1254952397}
     SpeechText: {fileID: 2047983889}
   DelayObj: {fileID: 1210001012}
-  delayTime: 0
+  delayTime: 15
   isWaitingForUserInput: 0
   isDialogueCantInteract: 0
   textSpeed: 0.04
-  dialogueDelay: 5
 --- !u!114 &1401099299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19902,9 +19900,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2d17f7125b0c14699651300837daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFlyCam: 1
+  isFlyCam: 0
   coins: 10
-  isCameraBought: 1
+  isCameraBought: 0
   texturesArray:
   - {fileID: 2800000, guid: 9245933826a134649b006878cafee915, type: 3}
   - {fileID: 2800000, guid: 1fb7aebc52bedc643abcc645e7bc2f93, type: 3}
@@ -26468,6 +26466,7 @@ SceneRoots:
   - {fileID: 9149155151023740478}
   - {fileID: 916607049}
   - {fileID: 1377772094}
+  - {fileID: 1231457775}
   - {fileID: 368922951}
   - {fileID: 1401099297}
   - {fileID: 1584241212}

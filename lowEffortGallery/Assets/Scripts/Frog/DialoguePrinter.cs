@@ -37,7 +37,7 @@ public class DialoguePrinter : MonoBehaviour
     public bool isDialogueCantInteract = false;
 
     public float textSpeed = 0.02f;
-    public float dialogueDelay = 2.0f; // Время задержки после завершения написания фразы
+   // public float dialogueDelay = 2.0f; // Время задержки после завершения написания фразы
     string inbetween = "between";
 
     private void Awake()
@@ -62,7 +62,7 @@ public class DialoguePrinter : MonoBehaviour
         {
             if ((Input.GetMouseButtonDown(0) && !GameManager.Instance.isPause) || startSpeaking)
             {
-                delaySequence.Kill();
+               delaySequence.Kill();
                 startSpeaking = false;
                 if (!isSpeaking || isWaitingForUserInput)
                 {
@@ -73,6 +73,7 @@ public class DialoguePrinter : MonoBehaviour
                         offPanel = null;
                         StartCoroutine(SwitchOffTextPanelTimer());
                         //SwitchOffTextPanel();
+                        StopSpeaking();
                         return;
                     }
 
@@ -95,13 +96,13 @@ public class DialoguePrinter : MonoBehaviour
 
     public void NewSay(string[] s)
     {
-        //StopSpeaking();
         if (isSpeaking)
         {
             str = str.Concat(new string[] { inbetween }).Concat(s).ToArray();
         }
         else
         {
+            StopSpeaking();
             str = s;
             startSpeaking = true;
             isDialogue = true;
@@ -110,13 +111,13 @@ public class DialoguePrinter : MonoBehaviour
     }
     public void NewSay(string[] s, bool isDelay)
     {
-        //StopSpeaking();
         if (isSpeaking)
         {
             str = str.Concat(new string[] { inbetween }).Concat(s).ToArray();
         }
         else
         {
+            StopSpeaking();
             str = s;
             startSpeaking = true;
             isDialogue = true;
@@ -126,12 +127,10 @@ public class DialoguePrinter : MonoBehaviour
 
     public void AutoEndPhrase()
     {
-        Debug.Log("start wait");
-         delaySequence = DOTween.Sequence()
+        delaySequence = DOTween.Sequence()
             .AppendInterval(delayTime)
             .OnComplete(() => {
                 startSpeaking = true;
-                Debug.Log("end wait");
             });
     }
 
@@ -189,7 +188,7 @@ public class DialoguePrinter : MonoBehaviour
         DelayObj.SetActive(false);
         SpeechPanel.SetActive(false);
         isDialogue = false;
-        
+        //speaking = null;
         index = 0;
         if (offPanel != null)
             StopCoroutine(offPanel);

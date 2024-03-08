@@ -10743,11 +10743,10 @@ MonoBehaviour:
     SpeechPanel: {fileID: 954628678}
     SpeechText: {fileID: 53120171}
   DelayObj: {fileID: 2077497364}
-  delayTime: 5
+  delayTime: 7
   isWaitingForUserInput: 0
   isDialogueCantInteract: 0
   textSpeed: 0.04
-  dialogueDelay: 15
 --- !u!1 &1102793853
 GameObject:
   m_ObjectHideFlags: 0
