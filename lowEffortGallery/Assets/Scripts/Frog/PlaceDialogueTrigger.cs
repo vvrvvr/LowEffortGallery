@@ -7,7 +7,7 @@ public class PlaceDialogueTrigger : MonoBehaviour
     public string[] Phrase = new string[1];
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && isOnce)
+        if (other.CompareTag("Player") && isOnce && GameVariables.instance.RunsCompleted == 0)
         {
             isOnce = false;
             if (withDelay)

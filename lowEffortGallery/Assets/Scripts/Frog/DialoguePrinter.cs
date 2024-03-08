@@ -9,7 +9,8 @@ public class DialoguePrinter : MonoBehaviour
     public static DialoguePrinter instance;
     public Elements elements;
     public GameObject DelayObj;
-    public float delayTime;
+    public float delayTime = 5f;
+    private Sequence delaySequence = null;
 
     [System.Serializable]
     public class Elements
@@ -58,6 +59,7 @@ public class DialoguePrinter : MonoBehaviour
         {
             if ((Input.GetMouseButtonDown(0) && !GameManager.Instance.isPause) || startSpeaking)
             {
+                delaySequence.Kill();
                 startSpeaking = false;
                 if (!isSpeaking || isWaitingForUserInput)
                 {
@@ -75,7 +77,10 @@ public class DialoguePrinter : MonoBehaviour
                     index++;
                 }
                 else if (isSpeaking)
-                {   
+                {
+                    delaySequence.Kill();
+                    AutoEndPhrase();
+                    
                     DelayObj.SetActive(true);
                     StopSpeaking();
                     SpeechText.text = str[index-1];
@@ -100,15 +105,16 @@ public class DialoguePrinter : MonoBehaviour
         startSpeaking = true;
         isDialogue = true;
         isDialogueCantInteract = true;
-        AutoEndPhrase();
     }
 
     public void AutoEndPhrase()
     {
-        DOTween.Sequence()
-            .AppendInterval(10)
+        Debug.Log("start wait");
+         delaySequence = DOTween.Sequence()
+            .AppendInterval(delayTime)
             .OnComplete(() => {
                 startSpeaking = true;
+                Debug.Log("end wait");
             });
     }
 
@@ -143,7 +149,7 @@ public class DialoguePrinter : MonoBehaviour
         }
         
         DelayObj.SetActive(true);
-
+        AutoEndPhrase();
         isWaitingForUserInput = true;
         while (isWaitingForUserInput)
             yield return new WaitForEndOfFrame();
