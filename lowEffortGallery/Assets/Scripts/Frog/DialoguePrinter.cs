@@ -38,7 +38,7 @@ public class DialoguePrinter : MonoBehaviour
 
     public float textSpeed = 0.02f;
    // public float dialogueDelay = 2.0f; // Время задержки после завершения написания фразы
-    string inbetween = "between";
+    string inbetween = "Anyway...";
 
     private void Awake()
     {
