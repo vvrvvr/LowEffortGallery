@@ -6665,6 +6665,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812267997}
   m_CullTransparentMesh: 0
+--- !u!1 &816226268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816226269}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &816226269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816226268}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1899353621}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821990257
 GameObject:
   m_ObjectHideFlags: 0
@@ -7928,7 +7959,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A game made by Vladimir Svistunov
+  m_text: "game made by vladimir svistunov\nHall 1 Ingame photos - vladimir svistunov\nHall
+    2 Ingame photos/ ghost gallery series/some assets - NinadX\nHall3 Ingame photos/Paintings
+    - Vasilisa Kovaleva a.k.a. Vasilisa_jj (inst/tg: Vasilisa_jj)\nsound design -
+    Vladimir Kamynin/Bob Butt\nmusic - \u0420\u0435\u0434\u0438\u043D\u0430 \u0423\u0441\u044B\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
   m_sharedMaterial: {fileID: 21148088844906328, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e,
@@ -7968,7 +8002,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 82.96
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -7992,7 +8026,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -757.3015, w: -53.499275}
+  m_margin: {x: 0, y: 0, z: -1254.5171, w: -540.9557}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -9832,7 +9866,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255371177}
   m_LocalRotation: {x: 0.000000036321577, y: 0.33098283, z: 0.000000014435498, w: 0.94363683}
-  m_LocalPosition: {x: 0, y: 0, z: 2254}
+  m_LocalPosition: {x: 0, y: 0, z: 1919}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9840,7 +9874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 38.657, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1319, y: 982}
+  m_AnchoredPosition: {x: 1738, y: 973}
   m_SizeDelta: {x: 3275.8, y: 384.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255371179
@@ -16318,10 +16352,10 @@ MonoBehaviour:
     SpeechText: {fileID: 666752364}
   DelayObj: {fileID: 2017754599}
   delayTime: 0
+  speechAdditional: {fileID: 816226268}
   isWaitingForUserInput: 0
   isDialogueCantInteract: 0
   textSpeed: 0.04
-  dialogueDelay: 5
 --- !u!4 &1899353621
 Transform:
   m_ObjectHideFlags: 0
@@ -16334,7 +16368,8 @@ Transform:
   m_LocalPosition: {x: -5.097542, y: 0.40747428, z: 8.585227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 816226269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916277995
@@ -48793,7 +48828,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5608760576104808343}
   m_LocalRotation: {x: 0.0007205493, y: 0.0759308, z: 0.002451154, w: 0.99710983}
-  m_LocalPosition: {x: 0, y: 0, z: 540.90283}
+  m_LocalPosition: {x: 0, y: 0, z: 1056}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48801,12 +48836,13 @@ RectTransform:
   - {fileID: 5608760576815030962}
   - {fileID: 939450022}
   - {fileID: 5608760576561666119}
+  - {fileID: 5608760577496243586}
   - {fileID: 5608760576953756052}
   m_Father: {fileID: 5676965097953037700}
   m_LocalEulerAnglesHint: {x: 0.061, y: 8.71, z: 0.286}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -359.97473, y: -238.16985}
+  m_AnchoredPosition: {x: -1189, y: 156}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5608760576104808343
@@ -49038,7 +49074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 625, y: -130}
+  m_AnchoredPosition: {x: 200, y: -130}
   m_SizeDelta: {x: 400, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5608760576716347258
@@ -49534,7 +49570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1050, y: -130}
+  m_AnchoredPosition: {x: 625, y: -130}
   m_SizeDelta: {x: 400, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5608760576919129169
@@ -49616,7 +49652,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5608760577496243586}
   - {fileID: 5608760576716347257}
   - {fileID: 5608760576919129135}
   - {fileID: 5608760577852443363}
@@ -49961,7 +49996,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a1235d87f41399c419b03cc17336dc72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16c6db9e9f7f8ba438f9ada5d10b982f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -50046,25 +50081,9 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Robust dynamic free-cursor system for desktop/console
-              UI navigation.
+            m_StringArgument: click to go to my instagram page
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &5608760577496243585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5608760577496243587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4870c7d0bdddd644a64ab8bc98f83ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  themeController: {fileID: 11400000, guid: e00c7d2bc58a2424b8dc09ecdafdb067, type: 2}
-  hasImage: 1
-  isText: 0
 --- !u!224 &5608760577496243586
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50072,18 +50091,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5608760577496243587}
-  m_LocalRotation: {x: -0, y: -0, z: 1.1641532e-10, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000035017725}
+  m_LocalRotation: {x: 0.0000000074505797, y: -0, z: -1.8189891e-10, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5608760577465689610}
-  m_Father: {fileID: 5608760576953756052}
+  m_Father: {fileID: 5608760576104808342}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -130}
-  m_SizeDelta: {x: 400, y: 260}
+  m_AnchoredPosition: {x: 447, y: 384}
+  m_SizeDelta: {x: 63.12, y: 63.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5608760577496243587
 GameObject:
@@ -50099,7 +50118,6 @@ GameObject:
   - component: {fileID: 5608760577496243591}
   - component: {fileID: 5608760577496243584}
   - component: {fileID: 5608760577496243588}
-  - component: {fileID: 5608760577496243585}
   m_Layer: 5
   m_Name: Btn_CCP
   m_TagString: Untagged
@@ -50157,15 +50175,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.6862745, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a8292d7c3170a7348accf3d85c0e7359, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 16c6db9e9f7f8ba438f9ada5d10b982f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -50543,7 +50561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -415}
+  m_AnchoredPosition: {x: 1050, y: -130}
   m_SizeDelta: {x: 400, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5608760577852443365

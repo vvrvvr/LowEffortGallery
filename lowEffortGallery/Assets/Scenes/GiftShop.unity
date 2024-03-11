@@ -20066,7 +20066,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  RunsCompleted: 1
+  RunsCompleted: 0
   cameraBoughtFirstTimeMenu: 0
   screenshotCount: 0
 --- !u!1 &1888708252
