@@ -45,6 +45,8 @@ public class DialogueManager : MonoBehaviour
                     "Here you can cop pre-made tourist shots with you in the mix, and also snag a special souvenir.. ",
                     "the Free Cam, letting you soar through all the halls!",
                     "I'm straight up urging you to cop this cam to peep the whole gallery content and the ghost gallery!",
+                    "Yo yo yo, peep this: you gotta run through the gallery like, 2-3 times to catch all that content, ya feel?",
+                    "And yo, make sure to use that free cam vibe at least once, straight up",
                     "Checking your cash flow..."
                 };
                 if (GameVariables.instance.coins >= freeCamCost)
@@ -143,7 +145,10 @@ public class DialogueManager : MonoBehaviour
                 {
                     "Yo, this is the ultimate cash splash!",
                     "You can flip to the Free Cam whenever in the pause menu (Escape button)",
-                    "Every purchase stays locked until you fully bounce from the gallery!"
+                    "Every purchase stays locked until you fully bounce from the gallery!",
+                    "Yo fam, don't forget to snag a couple of our touristy shots for the memories, ya know?",
+                    "And yo, important rule: we only snap pics when you're cruising through the not-gallery halls in character mode",
+                    "That's just how the rules roll, fam"
                 };
                 break;
             
