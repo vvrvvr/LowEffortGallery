@@ -24,6 +24,7 @@ public class DialoguePrinter : MonoBehaviour
     public bool isSpeaking { get { return speaking != null; } }
     public GameObject SpeechPanel { get { return elements.SpeechPanel; } }
     public TextMeshProUGUI SpeechText { get { return elements.SpeechText; } }
+    public GameObject speechAdditional;
 
     private int index = 0;
     private string[] str;
@@ -49,6 +50,7 @@ public class DialoguePrinter : MonoBehaviour
     {
         DelayObj.SetActive(false);
         SpeechPanel.SetActive(false);
+        speechAdditional.SetActive(false);
     }
 
     private void Update()
@@ -154,6 +156,7 @@ public class DialoguePrinter : MonoBehaviour
     {
         DelayObj.SetActive(false);
         SpeechPanel.SetActive(true);
+        speechAdditional.SetActive(true);
         targetSpeech = speech;
         SpeechText.text = "";
 
@@ -187,6 +190,7 @@ public class DialoguePrinter : MonoBehaviour
     {
         DelayObj.SetActive(false);
         SpeechPanel.SetActive(false);
+        speechAdditional.SetActive(false);
         isDialogue = false;
         //speaking = null;
         index = 0;
