@@ -3,7 +3,7 @@
 namespace SlimUI.ModernMenu{
     public class ExtraLinks : MonoBehaviour{
         public void CCP(){
-            Application.OpenURL("http://u3d.as/1JZG");
+            Application.OpenURL("https://www.instagram.com/vl_ad_no?igsh=MXA0cDV6cGY3d3V3eQ%3D%3D&utm_source=qr");
         }
 
         public void SciFi(){

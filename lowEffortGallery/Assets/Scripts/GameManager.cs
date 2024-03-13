@@ -37,6 +37,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI CoinsText;
     public bool isPause = false;
     public UIManager _UIManager;
+    [Space(20)]
+    public AudioSource _Audio;
+
+    public AudioClip bougth;
+    public AudioClip boughtError;
+    public AudioClip savedToDesctop;
     
 
     public static GameManager Instance
@@ -240,6 +246,9 @@ public class GameManager : MonoBehaviour
     {
         if (coins >= obj.cost)
         {
+            _Audio.clip = bougth;
+            _Audio.Play();
+            
             coins -= obj.cost;
             GameVariables.instance.coins = coins;
             UpdateCoins(coins);
@@ -258,6 +267,9 @@ public class GameManager : MonoBehaviour
         else
         {
             impulseSource.GenerateImpulse(impulsePower);
+            
+            _Audio.clip = boughtError;
+            _Audio.Play();
             
             if (obj.isCam) //не удалось купить камеру
             {

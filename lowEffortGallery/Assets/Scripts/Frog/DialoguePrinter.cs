@@ -5,6 +5,8 @@ using TMPro;
 using DG.Tweening;
 using System;
 using System.Linq;
+using System.Collections;
+using Random = UnityEngine.Random;
 
 public class DialoguePrinter : MonoBehaviour
 {
@@ -40,6 +42,14 @@ public class DialoguePrinter : MonoBehaviour
     public float textSpeed = 0.02f;
    // public float dialogueDelay = 2.0f; // Время задержки после завершения написания фразы
     string inbetween = "Anyway...";
+    
+    public AudioClip frogPhrase;
+    public float pitchMin = 0.8f;
+    public float pitchMax = 1.2f;
+    private bool isPlaying = false;
+    public AudioSource _Audio;
+    
+    
 
     private void Awake()
     {
@@ -163,6 +173,7 @@ public class DialoguePrinter : MonoBehaviour
         isWaitingForUserInput = false;
         while (SpeechText.text != speech)
         {
+            FrogSound(false);
             SpeechText.text += targetSpeech[SpeechText.text.Length];
             yield return new WaitForSeconds(textSpeed);
         }
@@ -197,5 +208,23 @@ public class DialoguePrinter : MonoBehaviour
         if (offPanel != null)
             StopCoroutine(offPanel);
         offPanel = null;
+    }
+    
+    public void FrogSound(bool isInterrupt)
+    {
+        if (!isInterrupt || !isPlaying)
+        {
+            isPlaying = true;
+            float randomPitch = Random.Range(pitchMin, pitchMax);
+            _Audio.pitch = randomPitch;
+            _Audio.PlayOneShot(frogPhrase);
+            StartCoroutine(WaitForSound(frogPhrase.length));
+        }
+    }
+
+    private IEnumerator WaitForSound(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        isPlaying = false;
     }
 }
