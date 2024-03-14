@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public AudioClip bougth;
     public AudioClip boughtError;
     public AudioClip savedToDesctop;
+    public SoundManager _soundManager;
     
 
     public static GameManager Instance
@@ -186,6 +187,10 @@ public class GameManager : MonoBehaviour
     
     public void LoadNextLevel(string levelName)
     {
+        if (_soundManager != null)
+        {
+            _soundManager.FadeSound(fadeSpeed-0.5f, false);
+        }
         FadeIn();
         DOTween.Sequence()
             .AppendInterval(fadeSpeed)  
