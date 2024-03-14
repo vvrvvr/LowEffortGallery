@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public AudioClip bougth;
     public AudioClip boughtError;
     public AudioClip savedToDesctop;
+    public AudioClip coinSound;
     public SoundManager _soundManager;
     
 
@@ -160,6 +161,8 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseCoins()
     {
+        _Audio.clip = coinSound;
+        _Audio.Play();
         coins++;
         GameVariables.instance.coins = coins;
         UpdateCoins(coins);
