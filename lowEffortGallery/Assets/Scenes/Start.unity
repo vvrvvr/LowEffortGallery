@@ -3888,7 +3888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFlyCam: 0
   coins: 0
-  isCameraBought: 1
+  isCameraBought: 0
   texturesArray:
   - {fileID: 0}
   - {fileID: 0}
