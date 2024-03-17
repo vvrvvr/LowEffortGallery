@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     public AudioClip boughtError;
     public AudioClip savedToDesctop;
     public AudioClip coinSound;
-    public SoundManager _soundManager;
+    public SoundManager[] _soundManager = new SoundManager[1];
     
 
     public static GameManager Instance
@@ -192,7 +192,12 @@ public class GameManager : MonoBehaviour
     {
         if (_soundManager != null)
         {
-            _soundManager.FadeSound(fadeSpeed-0.5f, false);
+            for (int i = 0; i < _soundManager.Length; i++)
+            {
+                Debug.Log("soundmanager");
+                _soundManager[i].FadeSound(fadeSpeed-0.5f, false);
+            }
+           
         }
         FadeIn();
         DOTween.Sequence()
