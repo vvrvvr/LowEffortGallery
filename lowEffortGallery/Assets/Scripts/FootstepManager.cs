@@ -11,6 +11,8 @@ public class FootstepManager : MonoBehaviour
     private AudioSource audioSource;
     private bool canPlay = true;
     private float lastStepTime = 0f;
+    private bool canChooseSteps = false;
+    private AudioClip step;
 
     private void Start()
     {
@@ -19,15 +21,27 @@ public class FootstepManager : MonoBehaviour
         {
             Debug.LogError("AudioSource component is missing!");
         }
+
+        if (Steps.Length > 1)
+        {
+            canChooseSteps = true;
+        }
+        else
+        {
+            step = Steps[0];
+            audioSource.clip = step;
+        }
     }
 
     public void PlayFootstep()
     {
         if (Time.time - lastStepTime >= playStepDelay)
         {
-            AudioClip step = Steps[Random.Range(0, Steps.Length)];
-            audioSource.clip = step;
-
+            if (canChooseSteps)
+            {
+               step = Steps[Random.Range(0, Steps.Length)];
+               audioSource.clip = step;
+            }
             if (isPitch)
             {
                 float pitch = Random.Range(pitchMin, pitchMax);
