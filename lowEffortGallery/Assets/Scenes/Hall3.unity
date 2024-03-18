@@ -2900,9 +2900,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e2062bfa22f992a4db1ef771b707fd9d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9f48c952004bda344ac094857ebc5762, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 1
   m_Pitch: 0.5
   Loop: 0
   Mute: 0
@@ -13021,9 +13021,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e2062bfa22f992a4db1ef771b707fd9d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9f48c952004bda344ac094857ebc5762, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 1
   m_Pitch: 0.5
   Loop: 0
   Mute: 0
@@ -13470,6 +13470,8 @@ MonoBehaviour:
   _soundManager:
   - {fileID: 462210338}
   - {fileID: 1694667508}
+  photoFlashVolume: 1
+  photoFlashSound: {fileID: 8300000, guid: 3d88a9be2c4e52240a174e46641aa4d1, type: 3}
 --- !u!4 &840707981
 Transform:
   m_ObjectHideFlags: 0
@@ -25838,9 +25840,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e2062bfa22f992a4db1ef771b707fd9d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9f48c952004bda344ac094857ebc5762, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 1
   m_Pitch: 0.5
   Loop: 0
   Mute: 0
@@ -28358,9 +28360,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e2062bfa22f992a4db1ef771b707fd9d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9f48c952004bda344ac094857ebc5762, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 1
   m_Pitch: 0.5
   Loop: 0
   Mute: 0
@@ -34310,9 +34312,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e2062bfa22f992a4db1ef771b707fd9d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9f48c952004bda344ac094857ebc5762, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 1
   m_Pitch: 0.5
   Loop: 0
   Mute: 0

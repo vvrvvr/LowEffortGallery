@@ -45,6 +45,9 @@ public class GameManager : MonoBehaviour
     public AudioClip savedToDesctop;
     public AudioClip coinSound;
     public SoundManager[] _soundManager = new SoundManager[1];
+
+    public float photoFlashVolume = 1f;
+    public AudioClip photoFlashSound;
     
 
     public static GameManager Instance

@@ -1543,6 +1543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _photoWarning: {fileID: 5210647860022315616}
   cameraToCapture: {fileID: 0}
+  camerasToCaptureList: []
   maskTexture: {fileID: 2800000, guid: ff75ce043dc56fa4caeae78ab3c865af, type: 3}
   isApplyMaskToPhoto: 1
 --- !u!1 &6305647159658578130

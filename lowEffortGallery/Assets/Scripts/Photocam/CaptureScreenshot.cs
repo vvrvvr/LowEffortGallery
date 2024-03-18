@@ -9,6 +9,7 @@ public class CaptureScreenshot : MonoBehaviour
     private Texture2D savedTexture;
     public bool isApplyMaskToPhoto = true;
     private bool isOnce = true;
+    private AudioSource _audio;
     
 
     private void Start()
@@ -17,6 +18,8 @@ public class CaptureScreenshot : MonoBehaviour
         {
             cameraToCapture = RandomExtensions.GetRandomElement(camerasToCaptureList);
             Debug.Log("Executed");
+            _audio = gameObject.AddComponent<AudioSource>();
+            _audio.volume = GameManager.Instance.photoFlashVolume;
         }
         
     }
@@ -44,6 +47,8 @@ public class CaptureScreenshot : MonoBehaviour
     {
         cameraToCapture.gameObject.SetActive(true);
         _photoWarning.DisableWarning();
+        
+        _audio.PlayOneShot(GameManager.Instance.photoFlashSound);
         
         GameManager.Instance.PhotoFlash();
 
