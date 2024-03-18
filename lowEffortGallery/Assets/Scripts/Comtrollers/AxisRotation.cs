@@ -9,7 +9,24 @@ public class AxisRotation : MonoBehaviour
     public bool rotateAroundY = false;
     public bool rotateAroundZ = false;
     public bool isLimiter = false;
+    private FootstepManager footstepManager;
 
+    void Start()
+    {
+        footstepManager = GetComponent<FootstepManager>();
+        if (footstepManager == null)
+        {
+            Debug.LogError("FootstepManager component is missing!");
+        }
+    }
+    private void Update()
+    {
+        if((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) && !isLimiter)
+        {
+            Debug.Log("step");
+            footstepManager.PlayFootstep();
+        }
+    }
     void FixedUpdate()
     {
         float rotateInputHorizontal = Input.GetAxis(inputHorizontalAxis);
