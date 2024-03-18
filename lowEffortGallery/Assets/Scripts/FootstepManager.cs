@@ -9,6 +9,9 @@ public class FootstepManager : MonoBehaviour
     public float playStepDelay = 0.5f;
 
     private AudioSource audioSource;
+    public AudioSource audioSourceJump;
+    //public AudioClip jumpSound;
+    public float playJumpDelay = 0.5f;
     private bool canPlay = true;
     private float lastStepTime = 0f;
     private bool canChooseSteps = false;
@@ -49,6 +52,15 @@ public class FootstepManager : MonoBehaviour
             }
 
             audioSource.Play();
+            lastStepTime = Time.time;
+        }
+    }
+
+    public void PlayJump()
+    {
+        if (Time.time - lastStepTime >= playJumpDelay)
+        {
+            audioSourceJump.Play();
             lastStepTime = Time.time;
         }
     }

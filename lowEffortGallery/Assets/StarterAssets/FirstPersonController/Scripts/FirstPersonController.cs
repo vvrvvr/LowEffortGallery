@@ -63,6 +63,9 @@ namespace StarterAssets
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
+		
+		private FootstepManager footstepManager;
+		private bool isInAir = false;
 
 	
 #if ENABLE_INPUT_SYSTEM
@@ -108,6 +111,12 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+			
+			footstepManager = GetComponent<FootstepManager>();
+			if (footstepManager == null)
+			{
+				Debug.LogError("FootstepManager component is missing!");
+			}
 		}
 
 		private void Update()
@@ -191,6 +200,11 @@ namespace StarterAssets
 			if (_input.move != Vector2.zero)
 			{
 				// move
+				if (Grounded)
+				{
+					footstepManager.PlayFootstep();
+				}
+				
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
 			}
 
@@ -214,7 +228,9 @@ namespace StarterAssets
 				// Jump
 				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
 				{
-					// the square root of H * -2 * G = how much velocity needed to reach desired height
+					Debug.Log("jump sound");
+					footstepManager.PlayJump();
+						// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 				}
 
@@ -228,7 +244,6 @@ namespace StarterAssets
 			{
 				// reset the jump timeout timer
 				_jumpTimeoutDelta = JumpTimeout;
-
 				// fall timeout
 				if (_fallTimeoutDelta >= 0.0f)
 				{
