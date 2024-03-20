@@ -13796,7 +13796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1327275032
 Transform:
   m_ObjectHideFlags: 0
@@ -16645,7 +16645,6 @@ MonoBehaviour:
   coinSound: {fileID: 0}
   _soundManager:
   - {fileID: 1418575895}
-  - {fileID: 0}
   photoFlashVolume: 1
   photoFlashSound: {fileID: 8300000, guid: 3d88a9be2c4e52240a174e46641aa4d1, type: 3}
 --- !u!1 &1481678521
