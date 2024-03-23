@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.031156076, g: 0.06826333, b: 0.1282432, a: 1}
+  m_IndirectSpecularColor: {r: 0.031155962, g: 0.06826303, b: 0.12824276, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15209,7 +15209,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716094806}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c328a84d75acbf44f985c680ce6a0b9f, type: 3}
@@ -15311,8 +15311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CarAudioSource: {fileID: 1716094808}
-  carDoorsOpen: {fileID: 8300000, guid: 63e94752e340f364a822b9b75724ffef, type: 3}
-  carEngineWroom: {fileID: 8300000, guid: a0793221be1496a40a858f5d5de9e112, type: 3}
+  carDoorsOpen: {fileID: 8300000, guid: 3bd4ad89c2c8342f3a627b0098983311, type: 3}
+  carEngineWroom: {fileID: 8300000, guid: 57a6c759f7fbb4e10a3f3e01183689ea, type: 3}
   delayToDoorsSound: 1
   delayToWroomSound: 2
 --- !u!1 &1724640516
@@ -17615,12 +17615,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Steps:
-  - {fileID: 8300000, guid: 2d7b31a5b4ff748f6b41cb4f03e9b8a6, type: 3}
   - {fileID: 8300000, guid: bd3a6e5c8647146288308b6758f0346b, type: 3}
   - {fileID: 8300000, guid: 637e21a6d774748d2af111c3f9e6d67a, type: 3}
   - {fileID: 8300000, guid: e48261769c0c84dd98660ea1ba168bf3, type: 3}
-  pitchMax: 1
-  pitchMin: 0.8
+  pitchMax: 1.1
+  pitchMin: 0.9
   isPitch: 1
   playStepDelay: 0.4
   audioSourceJump: {fileID: 1932876298}
@@ -17637,7 +17636,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e6bb48a03640d48a1930c053eb0c415b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.948
+  m_Volume: 1
   m_Pitch: 0.9
   Loop: 0
   Mute: 0
@@ -19331,7 +19330,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059866821}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c328a84d75acbf44f985c680ce6a0b9f, type: 3}
@@ -19433,8 +19432,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CarAudioSource: {fileID: 2059866823}
-  carDoorsOpen: {fileID: 8300000, guid: 63e94752e340f364a822b9b75724ffef, type: 3}
-  carEngineWroom: {fileID: 8300000, guid: a0793221be1496a40a858f5d5de9e112, type: 3}
+  carDoorsOpen: {fileID: 8300000, guid: 3bd4ad89c2c8342f3a627b0098983311, type: 3}
+  carEngineWroom: {fileID: 8300000, guid: 57a6c759f7fbb4e10a3f3e01183689ea, type: 3}
   delayToDoorsSound: 1
   delayToWroomSound: 2
 --- !u!1001 &2084974025
