@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public CinemachineVirtualCamera MenuCamera;
     public GameObject Cursor;
     public Image fadeImage;
-    public float fadeSpeed = 1.0f;
+    public float fadeSpeed = 2.0f;
     
     [HideInInspector] public bool isFlyCam = false;
     [HideInInspector] public int coins = 0;
@@ -193,11 +193,12 @@ public class GameManager : MonoBehaviour
     
     public void LoadNextLevel(string levelName)
     {
+        Debug.Log("exit");
         if (_soundManager != null)
         {
             for (int i = 0; i < _soundManager.Length; i++)
             {
-                Debug.Log("soundmanager");
+                
                 _soundManager[i].FadeSound(fadeSpeed-0.5f, false);
             }
            

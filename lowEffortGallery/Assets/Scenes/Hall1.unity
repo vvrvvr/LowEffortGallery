@@ -3511,6 +3511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchMin: 0.6
+  pitchMax: 1
 --- !u!54 &329142797
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13926,6 +13928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchMin: 0.6
+  pitchMax: 1
 --- !u!54 &1326848084
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14201,6 +14205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchMin: 0.6
+  pitchMax: 1
 --- !u!54 &1337320563
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16867,7 +16873,7 @@ MonoBehaviour:
   MenuCamera: {fileID: 0}
   Cursor: {fileID: 1747307725}
   fadeImage: {fileID: 264210859}
-  fadeSpeed: 7
+  fadeSpeed: 2
   isFlyCam: 0
   coins: 0
   texturesArray:
@@ -19013,6 +19019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchMin: 0.6
+  pitchMax: 1
 --- !u!54 &1673181669
 Rigidbody:
   m_ObjectHideFlags: 0
