@@ -20279,9 +20279,15 @@ MonoBehaviour:
   isFlyCam: 0
   coins: 0
   texturesArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
   _Avatars: {fileID: 371965632}
   folderName: galleryFiles
   fileNamePrefix: Screenshot
@@ -31843,18 +31849,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2d17f7125b0c14699651300837daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isExposition: 1
   isFlyCam: 0
   coins: 5
   isCameraBought: 1
-  texturesArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  textureDataArray:
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
   AvatarID: 1
-  texturesArrayTest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   RunsCompleted: 0
   cameraBoughtFirstTimeMenu: 0
   screenshotCount: 0

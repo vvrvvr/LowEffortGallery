@@ -10,6 +10,7 @@ public class AlchemyDeskSlot : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Animator counterAnimator;
     public ParticleSystem particles;
+    public QRCodeHandler qrCodeHandler;
         
 
     public bool isSlotBusy = false;
@@ -72,6 +73,8 @@ public class AlchemyDeskSlot : MonoBehaviour
             int avatar = currentInterface.avatar;
             int hall = currentInterface.hall;
             //здесь изменить фразу и отправить в гейм менеджер для показа куар кода 
+            var qrCodeIndex = GetCode(avatar, hall);
+            qrCodeHandler.ApplyCode(qrCodeIndex);
             Debug.Log(GetCode(avatar, hall));
             DialogueManager.instance.FrogSay("photoSavedToQR");
         }
