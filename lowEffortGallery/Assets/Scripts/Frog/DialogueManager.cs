@@ -235,17 +235,15 @@ public class DialogueManager : MonoBehaviour
                 {
                     phrase = new string[]
                     {
-                        "saved to qr 1",
-                        "saved to qr 2"
+                        "Boom, nailed it!",
+                        "Point your phone cam at the QR code to grab this insane pic for yourself"
                     };
                     photoSavedToQR = false;
                 }
                 else
                 {
                     var variants5 = new string[]{ 
-                        "saved to qr 21",
-                        "saved to qr 22",
-                        "saved to qr 23"
+                        "Fresh day, fresh QR code straight outta the grinder!"
                     };
                     phrase = new string[] {RandomExtensions.GetRandomElement(variants5)};
                 }
@@ -256,17 +254,17 @@ public class DialogueManager : MonoBehaviour
                 {
                     phrase = new string[]
                     {
-                        "Solid choice11!",
-                        "Drop the photo on the counter for that expanded-magic to happen and save it to your desktop11!",
-                        "If all's smooth sailing, you should see a folder with our gallery's name and files inside on your desk11"
+                        "Absolutely sick choice, mate!",
+                        "Toss that snap on the counter, let the vibes expand and watch it morph into a QR code on the wall",
+                        "Scan that code to snag the pic on your phone, easy-peasy, fam!"
                     };
                     photoBoughtQR = false;
                 }
                 else
                 {
                     var variants6 = new string[]{ 
-                        "Not bad. Chuck the photo into the virtual grinder to save it to your desktop22",
-                        "The photo's yours. You can do whatever with it within our gallery's limits22"
+                        "Not bad, fam. Chuck that pic into the virtual blender to churn out a fresh QR code on the wall",
+                        "It's all yours, do whatever floats your boat within the gallery's vibe"
                     };
                     phrase = new string[] {RandomExtensions.GetRandomElement(variants6)};
                 }
