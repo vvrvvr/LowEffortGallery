@@ -1886,7 +1886,7 @@ PrefabInstance:
     - target: {fileID: 3325583467913471700, guid: 3f58082c10f875a49b957cde81e1260f,
         type: 3}
       propertyPath: maxTime
-      value: 5
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3325583467913471700, guid: 3f58082c10f875a49b957cde81e1260f,
         type: 3}
@@ -3967,18 +3967,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2d17f7125b0c14699651300837daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isExposition: 1
   isFlyCam: 0
   coins: 0
   isCameraBought: 0
-  texturesArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  textureDataArray:
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
   AvatarID: 0
-  texturesArrayTest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   RunsCompleted: 0
   cameraBoughtFirstTimeMenu: 0
   screenshotCount: 0
@@ -16184,9 +16187,15 @@ MonoBehaviour:
   isFlyCam: 0
   coins: 0
   texturesArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
   _Avatars: {fileID: 432118017}
   folderName: galleryFiles
   fileNamePrefix: Screenshot
