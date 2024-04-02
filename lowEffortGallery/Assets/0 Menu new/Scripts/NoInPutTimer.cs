@@ -31,7 +31,7 @@ public class NoInPutTimer : MonoBehaviour
         if (!Input.anyKey && Input.mousePosition == lastMousePosition) //not pressed
         {
             currentTime += Time.unscaledDeltaTime;
-            Debug.Log(currentTime);
+            //Debug.Log(currentTime);
             if (currentTime >= maxTime)
             {
                 if (!isTimerScreen)
@@ -110,7 +110,15 @@ public class NoInPutTimer : MonoBehaviour
         {
             if (_UIManager.isMenu)
             {
-                ResetTimer();
+                if (GameVariables.instance.coins > 0 || GameVariables.instance.RunsCompleted > 0)
+                {
+                    GameVariables.instance.ResetVariables();
+                    SceneManager.LoadScene("Start");
+                }
+                else
+                {
+                    ResetTimer();
+                }
             }
             else
             {
