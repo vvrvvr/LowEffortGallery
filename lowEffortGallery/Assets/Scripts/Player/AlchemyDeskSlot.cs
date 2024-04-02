@@ -73,7 +73,7 @@ public class AlchemyDeskSlot : MonoBehaviour
             int hall = currentInterface.hall;
             //здесь изменить фразу и отправить в гейм менеджер для показа куар кода 
             Debug.Log(GetCode(avatar, hall));
-            DialogueManager.instance.FrogSay("photoSavedToDesktop");
+            DialogueManager.instance.FrogSay("photoSavedToQR");
         }
         else
         {

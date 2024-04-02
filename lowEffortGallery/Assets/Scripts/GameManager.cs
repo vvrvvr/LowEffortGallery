@@ -279,7 +279,14 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                DialogueManager.instance.FrogSay("photoBought");
+                if (GameVariables.instance.isExposition)
+                {
+                    DialogueManager.instance.FrogSay("photoBoughtQR");
+                }
+                else
+                {
+                    DialogueManager.instance.FrogSay("photoBought");
+                }
             }
         }
         else

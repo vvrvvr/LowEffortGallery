@@ -16,8 +16,11 @@ public class DialogueManager : MonoBehaviour
     private bool photoBought = true;
     private bool playerTeleport = true;
     private bool photoSavedToDesktop = true;
-    
-    
+    private bool photoSavedToQR = true;
+    private bool photoBoughtQR = true;
+
+
+
     private void Awake()
     {
         instance = this;
@@ -224,6 +227,48 @@ public class DialogueManager : MonoBehaviour
                 else
                 {
                     phrase = new string[] {"Check in the folder on your desktop"};
+                }
+                break;
+            
+            case "photoSavedToQR":
+                if (photoSavedToQR)
+                {
+                    phrase = new string[]
+                    {
+                        "saved to qr 1",
+                        "saved to qr 2"
+                    };
+                    photoSavedToQR = false;
+                }
+                else
+                {
+                    var variants5 = new string[]{ 
+                        "saved to qr 21",
+                        "saved to qr 22",
+                        "saved to qr 23"
+                    };
+                    phrase = new string[] {RandomExtensions.GetRandomElement(variants5)};
+                }
+                break;
+            
+            case "photoBoughtQR":
+                if (photoBoughtQR)
+                {
+                    phrase = new string[]
+                    {
+                        "Solid choice11!",
+                        "Drop the photo on the counter for that expanded-magic to happen and save it to your desktop11!",
+                        "If all's smooth sailing, you should see a folder with our gallery's name and files inside on your desk11"
+                    };
+                    photoBoughtQR = false;
+                }
+                else
+                {
+                    var variants6 = new string[]{ 
+                        "Not bad. Chuck the photo into the virtual grinder to save it to your desktop22",
+                        "The photo's yours. You can do whatever with it within our gallery's limits22"
+                    };
+                    phrase = new string[] {RandomExtensions.GetRandomElement(variants6)};
                 }
                 break;
             
