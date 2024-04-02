@@ -11,7 +11,9 @@ public struct TextureData
 public class GameVariables : MonoBehaviour
 {
     public static GameVariables instance;
-
+    [Space(10)] 
+    public bool isExposition = false;
+    [Space(10)]
     public bool isFlyCam = false;
     public int coins = 0;
     public bool isCameraBought = false;

@@ -67,8 +67,19 @@ public class AlchemyDeskSlot : MonoBehaviour
        
     public void ApplyBuy()
     {
-        DialogueManager.instance.FrogSay("photoSavedToDesktop");
-        GameManager.Instance.SaveTextureToFile(currentInterface.photoArrayID);
+        if (GameVariables.instance.isExposition)
+        {
+            int avatar = currentInterface.avatar;
+            int hall = currentInterface.hall;
+            //здесь изменить фразу и отправить в гейм менеджер для показа куар кода 
+            Debug.Log(GetCode(avatar, hall));
+            DialogueManager.instance.FrogSay("photoSavedToDesktop");
+        }
+        else
+        {
+            DialogueManager.instance.FrogSay("photoSavedToDesktop");
+            GameManager.Instance.SaveTextureToFile(currentInterface.photoArrayID);
+        }
         currentInterface.DeleteInterface();
         animator.enabled = false;
         animator.enabled = true;
@@ -78,4 +89,20 @@ public class AlchemyDeskSlot : MonoBehaviour
         currentInterface = null;
         isSlotBusy = false;
     }
+    
+    public int GetCode(int avatar, int hall)
+    {
+        if (avatar < 0 || avatar > 2 || hall < 1 || hall > 3)
+        {
+            Debug.LogError("Недопустимые значения avatar или hall.");
+            return -1;
+        }
+
+        // Массив изображений имеет размер 3x3, поэтому используем формулу:
+        // индекс = avatar * 3 + (hall - 1)
+        int code = avatar * 3 + (hall - 1);
+    
+        return code;
+    }
+    
 }
