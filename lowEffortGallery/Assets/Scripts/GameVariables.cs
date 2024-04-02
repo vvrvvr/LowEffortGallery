@@ -35,5 +35,18 @@ public class GameVariables : MonoBehaviour
             screenshotCount = 0;
         }
     }
+
+    public void ResetVariables()
+    {
+        isFlyCam = false;
+        coins = 0;
+        isCameraBought = false;
+        texturesArray= new Texture2D[3];
+        AvatarID = 0;
+        texturesArrayTest = new Texture2D[3]; //delete after 
+        RunsCompleted = 0;
+        cameraBoughtFirstTimeMenu = false;
+        screenshotCount = 0;
+    }
     
 }
