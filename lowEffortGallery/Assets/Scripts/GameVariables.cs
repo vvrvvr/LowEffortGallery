@@ -1,18 +1,26 @@
 using UnityEngine;
 
+[System.Serializable]
+public struct TextureData
+{
+    public Texture2D texture;
+    public int avatar;
+    public int hall;
+}
+
 public class GameVariables : MonoBehaviour
 {
     public static GameVariables instance;
-    
+
     public bool isFlyCam = false;
     public int coins = 0;
     public bool isCameraBought = false;
-    public Texture2D[] texturesArray= new Texture2D[3];
+    public TextureData[] textureDataArray = new TextureData[3]; // Массив структур TextureData
     public int AvatarID = 0;
-    public Texture2D[] texturesArrayTest = new Texture2D[3]; //delete after 
     public int RunsCompleted = 0;
     public bool cameraBoughtFirstTimeMenu = false;
     public int screenshotCount = 0;
+
     private void Awake()
     {
         if (instance == null)
@@ -25,12 +33,19 @@ public class GameVariables : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-    public void SavePhotoTextureToArray(Texture2D textureToSave)
+
+    public void SavePhotoTextureToArray(Texture2D textureToSave, int avatar, int hall)
     {
-        texturesArray[screenshotCount] = textureToSave;
+        // Создание новой структуры TextureData и сохранение данных
+        TextureData newData = new TextureData();
+        newData.texture = textureToSave;
+        newData.avatar = avatar;
+        newData.hall = hall;
+
+        // Сохранение структуры в массиве
+        textureDataArray[screenshotCount] = newData;
         screenshotCount++;
-        if (screenshotCount >= texturesArray.Length)
+        if (screenshotCount >= textureDataArray.Length)
         {
             screenshotCount = 0;
         }
@@ -41,12 +56,10 @@ public class GameVariables : MonoBehaviour
         isFlyCam = false;
         coins = 0;
         isCameraBought = false;
-        texturesArray= new Texture2D[3];
+        textureDataArray = new TextureData[3];
         AvatarID = 0;
-        texturesArrayTest = new Texture2D[3]; //delete after 
         RunsCompleted = 0;
         cameraBoughtFirstTimeMenu = false;
         screenshotCount = 0;
     }
-    
 }
