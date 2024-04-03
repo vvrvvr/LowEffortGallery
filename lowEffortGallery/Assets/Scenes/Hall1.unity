@@ -16877,9 +16877,15 @@ MonoBehaviour:
   isFlyCam: 0
   coins: 0
   texturesArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
   _Avatars: {fileID: 2008376122}
   folderName: galleryFiles
   fileNamePrefix: Screenshot
@@ -19813,7 +19819,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3285854c13c8ab24bba3c24d12745d76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 005c13bb2ed5ad349a4eaa20ce218d6a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21972,7 +21978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 689.84033, y: -41}
+  m_AnchoredPosition: {x: 729, y: -17}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2006120275
@@ -23086,18 +23092,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2d17f7125b0c14699651300837daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isExposition: 0
   isFlyCam: 0
   coins: 0
   isCameraBought: 1
-  texturesArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  textureDataArray:
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
+  - texture: {fileID: 0}
+    avatar: 0
+    hall: 0
   AvatarID: 1
-  texturesArrayTest:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   RunsCompleted: 0
   cameraBoughtFirstTimeMenu: 0
   screenshotCount: 0
