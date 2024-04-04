@@ -261,4 +261,13 @@ public class UIManager : MonoBehaviour
 				Application.Quit();
 #endif
     }
+
+    public void RestartGame()
+    {
+        //reset variables
+        var gameVars = GameVariables.instance;
+        gameVars.ResetVariables();
+        
+        SceneManager.LoadScene("Start");
+    }
 }

@@ -13,10 +13,14 @@ public class Postcards : MonoBehaviour
         int photoCounter = 0;
         for (; photoCounter < photos.Length; photoCounter++)
         {
-            if (photos[photoCounter] != null)
+            if (photos[photoCounter].texture != null)
             {
-                _postcards[postcardCounter].GetComponent<InterfaceObject>().photoArrayID = photoCounter;
-                ApplySavedTexture(photos[photoCounter],_postcards[postcardCounter]);
+                var postcardInterfaceObject = _postcards[postcardCounter].GetComponent<InterfaceObject>();
+                postcardInterfaceObject.photoArrayID = photoCounter;
+                postcardInterfaceObject.avatar = photos[photoCounter].avatar;
+                postcardInterfaceObject.hall = photos[photoCounter].hall;
+                
+                ApplySavedTexture(photos[photoCounter].texture,_postcards[postcardCounter]);
                 postcardCounter++;
             }
         }

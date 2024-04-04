@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CaptureScreenshot : MonoBehaviour
 {
@@ -70,8 +71,18 @@ public class CaptureScreenshot : MonoBehaviour
             ApplyMaskToTexture();
 
         cameraToCapture.gameObject.SetActive(false);
+
+        string hallNumber = SceneManager.GetActiveScene().name;
+        if (int.TryParse(hallNumber[hallNumber.Length - 1].ToString(), out var digit))
+        {
+            
+        }
+        else
+        {
+            digit = 1;
+        }
         
-        GameVariables.instance.SavePhotoTextureToArray(savedTexture);
+        GameVariables.instance.SavePhotoTextureToArray(savedTexture, GameVariables.instance.AvatarID, digit );
         savedTexture = null;
         
         Debug.Log("screenshot made");

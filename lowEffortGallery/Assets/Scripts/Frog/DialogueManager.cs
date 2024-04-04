@@ -16,8 +16,11 @@ public class DialogueManager : MonoBehaviour
     private bool photoBought = true;
     private bool playerTeleport = true;
     private bool photoSavedToDesktop = true;
-    
-    
+    private bool photoSavedToQR = true;
+    private bool photoBoughtQR = true;
+
+
+
     private void Awake()
     {
         instance = this;
@@ -224,6 +227,46 @@ public class DialogueManager : MonoBehaviour
                 else
                 {
                     phrase = new string[] {"Check in the folder on your desktop"};
+                }
+                break;
+            
+            case "photoSavedToQR":
+                if (photoSavedToQR)
+                {
+                    phrase = new string[]
+                    {
+                        "Boom, nailed it!",
+                        "Point your phone cam at the QR code to grab this insane pic for yourself"
+                    };
+                    photoSavedToQR = false;
+                }
+                else
+                {
+                    var variants5 = new string[]{ 
+                        "Fresh day, fresh QR code straight outta the grinder!"
+                    };
+                    phrase = new string[] {RandomExtensions.GetRandomElement(variants5)};
+                }
+                break;
+            
+            case "photoBoughtQR":
+                if (photoBoughtQR)
+                {
+                    phrase = new string[]
+                    {
+                        "Absolutely sick choice, mate!",
+                        "Toss that snap on the counter, let the vibes expand and watch it morph into a QR code on the wall",
+                        "Scan that code to snag the pic on your phone, easy-peasy, fam!"
+                    };
+                    photoBoughtQR = false;
+                }
+                else
+                {
+                    var variants6 = new string[]{ 
+                        "Not bad, fam. Chuck that pic into the virtual blender to churn out a fresh QR code on the wall",
+                        "It's all yours, do whatever floats your boat within the gallery's vibe"
+                    };
+                    phrase = new string[] {RandomExtensions.GetRandomElement(variants6)};
                 }
                 break;
             
