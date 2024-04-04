@@ -4219,14 +4219,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Steps:
-  - {fileID: 8300000, guid: 2d7b31a5b4ff748f6b41cb4f03e9b8a6, type: 3}
-  - {fileID: 8300000, guid: bd3a6e5c8647146288308b6758f0346b, type: 3}
-  - {fileID: 8300000, guid: 637e21a6d774748d2af111c3f9e6d67a, type: 3}
-  - {fileID: 8300000, guid: e48261769c0c84dd98660ea1ba168bf3, type: 3}
+  - {fileID: 8300000, guid: 8a91962dd31014cb791062d0992bae80, type: 3}
+  - {fileID: 8300000, guid: af0e9cd672cac4e89a68ed1962d60c0d, type: 3}
+  - {fileID: 8300000, guid: 8bd8544501ee3481e971cf68edbc53a6, type: 3}
+  - {fileID: 8300000, guid: 577d3c9d509b3423687bc3d6e5b544ac, type: 3}
   pitchMax: 1
   pitchMin: 0.8
   isPitch: 1
-  playStepDelay: 0.4
+  playStepDelay: 0.45
   audioSourceJump: {fileID: 365020281}
   playJumpDelay: 0.18
 --- !u!82 &365020280
@@ -4241,7 +4241,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6717,6 +6717,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -3510264905822749958, guid: 1282d53553c844e4c8c164883ad94152, type: 2}
     value: {fileID: 184977759}
+  - key: {fileID: 2772744249981688295, guid: 1282d53553c844e4c8c164883ad94152, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &489848992
@@ -6733,6 +6735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 489848991}
   nextLevelName: Start
+  _exitCarSoundManager: {fileID: 0}
 --- !u!65 &489848993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8183,6 +8186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playableDirector: {fileID: 593645626}
   nextLevelName: Start
+  _exitCarSoundManager: {fileID: 0}
 --- !u!65 &593645628
 BoxCollider:
   m_ObjectHideFlags: 0

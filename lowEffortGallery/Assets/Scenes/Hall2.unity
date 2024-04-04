@@ -11322,6 +11322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchMin: 0.6
+  pitchMax: 1
 --- !u!54 &698683131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12549,6 +12551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchMin: 0.6
+  pitchMax: 1
 --- !u!54 &752210186
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15357,6 +15361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchMin: 0.6
+  pitchMax: 1
 --- !u!54 &931306650
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20290,7 +20296,7 @@ MonoBehaviour:
   coinSound: {fileID: 0}
   _soundManager:
   - {fileID: 965233587}
-  photoFlashVolume: 1
+  photoFlashVolume: 0.85
   photoFlashSound: {fileID: 8300000, guid: 3d88a9be2c4e52240a174e46641aa4d1, type: 3}
 --- !u!4 &1224862089
 Transform:
@@ -24651,6 +24657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchMin: 0.6
+  pitchMax: 1
 --- !u!54 &1526694512
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -37705,6 +37713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9b898c7f4eb754ea29c5a3ad653aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pitchMin: 0.6
+  pitchMax: 1
 --- !u!82 &8539700775885982712
 AudioSource:
   m_ObjectHideFlags: 0

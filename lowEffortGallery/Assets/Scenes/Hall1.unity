@@ -16894,7 +16894,7 @@ MonoBehaviour:
   coinSound: {fileID: 0}
   _soundManager:
   - {fileID: 1418575895}
-  photoFlashVolume: 1
+  photoFlashVolume: 0.8
   photoFlashSound: {fileID: 8300000, guid: 3d88a9be2c4e52240a174e46641aa4d1, type: 3}
 --- !u!1 &1481678521
 GameObject:
