@@ -43,11 +43,15 @@ public class DialoguePrinter : MonoBehaviour
    // public float dialogueDelay = 2.0f; // Время задержки после завершения написания фразы
     string inbetween = "Anyway...";
     
-    public AudioClip frogPhrase;
+    [Space(20)]
+    //public AudioClip frogPhrase;
     public float pitchMin = 0.8f;
     public float pitchMax = 1.2f;
     private bool isPlaying = false;
     public AudioSource _Audio;
+    public AudioClip[] frogAudioClips;
+    private AudioClip frogCurrentAudio;
+    public float frogSoundsDelay = 0.1f;
     
     
 
@@ -212,13 +216,15 @@ public class DialoguePrinter : MonoBehaviour
     
     public void FrogSound(bool isInterrupt)
     {
-        if (!isInterrupt || !isPlaying)
+        if (!isInterrupt && !isPlaying)
         {
             isPlaying = true;
             float randomPitch = Random.Range(pitchMin, pitchMax);
             _Audio.pitch = randomPitch;
-            _Audio.PlayOneShot(frogPhrase);
-            StartCoroutine(WaitForSound(frogPhrase.length));
+            frogCurrentAudio = frogAudioClips[Random.Range(0, frogAudioClips.Length)];
+            _Audio.clip = frogCurrentAudio;
+            _Audio.PlayOneShot(frogCurrentAudio);
+            StartCoroutine(WaitForSound(frogSoundsDelay));
         }
     }
 
