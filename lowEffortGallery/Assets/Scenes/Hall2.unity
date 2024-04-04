@@ -13838,7 +13838,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.256
+  m_Volume: 0.299
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15723,7 +15723,7 @@ PrefabInstance:
     - target: {fileID: 3153960609926301210, guid: da84cd2cd50ae0a4799ee0a921d74b32,
         type: 3}
       propertyPath: m_Volume
-      value: 0.656
+      value: 0.699
       objectReference: {fileID: 0}
     - target: {fileID: 3153960609926301210, guid: da84cd2cd50ae0a4799ee0a921d74b32,
         type: 3}
@@ -16645,9 +16645,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c5c4fbee0989d884f8467707eedb8bf7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.07
+  m_Volume: 0.06
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -17226,7 +17226,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.102
+  m_Volume: 0.136
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -23687,8 +23687,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1.28
+  m_Volume: 0.36
+  m_Pitch: 1.14
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -23785,8 +23785,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Steps:
   - {fileID: 8300000, guid: 88f1d1264973b884f8a2b485b77194b4, type: 3}
-  pitchMax: 1
-  pitchMin: 0.8
+  pitchMax: 0.75
+  pitchMin: 0.5
   isPitch: 0
   playStepDelay: 0.05
   audioSourceJump: {fileID: 0}

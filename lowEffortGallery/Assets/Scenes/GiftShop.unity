@@ -4791,14 +4791,14 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0e67df78712115347bc734b8009668fd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.66
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 1.09
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -15388,6 +15388,7 @@ GameObject:
   - component: {fileID: 1401099298}
   - component: {fileID: 1401099299}
   - component: {fileID: 1401099300}
+  - component: {fileID: 1401099301}
   m_Layer: 0
   m_Name: DialoguePrinter (1)
   m_TagString: Untagged
@@ -15404,7 +15405,7 @@ Transform:
   m_GameObject: {fileID: 1401099296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.097542, y: 0.40747428, z: 8.585227}
+  m_LocalPosition: {x: -8.764, y: 2.021, z: 7.409}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15435,9 +15436,22 @@ MonoBehaviour:
   pitchMax: 1.1
   _Audio: {fileID: 1401099300}
   frogAudioClips:
-  - {fileID: 8300000, guid: 63e94752e340f364a822b9b75724ffef, type: 3}
-  - {fileID: 8300000, guid: a0793221be1496a40a858f5d5de9e112, type: 3}
-  frogSoundsDelay: 0.05
+  - {fileID: 8300000, guid: d550ff1f38dca294b8a100eb880edcb4, type: 3}
+  - {fileID: 8300000, guid: e5dd490a72253924e9467b78c6553a72, type: 3}
+  - {fileID: 8300000, guid: d15d1985904e5db449eef8c9709d9680, type: 3}
+  - {fileID: 8300000, guid: 7059a90a69475b542ba2eb905b1a45ac, type: 3}
+  - {fileID: 8300000, guid: 9b1d256749817c944a38e7d99e659bd1, type: 3}
+  - {fileID: 8300000, guid: 6106f6e0ef6434544b04e61289d62f11, type: 3}
+  - {fileID: 8300000, guid: 5d34dc16b99ab6449a4ae9a033b4ac1c, type: 3}
+  - {fileID: 8300000, guid: 6d022e21be72c4e4c95602845f152163, type: 3}
+  - {fileID: 8300000, guid: 1b8a67a4c4d889d4a9ff65126f69e206, type: 3}
+  - {fileID: 8300000, guid: 6203d32ac4504e94b825a08446e9d967, type: 3}
+  - {fileID: 8300000, guid: 4f7c400e0dce7ca4cb341c1c16b28cbf, type: 3}
+  - {fileID: 8300000, guid: 68c1cf444b8732048bf11b5f31660c84, type: 3}
+  - {fileID: 8300000, guid: 867699a43cc03e448ba17405ff0ba4e0, type: 3}
+  - {fileID: 8300000, guid: 707b7b2b263ea99428c550f029ba80db, type: 3}
+  - {fileID: 8300000, guid: f14e6ee024d1ed9499f3de2dc088e3bc, type: 3}
+  frogSoundsDelay: 0.15
 --- !u!114 &1401099299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15464,7 +15478,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.532
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -15475,7 +15489,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -15483,23 +15497,50 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.002
+      value: 1.0061798
+      inSlope: -5.1796546
+      outSlope: -5.1796546
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.09150945
+      value: 0.5033722
+      inSlope: -3.1558151
+      outSlope: -3.1558151
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.40748248
+    - serializedVersion: 3
+      time: 0.30754638
+      value: 0.16394043
+      inSlope: -0.7519433
+      outSlope: -0.7519433
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.652446
+    - serializedVersion: 3
+      time: 0.58714956
+      value: 0.034805298
+      inSlope: -0.22661132
+      outSlope: -0.22661132
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.83935654
+      outWeight: 0.5819513
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 0.002
+      inSlope: -0.002000801
+      outSlope: -0.002000801
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -15508,7 +15549,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.647
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -15548,6 +15589,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1401099301
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401099296}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1362
+  m_RoomHF: 0
+  m_DecayTime: 1
+  m_DecayHFRatio: 0.5
+  m_ReflectionsLevel: -10000
+  m_ReverbLevel: 0
+  m_ReverbDelay: 0.04
+  m_Diffusion: 60.5
+  m_Density: 62.6
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 27
 --- !u!1 &1410012389
 GameObject:
   m_ObjectHideFlags: 0

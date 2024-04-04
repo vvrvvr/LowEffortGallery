@@ -6183,9 +6183,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c5c4fbee0989d884f8467707eedb8bf7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.083
   m_Pitch: 0.8
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -11268,6 +11268,7 @@ GameObject:
   - component: {fileID: 1102508653}
   - component: {fileID: 1102508654}
   - component: {fileID: 1102508655}
+  - component: {fileID: 1102508656}
   m_Layer: 0
   m_Name: DialoguePrinter
   m_TagString: Untagged
@@ -11312,10 +11313,24 @@ MonoBehaviour:
   isWaitingForUserInput: 0
   isDialogueCantInteract: 0
   textSpeed: 0.01
-  frogPhrase: {fileID: 8300000, guid: 63e94752e340f364a822b9b75724ffef, type: 3}
-  pitchMin: 0.8
-  pitchMax: 1.1
+  pitchMin: 0.75
+  pitchMax: 1.15
   _Audio: {fileID: 1102508655}
+  frogAudioClips:
+  - {fileID: 8300000, guid: d550ff1f38dca294b8a100eb880edcb4, type: 3}
+  - {fileID: 8300000, guid: e5dd490a72253924e9467b78c6553a72, type: 3}
+  - {fileID: 8300000, guid: d15d1985904e5db449eef8c9709d9680, type: 3}
+  - {fileID: 8300000, guid: 7059a90a69475b542ba2eb905b1a45ac, type: 3}
+  - {fileID: 8300000, guid: 9b1d256749817c944a38e7d99e659bd1, type: 3}
+  - {fileID: 8300000, guid: 6106f6e0ef6434544b04e61289d62f11, type: 3}
+  - {fileID: 8300000, guid: 5d34dc16b99ab6449a4ae9a033b4ac1c, type: 3}
+  - {fileID: 8300000, guid: 6d022e21be72c4e4c95602845f152163, type: 3}
+  - {fileID: 8300000, guid: 1b8a67a4c4d889d4a9ff65126f69e206, type: 3}
+  - {fileID: 8300000, guid: 6203d32ac4504e94b825a08446e9d967, type: 3}
+  - {fileID: 8300000, guid: 707b7b2b263ea99428c550f029ba80db, type: 3}
+  - {fileID: 8300000, guid: f14e6ee024d1ed9499f3de2dc088e3bc, type: 3}
+  - {fileID: 8300000, guid: 4f7c400e0dce7ca4cb341c1c16b28cbf, type: 3}
+  frogSoundsDelay: 0.15
 --- !u!82 &1102508655
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11328,7 +11343,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11338,7 +11353,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.12
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -11412,6 +11427,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!165 &1102508656
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102508652}
+  m_Enabled: 1
+  m_CutoffFrequency: 400
+  m_HighpassResonanceQ: 1
 --- !u!1 &1102793853
 GameObject:
   m_ObjectHideFlags: 0
@@ -16100,7 +16125,7 @@ PrefabInstance:
     - target: {fileID: 3153960609926301210, guid: da84cd2cd50ae0a4799ee0a921d74b32,
         type: 3}
       propertyPath: m_Volume
-      value: 0.656
+      value: 0.605
       objectReference: {fileID: 0}
     - target: {fileID: 3153960609926301210, guid: da84cd2cd50ae0a4799ee0a921d74b32,
         type: 3}
@@ -16900,7 +16925,7 @@ MonoBehaviour:
   coinSound: {fileID: 0}
   _soundManager:
   - {fileID: 1418575895}
-  photoFlashVolume: 0.8
+  photoFlashVolume: 0.84
   photoFlashSound: {fileID: 8300000, guid: 3d88a9be2c4e52240a174e46641aa4d1, type: 3}
 --- !u!1 &1481678521
 GameObject:
@@ -17069,8 +17094,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1.28
+  m_Volume: 0.8
+  m_Pitch: 1.2
   Loop: 0
   Mute: 0
   Spatialize: 0
