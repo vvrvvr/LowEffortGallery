@@ -15429,10 +15429,13 @@ MonoBehaviour:
   isWaitingForUserInput: 0
   isDialogueCantInteract: 0
   textSpeed: 0.02
-  frogPhrase: {fileID: 8300000, guid: 63e94752e340f364a822b9b75724ffef, type: 3}
   pitchMin: 0.8
   pitchMax: 1.1
   _Audio: {fileID: 1401099300}
+  frogAudioClips:
+  - {fileID: 8300000, guid: 63e94752e340f364a822b9b75724ffef, type: 3}
+  - {fileID: 8300000, guid: a0793221be1496a40a858f5d5de9e112, type: 3}
+  frogSoundsDelay: 0.05
 --- !u!114 &1401099299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15458,7 +15461,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
