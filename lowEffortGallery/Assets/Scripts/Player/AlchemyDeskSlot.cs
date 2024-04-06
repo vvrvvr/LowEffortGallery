@@ -50,6 +50,8 @@ public class AlchemyDeskSlot : MonoBehaviour
         if (other.CompareTag("Interface") && !isSlotBusy)
         {
             currentInterface = other.GetComponent<InterfaceObject>();
+            if (!currentInterface._isDropped)
+                return;
             currentInterface.MoveInterfaceToSlot(0f, 0.4f, itemPlace );
             currentInterface.SetInHandScale(1.5f, 10f, 100f);
             isSlotBusy = true;

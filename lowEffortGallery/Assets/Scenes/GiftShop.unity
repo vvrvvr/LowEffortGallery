@@ -5539,6 +5539,7 @@ MonoBehaviour:
   photoArrayID: 0
   DeathParticles: {fileID: 198175801688348628, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
     type: 3}
+  _isDropped: 0
   isOnscreen: 1
   interfaceType: 1
   onScreenPosition: {x: 0, y: 0, z: 0}
@@ -28291,8 +28292,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.988945, y: 1, z: 2.0374274}
-  m_Center: {x: -0.49447262, y: 0, z: 0.21244496}
+  m_Size: {x: 1.988945, y: 2.0550432, z: 2.0374274}
+  m_Center: {x: -0.49447265, y: 0.5275216, z: 0.21244492}
 --- !u!33 &8633097495352533259
 MeshFilter:
   m_ObjectHideFlags: 0

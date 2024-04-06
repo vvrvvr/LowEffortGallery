@@ -30,7 +30,7 @@ public class InterfaceObject : MonoBehaviour
     public ParticleSystem DeathParticles;
     [Space(10)]
 
-    private bool _isDropped = false;
+    public bool _isDropped = false;
     public bool isOnscreen = true;
     private Vector3 dropDir = Vector3.zero;
 
