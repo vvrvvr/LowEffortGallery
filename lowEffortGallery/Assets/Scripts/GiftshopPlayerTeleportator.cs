@@ -6,6 +6,8 @@ public class GiftshopPlayerTeleportator : MonoBehaviour
 {
     public Transform teleportSpot;
     public GameObject player;
+    public AudioSource audio;
+    public AudioClip teleportSound;
     void Start()
     {
         // Находим игрока в сцене и сохраняем ссылку на его объект
@@ -26,6 +28,7 @@ public class GiftshopPlayerTeleportator : MonoBehaviour
             player.transform.position = teleportSpot.position;
             player.SetActive(true);
             DialogueManager.instance.FrogSay("playerTeleport");
+            audio.PlayOneShot(teleportSound);
         }
     }
 }
