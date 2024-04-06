@@ -66,7 +66,10 @@ public class UIManager : MonoBehaviour
     {
         if (!isMenu && Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!GameManager.Instance.isPause)
+            if (GameManager.Instance.isExiting)
+                return;
+            
+            if (!GameManager.Instance.isPause )
             {
                 PauseGame();
             }

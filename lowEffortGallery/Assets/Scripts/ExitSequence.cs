@@ -12,6 +12,7 @@ public class ExitSequence : MonoBehaviour
     {
         if (other.CompareTag("Player") && isOnce)
         {
+            GameManager.Instance.isExiting = true;
             isOnce = false;
             Debug.Log("StartSequence");
             if (_playableDirector != null)

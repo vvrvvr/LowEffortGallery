@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
 
     public float photoFlashVolume = 1f;
     public AudioClip photoFlashSound;
+    public bool isExiting = false;
     
 
     public static GameManager Instance
