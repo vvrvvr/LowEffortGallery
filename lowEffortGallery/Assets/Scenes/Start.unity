@@ -1898,6 +1898,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: timer
       objectReference: {fileID: 0}
+    - target: {fileID: 6273779975960405830, guid: 3f58082c10f875a49b957cde81e1260f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6306357496602791787, guid: 3f58082c10f875a49b957cde81e1260f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3967,7 +3972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2d17f7125b0c14699651300837daca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isExposition: 1
+  isExposition: 0
   isFlyCam: 0
   coins: 0
   isCameraBought: 0
@@ -8648,7 +8653,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reset Game
+  m_text: Exit Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b65c99348f068b49bef5db0bb76a6e4, type: 2}
   m_sharedMaterial: {fileID: 21809785584020342, guid: 0b65c99348f068b49bef5db0bb76a6e4,
@@ -16213,6 +16218,7 @@ MonoBehaviour:
   - {fileID: 917690590}
   photoFlashVolume: 1
   photoFlashSound: {fileID: 0}
+  isExiting: 0
 --- !u!4 &1790385874
 Transform:
   m_ObjectHideFlags: 0
@@ -24222,7 +24228,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1693028402}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: RestartGame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30191,7 +30197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reset ?
+  m_text: Exit ?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0b65c99348f068b49bef5db0bb76a6e4, type: 2}
   m_sharedMaterial: {fileID: 21809785584020342, guid: 0b65c99348f068b49bef5db0bb76a6e4,
@@ -50616,7 +50622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &5608760577496243588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50730,8 +50736,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5608760576104808340}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: CCP
+        m_TargetAssemblyTypeName: SlimUI.ModernMenu.ExtraLinks, Assembly-CSharp
+        m_MethodName: VLAD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

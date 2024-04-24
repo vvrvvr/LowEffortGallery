@@ -483,6 +483,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: timer
       objectReference: {fileID: 0}
+    - target: {fileID: 6273779975960405830, guid: 3f58082c10f875a49b957cde81e1260f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6306357496602791787, guid: 3f58082c10f875a49b957cde81e1260f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13175,6 +13180,7 @@ MonoBehaviour:
   - {fileID: 462210338}
   photoFlashVolume: 1
   photoFlashSound: {fileID: 8300000, guid: 3d88a9be2c4e52240a174e46641aa4d1, type: 3}
+  isExiting: 0
 --- !u!4 &840707981
 Transform:
   m_ObjectHideFlags: 0
