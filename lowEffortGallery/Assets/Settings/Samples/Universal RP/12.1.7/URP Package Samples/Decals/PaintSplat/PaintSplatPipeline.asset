@@ -25,9 +25,9 @@ MonoBehaviour:
   m_SupportsTerrainHoles: 1
   m_SupportsHDR: 1
   m_HDRColorBufferPrecision: 0
-  m_MSAA: 2
-  m_RenderScale: 0.982
-  m_UpscalingFilter: 1
+  m_MSAA: 1
+  m_RenderScale: 1
+  m_UpscalingFilter: 0
   m_FsrOverrideSharpness: 0
   m_FsrSharpness: 0.92
   m_EnableLODCrossFade: 1
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_PrefilterSSAOSampleCountHigh: 1
   m_PrefilterDBufferMRT1: 1
   m_PrefilterDBufferMRT2: 1
-  m_PrefilterDBufferMRT3: 0
+  m_PrefilterDBufferMRT3: 1
   m_PrefilterScreenCoord: 1
   m_PrefilterNativeRenderPass: 1
   m_ShaderVariantLogLevel: 0

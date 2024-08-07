@@ -64,6 +64,7 @@ public class ObjectInteraction : MonoBehaviour
            // _characterController.radius = defaultCharacterRadius;
             cursor.SetActive(true);
         }
+        //выход
         else if (heldObject == null &&
                  Physics.Raycast(_camera.transform.position, fwd, out hit, grabDistance, layerMaskExit.value))
         {
@@ -73,6 +74,7 @@ public class ObjectInteraction : MonoBehaviour
                 GameManager.Instance.LoadNextLevel("Start");
             }
         }
+        //обычный объект
         else if (heldObject == null &&
                  Physics.Raycast(_camera.transform.position, fwd, out hit, grabDistance, layerMaskInteract.value))
         {

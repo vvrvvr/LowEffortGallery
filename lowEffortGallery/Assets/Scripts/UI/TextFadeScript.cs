@@ -39,7 +39,7 @@ public class TextFadeScript : MonoBehaviour
     private void DisableScript()
     {
         // Отключаем этот скрипт
-        GameManager.Instance.fadeSpeed = 2f;
+       // GameManager.Instance.fadeSpeed = 2f;
         enabled = false;
     }
 }
